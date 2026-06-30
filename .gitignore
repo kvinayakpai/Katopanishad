@@ -1,0 +1,7 @@
+# Temporary image crops from OCR sessions (regenerable from PDF)
+pg*.png
+p1*.png
+p17*.png
+p18*.png
+p14.png
+pages/
