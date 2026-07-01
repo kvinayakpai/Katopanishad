@@ -51,7 +51,8 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 25   | ✅ Done   | Nachiketa holds firm; shlokas 21-24; Yama's temptations (sons, cattle, land, long life, kingdom, women) |
 | 26   | ✅ Done   | Yama offers deva-loka pleasures; shlokas 25-28; Nachiketa's reply: all worldly things are impermanent |
 | 27   | ✅ Done   | Nachiketa's argument: worldly boons impermanent; kvadhastha/naraka etymology; end of Prathamā Vallī summary |
-| 28–171 | ⬜ Pending | |
+| 28   | ✅ Done   | Yama's pedagogical method; Nachiketa's exemplary resolve; colophon: Prathamā Vallī samāptā |
+| 29–171 | ⬜ Pending | |
 
 ## Key encoding notes (legacy font)
 - `ε`-like shape = ೩, small hook = ೬, oval = ೦ (Kannada digits in this font)
