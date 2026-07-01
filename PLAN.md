@@ -44,7 +44,9 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 18   | ✅ Done   | |
 | 19   | ✅ Done   | Ishtaka/agnikunda numerology; calendar day-counts (solar 365 8/31, lunar 355, nakshatra 324, brihaspati 390) — verified against pdftext |
 | 20   | ✅ Done   | 1080 forms (360×3); Vishnu Sahasranama single-syllable names; trichikētas/triple-sandhi; Veda śākhā counts (Rig 21, Yajur 101, Sama 1000, Atharva 9 = 1131) — corrected Yajur from misread 100→101 after image zoom verification |
-| 21–171 | ⬜ Pending | |
+| 21   | ✅ Done   | Dana/tapas definitions; trichiketa upasana leading to moksha; Brahmajaj/Devaru etymology (7 meanings of 'divu' dhatu) |
+| 22   | ✅ Done   | 7 meanings of 'deva' contd; shloka refs 19-1, 19-2, 16-1, 16-2; Srṃkāṃ (golden chain) as Yama's test of Nachiketa |
+| 23–171 | ⬜ Pending | |
 
 ## Key encoding notes (legacy font)
 - `ε`-like shape = ೩, small hook = ೬, oval = ೦ (Kannada digits in this font)
