@@ -48,7 +48,8 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 22   | ✅ Done   | 7 meanings of 'deva' contd; shloka refs 19-1, 19-2, 16-1, 16-2; Srṃkāṃ (golden chain) as Yama's test of Nachiketa |
 | 23   | ✅ Done   | Nachiketa rejects gold chain; 3rd boon asked; shloka 20 (yeyam prete); prēta/manushya etymology |
 | 24   | ✅ Done   | Nachiketa's 3rd boon (moksha/God's control of jiva); shloka 21; dharma etymology; Yama tries to dissuade |
-| 25–171 | ⬜ Pending | |
+| 25   | ✅ Done   | Nachiketa holds firm; shlokas 21-24; Yama's temptations (sons, cattle, land, long life, kingdom, women) |
+| 26–171 | ⬜ Pending | |
 
 ## Key encoding notes (legacy font)
 - `ε`-like shape = ೩, small hook = ೬, oval = ೦ (Kannada digits in this font)
