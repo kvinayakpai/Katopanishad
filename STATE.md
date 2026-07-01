@@ -63,10 +63,11 @@ Notes:
 |-----------|--------------|---------|--------|
 | 1–7 | front matter | Title, intro, preface | ✅ Done |
 | 8–28 | 7–27 | Adhyāya 1, Prathamā Vallī (shlokas 1–28) | ✅ Done |
-| 29–171 | 28–170 | Adhyāya 1 Dvitīyā Vallī onward | ⬜ Pending |
+| 29–35  | 28–34  | Adhyāya 1, Dvitīyā Vallī (shlokas 1–16) | ✅ Done |
+| 36–171 | 35–170 | Adhyāya 1 Dvitīyā Vallī continued onward | ⬜ Pending |
 
-**Pages done: 28 / 171**
-**Pages remaining: 143**
+**Pages done: 35 / 171**
+**Pages remaining: 136**
 
 ---
 
