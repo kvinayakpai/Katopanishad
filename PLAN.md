@@ -50,7 +50,8 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 24   | ✅ Done   | Nachiketa's 3rd boon (moksha/God's control of jiva); shloka 21; dharma etymology; Yama tries to dissuade |
 | 25   | ✅ Done   | Nachiketa holds firm; shlokas 21-24; Yama's temptations (sons, cattle, land, long life, kingdom, women) |
 | 26   | ✅ Done   | Yama offers deva-loka pleasures; shlokas 25-28; Nachiketa's reply: all worldly things are impermanent |
-| 27–171 | ⬜ Pending | |
+| 27   | ✅ Done   | Nachiketa's argument: worldly boons impermanent; kvadhastha/naraka etymology; end of Prathamā Vallī summary |
+| 28–171 | ⬜ Pending | |
 
 ## Key encoding notes (legacy font)
 - `ε`-like shape = ೩, small hook = ೬, oval = ೦ (Kannada digits in this font)
