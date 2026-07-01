@@ -42,8 +42,8 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 16   | ✅ Done   | |
 | 17   | ✅ Done   | |
 | 18   | ✅ Done   | |
-| 19   | ✅ Done   | Calendar numbers (Nakṣatra ೩೨೪, Bṛhaspati ೩೯೦) from pdftext |
-| 20   | 🔄 In progress | |
+| 19   | ✅ Done   | Ishtaka/agnikunda numerology; calendar day-counts (solar 365 8/31, lunar 355, nakshatra 324, brihaspati 390) — verified against pdftext |
+| 20   | ✅ Done   | 1080 forms (360×3); Vishnu Sahasranama single-syllable names; trichikētas/triple-sandhi; Veda śākhā counts (Rig 21, Yajur 101, Sama 1000, Atharva 9 = 1131) — corrected Yajur from misread 100→101 after image zoom verification |
 | 21–171 | ⬜ Pending | |
 
 ## Key encoding notes (legacy font)
@@ -54,5 +54,9 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 
 ## Session notes
 - Pages 1–18 completed in prior sessions
-- Page 19 completed session of 2026-06-30 (multi-session effort)
+- Page 19 status in PLAN.md was previously marked "Done" but was NOT actually present
+  in kata-upanishad-text.txt — corrected this session (verified via git archive fetch
+  since GitHub's web view was serving a stale cache of the repo)
+- Pages 19–20 transcribed and verified this session (2026-07-01), including one
+  digit correction (Yajurveda śākhā count 100→101) found via image zoom cross-check
 - New session should start fresh per chapter/section to avoid context overhead
