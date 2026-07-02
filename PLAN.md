@@ -95,7 +95,21 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 69   | ✅ Done   | Commentary on shloka 2-3-2 continued — Brahman's terrifying power (vajra) for the wicked; parallel with Taittiriya and Gita 9-19 |
 | 70   | ✅ Done   | Commentary on shlokas 2-3-3 & 2-3-4 — human body as the unique vehicle for spiritual realization; journey to Brahmaloka |
 | 71   | ✅ Done   | Commentary on shlokas 2-3-5 & 2-3-6 — visual clarity of Brahman in different realms (sushupti/dreamlike vs. sathyaloka); indwelling deities |
-| 72–171 | ⬜ Pending | |
+| 72   | ✅ Done   | Commentary on shlokas 2-3-7 & 2-3-8 — hierarchy of senses, mind, intellect, and unmanifested; and definition of Purusha |
+| 73   | ✅ Done   | Commentary on shloka 2-3-9 — Brahman cannot be seen by physical eyes, but by heart, intellect, and mind |
+| 74   | ✅ Done   | Commentary on shloka 2-3-9 continued — the roles of mind and heart in seeing Brahman; and shloka 2-3-10 on sensory stillness |
+| 75   | ✅ Done   | Commentary on shloka 2-3-11 & 2-3-12 — definition of yoga (stillness of senses), and impossibility of reaching Brahman by speech or mind |
+| 76   | ✅ Done   | Commentary on shloka 2-3-13 — two paths of understanding: "He exists" (asti) and "He is the truth" (tattva-bhava) |
+| 77   | ✅ Done   | Commentary on shlokas 2-3-14 & 2-3-15 — release from all desires leads to immortality; end of all heart-knots |
+| 78   | ✅ Done   | Commentary on shlokas 2-3-16, 2-3-17 & 2-3-18 — 101 heart channels, Angushtha-matra Purusha, and Nachiketa obtaining brahmavidya |
+| 79   | ✅ Done   | Introduction to Kannada Poetic Translation section (ಶ್ರೀ ಗೋವಿಂದ ಮಾಗಳ ಅವರ ಪ್ರಸ್ತುತಿ); and Preface (ಪ್ರಸ್ತಾವನೆ) |
+| 80   | ✅ Done   | Preface continued: introduction of Yama and Nachiketa as the two primary rishis of this Upanishad |
+| 81   | ✅ Done   | Adhyāya 1 Valli 1 Verse 1 & 2 translation: Vajashravas performs Vishvajit yajna and gives away cows |
+| 82   | ✅ Done   | Verse 3 to 7 translation: Nachiketa notices the uselessness of the cows given and asks whom he will be given to |
+| 83   | ✅ Done   | Verse 8 to 11 translation: Nachiketa arrives at Yama's house and waits for three nights without food |
+| 84   | ✅ Done   | Verse 12 & 13 translation: Nachiketa asks for his second boon — the knowledge of the heavenly fire (swargyagnim) |
+| 85   | ✅ Done   | Verse 14 to 16 translation: Yama teaches the fire sacrifice, names it "Nachiketagni", and offers a necklace |
+| 86–171 | ⬜ Pending | |
 
 
 ## Key encoding notes (legacy font)

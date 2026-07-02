@@ -67,11 +67,12 @@ Notes:
 | 40–47 | 39–46 | Adhyāya 1, Tṛtīyā Vallī (shlokas 1–17) | ✅ Done |
 | 48–57 | 47–56 | Adhyāya 2, Prathamā Vallī (shlokas 1–15) | ✅ Done |
 | 58–66 | 57–65 | Adhyāya 2, Dvitīyā Vallī (shlokas 1–15, complete) | ✅ Done |
-| 67–71 | 66–70 | Adhyāya 2, Tṛtīyā Vallī (shlokas 1–6) | ✅ Done |
-| 72–171 | 71–170 | Adhyāya 2, Tṛtīyā Vallī continued | ⬜ Pending |
+| 67–77 | 66–76 | Adhyāya 2, Tṛtīyā Vallī (shlokas 1–18, complete) | ✅ Done |
+| 78–85 | 77–84 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 1–16) | ✅ Done |
+| 86–171 | 85–170 | Kannada Poetic Translation continued | ⬜ Pending |
 
-**Pages done: 71 / 171**
-**Pages remaining: 100**
+**Pages done: 85 / 171**
+**Pages remaining: 86**
 
 ---
 
