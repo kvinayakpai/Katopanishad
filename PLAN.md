@@ -80,7 +80,9 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 54   | ✅ Done   | shloka 2-2-9 — Jnanayajna vs Karmayajna, cosmic order of Sun, solar deities under Brahman's control |
 | 55   | ✅ Done   | shlokas 2-2-10,11 — equality of Avatara and Mula forms of Brahman, and rejection of internal divisions in Brahman |
 | 56   | ✅ Done   | shlokas 2-2-12,13,14 — Angushtha-matra Purusha in heart, OM as smoke-less flame, and hill-water runoff analogy for wrong division in Brahman |
-| 57–171 | ⬜ Pending | |
+| 57   | ✅ Done   | shloka 2-2-15 — end of Adhyaya 2, Prathama Valli; soul-Brahman union analogy (mixing pure water with pure water) |
+| 58–171 | ⬜ Pending | |
+
 
 ## Key encoding notes (legacy font)
 - `ε`-like shape = ೩, small hook = ೬, oval = ೦ (Kannada digits in this font)
