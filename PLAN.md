@@ -82,7 +82,11 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 56   | ✅ Done   | shlokas 2-2-12,13,14 — Angushtha-matra Purusha in heart, OM as smoke-less flame, and hill-water runoff analogy for wrong division in Brahman |
 | 57   | ✅ Done   | shloka 2-2-15 — end of Adhyaya 2, Prathama Valli; soul-Brahman union analogy (mixing pure water with pure water) |
 | 58   | ✅ Done   | Adhyāya 2, Dvitīyā Vallī begins — shlokas 1-2 (eleven-gated city of Brahman, and Hamsa/nature invocation) |
-| 59–171 | ⬜ Pending | |
+| 59   | ✅ Done   | Commentary on Hamsa Gayatri — pronunciation rules of Vedic Hamsa, and heart-lotus (Hritkamala) indwelling of Hamsa-Brahman |
+| 60   | ✅ Done   | Commentary on Hamsa Gayatri — explanation of natural forces, Rigvedic textual variant citation (4-40-5) |
+| 61   | ✅ Done   | Taittiriya Aranyaka commentary on Hamsa Gayatri, sūryopasthāna worship, and shloka 2-2-3 (Prana/Apana and Vamana in heart) |
+| 62   | ✅ Done   | Commentary on shlokas 2-2-4 & 2-2-5 — three bodies of soul (gross, subtle, causal/linga), post-death journey, and Brahman as the source of life |
+| 63–171 | ⬜ Pending | |
 
 
 ## Key encoding notes (legacy font)

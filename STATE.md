@@ -66,10 +66,11 @@ Notes:
 | 29–39 | 28–38 | Adhyāya 1, Dvitīyā Vallī (shlokas 1–25) | ✅ Done |
 | 40–47 | 39–46 | Adhyāya 1, Tṛtīyā Vallī (shlokas 1–17) | ✅ Done |
 | 48–57 | 47–56 | Adhyāya 2, Prathamā Vallī (shlokas 1–15) | ✅ Done |
-| 58–171 | 57–170 | Adhyāya 2, Dvitīyā Vallī and onward | ⬜ Pending |
+| 58–62 | 57–61 | Adhyāya 2, Dvitīyā Vallī (shlokas 1–5, Hamsa Gayatri commentary) | ✅ Done |
+| 63–171 | 62–170 | Adhyāya 2, Dvitīyā Vallī continued | ⬜ Pending |
 
-**Pages done: 57 / 171**
-**Pages remaining: 114**
+**Pages done: 62 / 171**
+**Pages remaining: 109**
 
 ---
 
@@ -79,8 +80,8 @@ Notes:
 
 **What was done:**
 - Confirmed pages 53–57 have already been transcribed by previous session, covering the completion of Adhyāya 2, Prathamā Vallī (shlokas 2-2-8 to 2-2-15).
-- Updated `STATE.md` to reflect pages 53–57 as done.
-- Started transcribing page 58 (printed page 57) for Adhyāya 2, Dvitīyā Vallī (shloka 1).
+- Transcribed Pages 58–62 (printed pages 57–61) for Adhyāya 2, Dvitīyā Vallī, including shlokas 1–5, full Hamsa Gayatri commentary, and discussion on the three bodies of the soul (gross, subtle, linga).
+- Appended all transcribed pages to `kata-upanishad-text.txt` and updated `PLAN.md` and `STATE.md`.
 
 ### Session: 2026-07-01 (prior session)
 
