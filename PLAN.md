@@ -77,7 +77,8 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 51   | ✅ Done   | shlokas 4-5 — senses, waking/dream states, Brahman as honey-eater |
 | 52   | ✅ Done   | shlokas 2-2-6,7 — Hiranyagarbha/Prana creation, Aditi etymology, gender representation in Brahman |
 | 53   | ✅ Done   | shloka 2-2-8 — three genders of Brahman, Arani wood analogy, guru-shishya study as churning |
-| 54–171 | ⬜ Pending | |
+| 54   | ✅ Done   | shloka 2-2-9 — Jnanayajna vs Karmayajna, cosmic order of Sun, solar deities under Brahman's control |
+| 55–171 | ⬜ Pending | |
 
 ## Key encoding notes (legacy font)
 - `ε`-like shape = ೩, small hook = ೬, oval = ೦ (Kannada digits in this font)
