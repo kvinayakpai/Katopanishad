@@ -86,7 +86,11 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 60   | ✅ Done   | Commentary on Hamsa Gayatri — explanation of natural forces, Rigvedic textual variant citation (4-40-5) |
 | 61   | ✅ Done   | Taittiriya Aranyaka commentary on Hamsa Gayatri, sūryopasthāna worship, and shloka 2-2-3 (Prana/Apana and Vamana in heart) |
 | 62   | ✅ Done   | Commentary on shlokas 2-2-4 & 2-2-5 — three bodies of soul (gross, subtle, causal/linga), post-death journey, and Brahman as the source of life |
-| 63–171 | ⬜ Pending | |
+| 63   | ✅ Done   | Commentary on shlokas 2-2-9, 2-2-10 & 2-2-11 — Agni, Vayu, and Surya symbols (pratīkas) representing Brahman's single indwelling reality |
+| 64   | ✅ Done   | Commentary on shloka 2-2-12 — one controller (vaśī) of all, inner self (antaratma), deep sleep (sushupti/nidra) bliss, and image worship (pratima) |
+| 65   | ✅ Done   | Commentary on shlokas 2-2-13 & 2-2-14 — eternal among eternals (nityo nityanam), deep bliss (shanti/moksha) and ineffability of Brahman |
+| 66   | ✅ Done   | Commentary on shloka 2-2-15 — Brahman as the supreme source of all light (Gita 15-6 parallel); end of Adhyaya 2, Dvitīyā Vallī |
+| 67–171 | ⬜ Pending | |
 
 
 ## Key encoding notes (legacy font)

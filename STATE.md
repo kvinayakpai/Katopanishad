@@ -66,11 +66,11 @@ Notes:
 | 29–39 | 28–38 | Adhyāya 1, Dvitīyā Vallī (shlokas 1–25) | ✅ Done |
 | 40–47 | 39–46 | Adhyāya 1, Tṛtīyā Vallī (shlokas 1–17) | ✅ Done |
 | 48–57 | 47–56 | Adhyāya 2, Prathamā Vallī (shlokas 1–15) | ✅ Done |
-| 58–62 | 57–61 | Adhyāya 2, Dvitīyā Vallī (shlokas 1–5, Hamsa Gayatri commentary) | ✅ Done |
-| 63–171 | 62–170 | Adhyāya 2, Dvitīyā Vallī continued | ⬜ Pending |
+| 58–66 | 57–65 | Adhyāya 2, Dvitīyā Vallī (shlokas 1–15, complete) | ✅ Done |
+| 67–171 | 66–170 | Adhyāya 2, Tṛtīyā Vallī | ⬜ Pending |
 
-**Pages done: 62 / 171**
-**Pages remaining: 109**
+**Pages done: 66 / 171**
+**Pages remaining: 105**
 
 ---
 
@@ -80,7 +80,7 @@ Notes:
 
 **What was done:**
 - Confirmed pages 53–57 have already been transcribed by previous session, covering the completion of Adhyāya 2, Prathamā Vallī (shlokas 2-2-8 to 2-2-15).
-- Transcribed Pages 58–62 (printed pages 57–61) for Adhyāya 2, Dvitīyā Vallī, including shlokas 1–5, full Hamsa Gayatri commentary, and discussion on the three bodies of the soul (gross, subtle, linga).
+- Transcribed Pages 58–66 (printed pages 57–65) for Adhyāya 2, Dvitīyā Vallī, covering shlokas 1–15 and completing the entire Dvitīyā Vallī. This includes Hamsa Gayatri commentary, analysis of the three bodies of the soul (gross, subtle, linga), the Agni/Vayu/Surya symbols of Brahman's single reality, deep sleep bliss, and Brahman as the supreme source of all light (Gita 15-6 parallel).
 - Appended all transcribed pages to `kata-upanishad-text.txt` and updated `PLAN.md` and `STATE.md`.
 
 ### Session: 2026-07-01 (prior session)
