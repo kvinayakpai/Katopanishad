@@ -90,7 +90,12 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 64   | ✅ Done   | Commentary on shloka 2-2-12 — one controller (vaśī) of all, inner self (antaratma), deep sleep (sushupti/nidra) bliss, and image worship (pratima) |
 | 65   | ✅ Done   | Commentary on shlokas 2-2-13 & 2-2-14 — eternal among eternals (nityo nityanam), deep bliss (shanti/moksha) and ineffability of Brahman |
 | 66   | ✅ Done   | Commentary on shloka 2-2-15 — Brahman as the supreme source of all light (Gita 15-6 parallel); end of Adhyaya 2, Dvitīyā Vallī |
-| 67–171 | ⬜ Pending | |
+| 67   | ✅ Done   | Commentary on shloka 2-3-1 — the cosmic Ashvattha tree (world-tree) having roots above (Brahman) and branches below |
+| 68   | ✅ Done   | Ashvattha tree details continued: trunk (Brahma), major branches (Garuda/Shesha/Rudra), leaves (Vedas); commentary on shloka 2-3-2 |
+| 69   | ✅ Done   | Commentary on shloka 2-3-2 continued — Brahman's terrifying power (vajra) for the wicked; parallel with Taittiriya and Gita 9-19 |
+| 70   | ✅ Done   | Commentary on shlokas 2-3-3 & 2-3-4 — human body as the unique vehicle for spiritual realization; journey to Brahmaloka |
+| 71   | ✅ Done   | Commentary on shlokas 2-3-5 & 2-3-6 — visual clarity of Brahman in different realms (sushupti/dreamlike vs. sathyaloka); indwelling deities |
+| 72–171 | ⬜ Pending | |
 
 
 ## Key encoding notes (legacy font)
