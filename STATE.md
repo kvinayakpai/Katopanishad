@@ -63,23 +63,35 @@ Notes:
 |-----------|--------------|---------|--------|
 | 1–7 | front matter | Title, intro, preface | ✅ Done |
 | 8–28 | 7–27 | Adhyāya 1, Prathamā Vallī (shlokas 1–28) | ✅ Done |
-| 29–35  | 28–34  | Adhyāya 1, Dvitīyā Vallī (shlokas 1–16) | ✅ Done |
-| 36–171 | 35–170 | Adhyāya 1 Dvitīyā Vallī continued onward | ⬜ Pending |
+| 29–39 | 28–38 | Adhyāya 1, Dvitīyā Vallī (shlokas 1–25) | ✅ Done |
+| 40–47 | 39–46 | Adhyāya 1, Tṛtīyā Vallī (shlokas 1–17) | ✅ Done |
+| 48–52 | 47–51 | Adhyāya 2, Prathamā Vallī (shlokas 1–7) | ✅ Done |
+| 53–171 | 52–170 | Adhyāya 2 Prathamā Vallī continued onward | ⬜ Pending |
 
-**Pages done: 35 / 171**
-**Pages remaining: 136**
+**Pages done: 52 / 171**
+**Pages remaining: 119**
 
 ---
 
 ## Session Log
 
-### Session: 2026-07-01 (this session)
+### Session: 2026-07-02 (this session)
+
+**What was done:**
+- Synchronized local repository with the remote repository on GitHub (`origin/master`), fetching and hard-resetting to resolve stale `.git/HEAD.lock` issues and align local copy with pages 19–51 transcribed on July 1.
+- Transcribed Page 52 (printed page 51) from `pages/page_052.png`, covering:
+  - Shlokas 2-2-6 and 2-2-7 (Hiranyagarbha/Prana creation, Aditi etymology, gender representation in Brahman).
+- Appended page 52 to `kata-upanishad-text.txt`.
+- Updated `PLAN.md` progress table with summaries for pages 29 to 52.
+- Updated `STATE.md` with new progress counts.
+
+### Session: 2026-07-01 (prior session)
 
 **What was done:**
 - Diagnosed GitHub web cache issue (repo showed as "empty" in browser but was not — fetched correctly via `codeload.github.com` zip)
 - Found that PLAN.md claimed page 19 was done, but content was missing from `kata-upanishad-text.txt` — corrected
 - Transcribed and pushed pages 19–28 (10 pages), covering:
-  - Pages 19–20: Ishtaka/agni-kunda numerology; 360/1080 forms; Veda śākhā counts (Yajur corrected 100→101 after image zoom)
+  - Pages 19–20: Ishtaka/agni-kunda numerology; 360/1080 forms; Veda śāಖಾ counts (Yajur corrected 100→101 after image zoom)
   - Pages 21–22: Dana/tapas; trichiketa triple-sandhi; Brahmajaj/Devaru etymology (7 meanings of 'divu')
   - Pages 23–24: Nachiketa's 3rd boon; preta/manushya etymology; dharma etymology; shloka 21
   - Pages 25–26: Shlokas 21–28; Yama's temptations (sons, cattle, land, women, kingdom)
@@ -88,7 +100,7 @@ Notes:
 - Added `STATE.md` (this file)
 - All pages pushed to `master` individually per page
 
-**Commits this session (in order):**
+**Commits 2026-07-01 (in order):**
 | Commit | Content |
 |--------|---------|
 | `019394c` | Pages 19–20 transcription + PLAN.md fix |
@@ -104,10 +116,10 @@ Notes:
 
 ## What Needs to Be Done Next
 
-1. **Continue transcription from page 29** — this begins Adhyāya 1, Dvitīyā Vallī (the second section, where Yama begins his actual teaching on the ātman/brahman)
+1. **Continue transcription from page 53** — this continues Adhyāya 2, Prathamā Vallī (shloka 2-2-8 onwards)
 2. Follow the workflow in `AGENT_GUIDELINES.md` exactly:
-   - Vision-read `pages/page_029.png` (one image per tool call)
-   - Cross-check numerals and special characters against `pdftext/p029.txt`
+   - Vision-read `pages/page_053.png` (one image per tool call)
+   - Cross-check numerals and special characters against `pdftext/p053.txt`
    - Zoom-crop any shloka or tricky passage before transcribing
    - Append to `kata-upanishad-text.txt`
    - Update `PLAN.md` progress table

@@ -52,7 +52,31 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 26   | ✅ Done   | Yama offers deva-loka pleasures; shlokas 25-28; Nachiketa's reply: all worldly things are impermanent |
 | 27   | ✅ Done   | Nachiketa's argument: worldly boons impermanent; kvadhastha/naraka etymology; end of Prathamā Vallī summary |
 | 28   | ✅ Done   | Yama's pedagogical method; Nachiketa's exemplary resolve; colophon: Prathamā Vallī samāptā |
-| 29–171 | ⬜ Pending | |
+| 29   | ✅ Done   | Dvitīyā Vallī begins — shlokas 1-2 (śreyas vs preyas) |
+| 30   | ✅ Done   | shlokas 3-5 — śreyas/preyas, vidyā/avidyā, textual variants note |
+| 31   | ✅ Done   | shlokas 6-7 — avidyā bondage, śravaṇa difficulty |
+| 32   | ✅ Done   | shlokas 8-10 — ātmajñāna not by tarka, Yama praises Nachiketa |
+| 33   | ✅ Done   | shlokas 11-12 — Nachiketa praised, ātman gūḍham in hṛdaya |
+| 34   | ✅ Done   | shlokas 13-15 — Nachiketa praised, ātman question, OM revealed |
+| 35   | ✅ Done   | shloka 16 — OM as brahman, discourse on OMkāra |
+| 36   | ✅ Done   | shlokas 17-19 — OM as supreme support, ātman birthless-deathless, who kills whom |
+| 37   | ✅ Done   | shlokas 20-21 — ātman subtler than subtle, Yama's supreme teaching |
+| 38   | ✅ Done   | shlokas 22-24 — ātman bodiless in bodies, found only by grace, prerequisites for knowledge |
+| 39   | ✅ Done   | shloka 25 + Dvitīyā Vallī colophon — Brahman's cosmic scale, end of Adhyāya 1 Vallī 2 |
+| 40   | ✅ Done   | Tṛtīyā Vallī begins — shloka 1-2, two forms of Brahman in heart-cave |
+| 41   | ✅ Done   | shlokas 2-4 — ātman as charioteer, body as chariot, intellect as driver |
+| 42   | ✅ Done   | shlokas 5-6 — uncontrolled vs controlled horses, role of buddhi and manas |
+| 43   | ✅ Done   | shlokas 7-9 — purity of mind, Vishnu's supreme abode |
+| 44   | ✅ Done   | Vishnu etymology, shlokas 10-11, jīva tāratamya hierarchy |
+| 45   | ✅ Done   | jīva tāratamya continued, shlokas 12-13, self-knowledge path |
+| 46   | ✅ Done   | shlokas 14-15 — wake up call, Brahman beyond senses, end of Adhyāya 1 |
+| 47   | ✅ Done   | shlokas 16-17, Adhyāya 1 colophon — Tṛtīyā Vallī complete |
+| 48   | ✅ Done   | Adhyāya 2 Prathamā Vallī begins — shlokas 1-2, senses created outward, Dhruva analogy |
+| 49   | ✅ Done   | shloka 2-2-6,7 — Yama's praise of Nachiketa, birth after death |
+| 50   | ✅ Done   | shloka 2-2-7,8, shloka 3 — rebirth, sleeping Brahman, sense organs |
+| 51   | ✅ Done   | shlokas 4-5 — senses, waking/dream states, Brahman as honey-eater |
+| 52   | ✅ Done   | shlokas 2-2-6,7 — Hiranyagarbha/Prana creation, Aditi etymology, gender representation in Brahman |
+| 53–171 | ⬜ Pending | |
 
 ## Key encoding notes (legacy font)
 - `ε`-like shape = ೩, small hook = ೬, oval = ೦ (Kannada digits in this font)
@@ -67,4 +91,6 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
   since GitHub's web view was serving a stale cache of the repo)
 - Pages 19–20 transcribed and verified this session (2026-07-01), including one
   digit correction (Yajurveda śākhā count 100→101) found via image zoom cross-check
+- Pages 21–51 transcribed in prior sessions by another agent but not fully reflected in local workspace/PLAN.md. Checked latest status, hard-reset to origin/master, and resolved HEAD.lock issues.
+- Page 52 transcribed and verified this session (2026-07-02), covering shlokas 2-2-6 and 2-2-7.
 - New session should start fresh per chapter/section to avoid context overhead
