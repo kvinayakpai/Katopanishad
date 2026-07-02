@@ -81,7 +81,8 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 55   | ✅ Done   | shlokas 2-2-10,11 — equality of Avatara and Mula forms of Brahman, and rejection of internal divisions in Brahman |
 | 56   | ✅ Done   | shlokas 2-2-12,13,14 — Angushtha-matra Purusha in heart, OM as smoke-less flame, and hill-water runoff analogy for wrong division in Brahman |
 | 57   | ✅ Done   | shloka 2-2-15 — end of Adhyaya 2, Prathama Valli; soul-Brahman union analogy (mixing pure water with pure water) |
-| 58–171 | ⬜ Pending | |
+| 58   | ✅ Done   | Adhyāya 2, Dvitīyā Vallī begins — shlokas 1-2 (eleven-gated city of Brahman, and Hamsa/nature invocation) |
+| 59–171 | ⬜ Pending | |
 
 
 ## Key encoding notes (legacy font)

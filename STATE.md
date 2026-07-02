@@ -65,11 +65,11 @@ Notes:
 | 8–28 | 7–27 | Adhyāya 1, Prathamā Vallī (shlokas 1–28) | ✅ Done |
 | 29–39 | 28–38 | Adhyāya 1, Dvitīyā Vallī (shlokas 1–25) | ✅ Done |
 | 40–47 | 39–46 | Adhyāya 1, Tṛtīyā Vallī (shlokas 1–17) | ✅ Done |
-| 48–52 | 47–51 | Adhyāya 2, Prathamā Vallī (shlokas 1–7) | ✅ Done |
-| 53–171 | 52–170 | Adhyāya 2 Prathamā Vallī continued onward | ⬜ Pending |
+| 48–57 | 47–56 | Adhyāya 2, Prathamā Vallī (shlokas 1–15) | ✅ Done |
+| 58–171 | 57–170 | Adhyāya 2, Dvitīyā Vallī and onward | ⬜ Pending |
 
-**Pages done: 52 / 171**
-**Pages remaining: 119**
+**Pages done: 57 / 171**
+**Pages remaining: 114**
 
 ---
 
@@ -78,12 +78,9 @@ Notes:
 ### Session: 2026-07-02 (this session)
 
 **What was done:**
-- Synchronized local repository with the remote repository on GitHub (`origin/master`), fetching and hard-resetting to resolve stale `.git/HEAD.lock` issues and align local copy with pages 19–51 transcribed on July 1.
-- Transcribed Page 52 (printed page 51) from `pages/page_052.png`, covering:
-  - Shlokas 2-2-6 and 2-2-7 (Hiranyagarbha/Prana creation, Aditi etymology, gender representation in Brahman).
-- Appended page 52 to `kata-upanishad-text.txt`.
-- Updated `PLAN.md` progress table with summaries for pages 29 to 52.
-- Updated `STATE.md` with new progress counts.
+- Confirmed pages 53–57 have already been transcribed by previous session, covering the completion of Adhyāya 2, Prathamā Vallī (shlokas 2-2-8 to 2-2-15).
+- Updated `STATE.md` to reflect pages 53–57 as done.
+- Started transcribing page 58 (printed page 57) for Adhyāya 2, Dvitīyā Vallī (shloka 1).
 
 ### Session: 2026-07-01 (prior session)
 
