@@ -69,10 +69,13 @@ Notes:
 | 58–66 | 57–65 | Adhyāya 2, Dvitīyā Vallī (shlokas 1–15, complete) | ✅ Done |
 | 67–77 | 66–76 | Adhyāya 2, Tṛtīyā Vallī (shlokas 1–18, complete) | ✅ Done |
 | 78–85 | 77–84 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 1–16) | ✅ Done |
-| 86–171 | 85–170 | Kannada Poetic Translation continued | ⬜ Pending |
+| 86–93 | 85–92 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 17–20 & commentary) | ✅ Done |
+| 94–109 | 93–108 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 21–29 & Adhyāya 1, Vallī 2, Verses 1–21) | ✅ Done |
+| 110–171 | 109–170 | Kannada Poetic Translation continued | ⬜ Pending |
 
-**Pages done: 85 / 171**
-**Pages remaining: 86**
+**Pages done: 109 / 171**
+**Pages remaining: 62**
+
 
 ---
 
@@ -84,7 +87,9 @@ Notes:
 - Confirmed pages 53–57 have already been transcribed by previous session, covering the completion of Adhyāya 2, Prathamā Vallī (shlokas 2-2-8 to 2-2-15).
 - Transcribed Pages 58–66 (printed pages 57–65) for Adhyāya 2, Dvitīyā Vallī, covering shlokas 1–15 and completing the entire Dvitīyā Vallī.
 - Transcribed Pages 67–71 (printed pages 66–70) for Adhyāya 2, Tṛtīyā Vallī, covering shlokas 1–6. This includes the cosmic Ashvattha tree, Brahman's terrifying power (vajra) for the wicked, human body as the unique vehicle for spiritual realization, visual clarity of Brahman in different realms (dreamlike vs. sathyaloka), and the role of indwelling deities.
+- Verified and appended pages 86–93 (printed pages 85–92) and pages 94–109 (printed pages 93–108) of the Kannada Poetic Translation section, covering Adhyāya 1, Vallī 1 (Verses 17–29) and Adhyāya 1, Vallī 2 (Verses 1–21).
 - Appended all transcribed pages to `kata-upanishad-text.txt` and updated `PLAN.md` and `STATE.md`.
+
 
 ### Session: 2026-07-01 (prior session)
 

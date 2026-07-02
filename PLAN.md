@@ -109,7 +109,10 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 83   | ✅ Done   | Verse 8 to 11 translation: Nachiketa arrives at Yama's house and waits for three nights without food |
 | 84   | ✅ Done   | Verse 12 & 13 translation: Nachiketa asks for his second boon — the knowledge of the heavenly fire (swargyagnim) |
 | 85   | ✅ Done   | Verse 14 to 16 translation: Yama teaches the fire sacrifice, names it "Nachiketagni", and offers a necklace |
-| 86–171 | ⬜ Pending | |
+| 86–93 | ✅ Done   | Verse 17 to 20 translation: Nachiketa asks the third boon (preta/manushya discussion) |
+| 94–109 | ✅ Done   | Verse 21 to 29 and Adhyāya 1 Vallī 2 Verses 1 to 21 translation: Yama's temptations, Nachiketa's rejection, instruction on OMkāra |
+| 110–171 | ⬜ Pending | |
+
 
 
 ## Key encoding notes (legacy font)
