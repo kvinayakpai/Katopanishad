@@ -109,6 +109,8 @@ def verify_file(filepath):
 
 if __name__ == "__main__":
     filepath = "kata-upanishad-text.txt"
+    if len(sys.argv) > 1:
+        filepath = sys.argv[1]
     success = verify_file(filepath)
     if not success:
         sys.exit(1)

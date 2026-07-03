@@ -61,20 +61,20 @@ Notes:
 
 | PDF Pages | Printed Pages | Section | Status |
 |-----------|--------------|---------|--------|
-| 1–7 | front matter | Title, intro, preface | ✅ Done |
-| 8–28 | 7–27 | Adhyāya 1, Prathamā Vallī (shlokas 1–28) | ✅ Done |
-| 29–39 | 28–38 | Adhyāya 1, Dvitīyā Vallī (shlokas 1–25) | ✅ Done |
-| 40–47 | 39–46 | Adhyāya 1, Tṛtīyā Vallī (shlokas 1–17) | ✅ Done |
-| 48–57 | 47–56 | Adhyāya 2, Prathamā Vallī (shlokas 1–15) | ✅ Done |
-| 58–66 | 57–65 | Adhyāya 2, Dvitīyā Vallī (shlokas 1–15, complete) | ✅ Done |
-| 67–77 | 66–76 | Adhyāya 2, Tṛtīyā Vallī (shlokas 1–18, complete) | ✅ Done |
-| 78–85 | 77–84 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 1–16) | ✅ Done |
-| 86–93 | 85–92 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 17–20 & commentary) | ✅ Done |
-| 94–109 | 93–108 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 21–29 & Adhyāya 1, Vallī 2, Verses 1–21) | ✅ Done |
-| 110–171 | 109–170 | Kannada Poetic Translation continued | ⬜ Pending |
+| 1–7 | front matter | Title, intro, preface | ✅ Re-transcribed |
+| 8–28 | 7–27 | Adhyāya 1, Prathamā Vallī (shlokas 1–28) | ✅ Re-transcribed |
+| 29–39 | 28–38 | Adhyāya 1, Dvitīyā Vallī (shlokas 1–25) | ✅ Re-transcribed |
+| 40–47 | 39–46 | Adhyāya 1, Tṛtīyā Vallī (shlokas 1–17) | ✅ Re-transcribed |
+| 48–57 | 47–56 | Adhyāya 2, Prathamā Vallī (shlokas 1–15) | ✅ Re-transcribed |
+| 58–66 | 57–65 | Adhyāya 2, Dvitīyā Vallī (shlokas 1–15, complete) | ✅ Re-transcribed |
+| 67–77 | 66–76 | Adhyāya 2, Tṛtīyā Vallī (shlokas 1–18, complete) | ✅ Re-transcribed |
+| 78–85 | 77–84 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 1–16) | ✅ Re-transcribed |
+| 86–93 | 85–92 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 17–20 & commentary) | ✅ Re-transcribed |
+| 94–109 | 93–108 | Kannada Poetic Translation (Adhyāya 1, Vallī 1, Verses 21–29 & Adhyāya 1, Vallī 2, Verses 1–21) | ✅ Re-transcribed |
+| 110–171 | 109–170 | Kannada Poetic Translation continued | ✅ Re-transcribed |
 
-**Pages done: 109 / 171**
-**Pages remaining: 62**
+**Pages done: 171 / 171**
+**Pages remaining: 0**
 
 
 ---
