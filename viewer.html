@@ -898,8 +898,7 @@ function renderFocusPage() {
       </div>
       <div style="opacity: 0.85; font-size: 15px; border-top: 1px dashed var(--rule); padding-top: 16px;">
         <strong style="color: var(--ink-fade); display: block; margin-bottom: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;">Original Kannada / Sanskrit</strong>
-        ${page.content.replace(/
-/g, '<br>')}
+        ${page.content.replace(/\n/g, '<br>')}
       </div>
     `;
     textField.innerHTML = htmlContent;
@@ -1079,43 +1078,16 @@ function renderConceptDetails(id) {
 // Chat responses mapping
 const CHAT_RESPONSES = {
   kn: {
-    "ನಚಿಕೇತನ ಮೂರು ವರಗಳು ಯಾವುವು?": "ನಚಿಕೇತನು ಯಮಧರ್ಮನಿಂದ ಮೂರು ವರಗಳನ್ನು ಕೇಳಿದನು:
-1. **ಮೊದಲನೇ ವರ (ಪಿತೃ ಪ್ರಸಾದ)**: ತಾನು ಹಿಂತಿರುಗಿದಾಗ ತಂದೆ ಉದ್ದಾಲಕ ಗೌತಮನು ಪ್ರಶಾಂತನಾಗಿರಬೇಕು ಮತ್ತು ತನ್ನ ಮೇಲಿನ ಸಿಟ್ಟು ದೂರವಾಗಬೇಕು.
-2. **ಎರಡನೇ ವರ (ಸ್ವರ್ಗ್ಯ ಅಗ್ನಿ ವಿದ್ಯಾ)**: ಸ್ವರ್ಗಲೋಕ ಮತ್ತು ಅಮೃತತ್ವಕ್ಕೆ ಕಾರಣವಾಗುವ ಪವಿತ್ರ ಅಗ್ನಿಯ ಯಜ್ಞ ವಿಧಾನದ ಜ್ಞಾನ.
-3. **ಮೂರನೇ ವರ (ಆತ್ಮಜ್ಞಾನ)**: ಮರಣದ ನಂತರ ಜೀವಿಯು ಇರುತ್ತಾನೋ ಇಲ್ಲವೋ ಎಂಬ ರಹಸ್ಯ (ಪ್ರೇತ ವಿಚಿಕಿತ್ಸಾ) ಹಾಗೂ ಆತ್ಮ ತತ್ವದ ಜ್ಞಾನ.",
-    "ರಥದ ರೂಪಕವನ್ನು ವಿವರಿಸಿ.": "ಕಠೋಪನಿಷತ್ತಿನ (೧.೩.೩-೪) ರಥದ ರೂಪಕವು ಆತ್ಮಸಾಕ್ಷಾತ್ಕಾರದ ಹಾದಿಯನ್ನು ವಿವರಿಸುತ್ತದೆ:
-- **ರಥಿಕ (ಯಜಮಾನ)**: ಆತ್ಮನ್ (ಜೀವ)
-- **ರಥ**: ಶರೀರ
-- **ಸಾರಥಿ**: ಬುದ್ಧಿ
-- **ಕಡಿವಾಣ (ಹಗ್ಗ)**: ಮನಸ್ಸು
-- **ಕುದುರೆಗಳು**: ಇಂದ್ರಿಯಗಳು
-- **ದಾರಿಗಳು (ವಿಷಯಗಳು)**: ಶಬ್ದ, ಸ್ಪರ್ಶ, ರೂಪ ಮುಂತಾದ ಭೋಗವಿಷಯಗಳು.
-ಬುದ್ಧಿಯಿಂದ ಮನಸ್ಸನ್ನು ನಿಯಂತ್ರಿಸಿದಾಗ ಇಂದ್ರಿಯಗಳು ಒಳ್ಳೆಯ ಕುದುರೆಗಳಂತೆ ವರ್ತಿಸಿ ಮೋಕ್ಷಕ್ಕೆ ಕೊಂಡೊಯ್ಯುತ್ತವೆ.",
-    "ಶ್ರೇಯಸ್ಸು ಮತ್ತು ಪ್ರೇಯಸ್ಸು ಎಂದರೇನು?": "ಯಮನು ೧.೨.೧ ರಲ್ಲಿ ಮನುಷ್ಯನಿಗೆ ಲಭ್ಯವಿರುವ ಎರಡು ಮಾರ್ಗಗಳನ್ನು ವಿವರಿಸುತ್ತಾನೆ:
-- **ಶ್ರೇಯೋಮಾರ್ಗ (ಆತ್ಮಕಲ್ಯಾಣ)**: ಇದು ಶಾಶ್ವತ ಆತ್ಮೋದ್ಧಾರ ಮತ್ತು ಮುಕ್ತಿಗೆ ಕಾರಣವಾಗುತ್ತದೆ. ಇದಕ್ಕೆ ಇಂದ್ರಿಯ ಸಂಯಮ ಮತ್ತು ವಿವೇಚನೆ ಅಗತ್ಯ.
-- **ಪ್ರೇಯೋಮಾರ್ಗ (ಭೋಗಮಾರ್ಗ)**: ಇದು ತಾತ್ಕಾಲಿಕ ಇಂದ್ರಿಯ ಸುಖಗಳನ್ನು ನೀಡುತ್ತದೆ. ಆದರೆ ಜೀವಿಯನ್ನು ಸಂಸಾರ ಚಕ್ರದಲ್ಲಿ ಬಂಧಿಸುತ್ತದೆ.",
-    "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಯೋಗವನ್ನು ಹೇಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ?": "ಕಠೋಪನಿಷತ್ತಿನ ೨.೩.೧೧ ರಲ್ಲಿ ಯೋಗವನ್ನು ಹೀಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ:
-* ಇಂದ್ರಿಯಗಳು, ಮನಸ್ಸು ಮತ್ತು ಬುದ್ಧಿಯು ಚಂಚಲತೆಯಿಲ್ಲದೆ ಸ್ಥಿರವಾಗುವ ಸ್ಥಿತಿಯೇ ಯೋಗ ('ಸ್ಥಿರಾಂ ಇಂದ್ರಿಯಧಾರಣಾಂ').
-* ಈ ಸ್ಥಿತಿಯಲ್ಲಿ ಯೋಗಿಯು ಅಪ್ರಮತ್ತನಾಗಿರುತ್ತಾನೆ (ಎಚ್ಚರದಿಂದಿರುತ್ತಾನೆ)."
+    "ನಚಿಕೇತನ ಮೂರು ವರಗಳು ಯಾವುವು?": "ನಚಿಕೇತನು ಯಮಧರ್ಮನಿಂದ ಮೂರು ವರಗಳನ್ನು ಕೇಳಿದನು:\n1. **ಮೊದಲನೇ ವರ (ಪಿತೃ ಪ್ರಸಾದ)**: ತಾನು ಹಿಂತಿರುಗಿದಾಗ ತಂದೆ ಉದ್ದಾಲಕ ಗೌತಮನು ಪ್ರಶಾಂತನಾಗಿರಬೇಕು ಮತ್ತು ತನ್ನ ಮೇಲಿನ ಸಿಟ್ಟು ದೂರವಾಗಬೇಕು.\n2. **ಎರಡನೇ ವರ (ಸ್ವರ್ಗ್ಯ ಅಗ್ನಿ ವಿದ್ಯಾ)**: ಸ್ವರ್ಗಲೋಕ ಮತ್ತು ಅಮೃತತ್ವಕ್ಕೆ ಕಾರಣವಾಗುವ ಪವಿತ್ರ ಅಗ್ನಿಯ ಯಜ್ಞ ವಿಧಾನದ ಜ್ಞಾನ.\n3. **ಮೂರನೇ ವರ (ಆತ್ಮಜ್ಞಾನ)**: ಮರಣದ ನಂತರ ಜೀವಿಯು ಇರುತ್ತಾನೋ ಇಲ್ಲವೋ ಎಂಬ ರಹಸ್ಯ (ಪ್ರೇತ ವಿಚಿಕಿತ್ಸಾ) ಹಾಗೂ ಆತ್ಮ ತತ್ವದ ಜ್ಞಾನ.",
+    "ರಥದ ರೂಪಕವನ್ನು ವಿವರಿಸಿ.": "ಕಠೋಪನಿಷತ್ತಿನ (೧.೩.೩-೪) ರಥದ ರೂಪಕವು ಆತ್ಮಸಾಕ್ಷಾತ್ಕಾರದ ಹಾದಿಯನ್ನು ವಿವರಿಸುತ್ತದೆ:\n- **ರಥಿಕ (ಯಜಮಾನ)**: ಆತ್ಮನ್ (ಜೀವ)\n- **ರಥ**: ಶರೀರ\n- **ಸಾರಥಿ**: ಬುದ್ಧಿ\n- **ಕಡಿವಾಣ (ಹಗ್ಗ)**: ಮನಸ್ಸು\n- **ಕುದುರೆಗಳು**: ಇಂದ್ರಿಯಗಳು\n- **ದಾರಿಗಳು (ವಿಷಯಗಳು)**: ಶಬ್ದ, ಸ್ಪರ್ಶ, ರೂಪ ಮುಂತಾದ ಭೋಗವಿಷಯಗಳು.\nಬುದ್ಧಿಯಿಂದ ಮನಸ್ಸನ್ನು ನಿಯಂತ್ರಿಸಿದಾಗ ಇಂದ್ರಿಯಗಳು ಒಳ್ಳೆಯ ಕುದುರೆಗಳಂತೆ ವರ್ತಿಸಿ ಮೋಕ್ಷಕ್ಕೆ ಕೊಂಡೊಯ್ಯುತ್ತವೆ.",
+    "ಶ್ರೇಯಸ್ಸು ಮತ್ತು ಪ್ರೇಯಸ್ಸು ಎಂದರೇನು?": "ಯಮನು ೧.೨.೧ ರಲ್ಲಿ ಮನುಷ್ಯನಿಗೆ ಲಭ್ಯವಿರುವ ಎರಡು ಮಾರ್ಗಗಳನ್ನು ವಿವರಿಸುತ್ತಾನೆ:\n- **ಶ್ರೇಯೋಮಾರ್ಗ (ಆತ್ಮಕಲ್ಯಾಣ)**: ಇದು ಶಾಶ್ವತ ಆತ್ಮೋದ್ಧಾರ ಮತ್ತು ಮುಕ್ತಿಗೆ ಕಾರಣವಾಗುತ್ತದೆ. ಇದಕ್ಕೆ ಇಂದ್ರಿಯ ಸಂಯಮ ಮತ್ತು ವಿವೇಚನೆ ಅಗತ್ಯ.\n- **ಪ್ರೇಯೋಮಾರ್ಗ (ಭೋಗಮಾರ್ಗ)**: ಇದು ತಾತ್ಕಾಲಿಕ ಇಂದ್ರಿಯ ಸುಖಗಳನ್ನು ನೀಡುತ್ತದೆ. ಆದರೆ ಜೀವಿಯನ್ನು ಸಂಸಾರ ಚಕ್ರದಲ್ಲಿ ಬಂಧಿಸುತ್ತದೆ.",
+    "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಯೋಗವನ್ನು ಹೇಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ?": "ಕಠೋಪನಿಷತ್ತಿನ ೨.೩.೧೧ ರಲ್ಲಿ ಯೋಗವನ್ನು ಹೀಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ:\n* ಇಂದ್ರಿಯಗಳು, ಮನಸ್ಸು ಮತ್ತು ಬುದ್ಧಿಯು ಚಂಚಲತೆಯಿಲ್ಲದೆ ಸ್ಥಿರವಾಗುವ ಸ್ಥಿತಿಯೇ ಯೋಗ ('ಸ್ಥಿರಾಂ ಇಂದ್ರಿಯಧಾರಣಾಂ').\n* ಈ ಸ್ಥಿತಿಯಲ್ಲಿ ಯೋಗಿಯು ಅಪ್ರಮತ್ತನಾಗಿರುತ್ತಾನೆ (ಎಚ್ಚರದಿಂದಿರುತ್ತಾನೆ)."
   },
   en: {
-    "What are Nachiketa's three boons?": "Nachiketa requested three boons from Lord Yama:
-1. **First Boon (Paternal Peace)**: That his father Uddalaka Gautama be peaceful, satisfied, and free from anger towards him upon his return.
-2. **Second Boon (Swargya Agni)**: The knowledge of the sacred fire sacrifice that leads to the heavenly realm and immortality.
-3. **Third Boon (Self-Knowledge)**: The answer to the mystery of death (Preta Vicikitsa) — does the soul exist after death or not?",
-    "Explain the Chariot Metaphor.": "In Kata Upanishad (1.3.3-4), Yama explains the chariot metaphor to describe the path to self-realization:
-- **Chariot Owner (Rathi)**: The Atman (individual self).
-- **Chariot (Ratha)**: The Physical Body.
-- **Charioteer (Sarathi)**: The Intellect (Buddhi).
-- **Reins (Pragraha)**: The Mind (Manas).
-- **Horses (Haya)**: The Senses (Indriyas).
-- **Paths (Gocara)**: The Sense Objects.
-When the mind is controlled by the intellect, the senses behave like good horses and lead the soul to liberation.",
-    "What is Shreyas vs Preyas?": "Yama teaches in verse 1.2.1 that there are two distinct paths available to mankind:
-- **Shreyas (The Good/Spiritual)**: Leads to eternal spiritual welfare, liberation, and peace. It requires discrimination and self-control.
-- **Preyas (The Pleasant/Materialistic)**: Leads to temporary sensory pleasures. It binds the soul to the worldly cycle of birth and death.",
-    "How is Yoga defined in Katopanishad?": "Yoga is explicitly defined in Kata Upanishad (2.3.11) as:
-**"Sthiram Indriya Dharanam"** (ಸ್ಥಿರ ಇಂದ್ರಿಯ ಧಾರಣೆ) — the steady, quiet control of the senses, where the mind and intellect become perfectly still. This state is the threshold to liberation."
+    "What are Nachiketa's three boons?": "Nachiketa requested three boons from Lord Yama:\n1. **First Boon (Paternal Peace)**: That his father Uddalaka Gautama be peaceful, satisfied, and free from anger towards him upon his return.\n2. **Second Boon (Swargya Agni)**: The knowledge of the sacred fire sacrifice that leads to the heavenly realm and immortality.\n3. **Third Boon (Self-Knowledge)**: The answer to the mystery of death (Preta Vicikitsa) — does the soul exist after death or not?",
+    "Explain the Chariot Metaphor.": "In Kata Upanishad (1.3.3-4), Yama explains the chariot metaphor to describe the path to self-realization:\n- **Chariot Owner (Rathi)**: The Atman (individual self).\n- **Chariot (Ratha)**: The Physical Body.\n- **Charioteer (Sarathi)**: The Intellect (Buddhi).\n- **Reins (Pragraha)**: The Mind (Manas).\n- **Horses (Haya)**: The Senses (Indriyas).\n- **Paths (Gocara)**: The Sense Objects.\nWhen the mind is controlled by the intellect, the senses behave like good horses and lead the soul to liberation.",
+    "What is Shreyas vs Preyas?": "Yama teaches in verse 1.2.1 that there are two distinct paths available to mankind:\n- **Shreyas (The Good/Spiritual)**: Leads to eternal spiritual welfare, liberation, and peace. It requires discrimination and self-control.\n- **Preyas (The Pleasant/Materialistic)**: Leads to temporary sensory pleasures. It binds the soul to the worldly cycle of birth and death.",
+    "How is Yoga defined in Katopanishad?": "Yoga is explicitly defined in Kata Upanishad (2.3.11) as:\n**\"Sthiram Indriya Dharanam\"** (ಸ್ಥಿರ ಇಂದ್ರಿಯ ಧಾರಣೆ) — the steady, quiet control of the senses, where the mind and intellect become perfectly still. This state is the threshold to liberation."
   }
 };
 
