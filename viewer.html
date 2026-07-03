@@ -673,22 +673,133 @@ function switchView(viewName) {
   }
 }
 
-// Language toggle
-document.getElementById('btn-lang-kn').addEventListener('click', () => {
-  currentLanguage = 'kn';
-  document.getElementById('btn-lang-kn').classList.add('on');
-  document.getElementById('btn-lang-en').classList.remove('on');
-  renderFocusPage();
-  renderConceptDetails(selectedConceptId);
-});
+// UI Translations dictionary
+const UI_TRANSLATIONS = {
+  kn: {
+    brand_name: 'ಕಠೋಪನಿಷತ್ · <em>ತತ್ವ ಜಲಂ</em>',
+    brand_crumb: 'ಬನ್ನಂಜೆ ಗೋವಿಂದಾಚಾರ್ಯ',
+    tab_browse: 'ವಿಷಯ ಸೂಚಿ',
+    tab_focus: 'ಏಕಾಗ್ರತೆ',
+    tab_chapters: 'ಅಧ್ಯಾಯಗಳು',
+    tab_map: 'ನಕ್ಷೆ',
+    tab_chat: 'ಚರ್ಚೆ',
+    search_placeholder: 'ಪುಟಗಳು, ಶ್ಲೋಕಗಳು, ಪರಿಕಲ್ಪನೆಗಳನ್ನು ಹುಡುಕಿ...',
+    sec_intro: 'ಪ್ರಸ್ತಾವನೆ ಮತ್ತು ಶಾಂತಿಪಾಠ',
+    sec_commentary: 'ಕನ್ನಡ ವಿವರಣೆ ಮತ್ತು ತಾತ್ಪರ್ಯ',
+    sec_poetic: 'ಕನ್ನಡ ಪದ್ಯರೂಪ',
+    sec_sanskrit: 'ಮೂಲ ಸಂಸ್ಕೃತ ಶ್ಲೋಕಗಳು',
+    sec_c11: 'ಅಧ್ಯಾಯ ೧ - ವಲ್ಲಿ ೧',
+    sec_c12: 'ಅಧ್ಯಾಯ ೧ - ವಲ್ಲಿ ೨',
+    sec_c13: 'ಅಧ್ಯಾಯ ೧ - ವಲ್ಲಿ ೩',
+    sec_c21: 'ಅಧ್ಯಾಯ ೨ - ವಲ್ಲಿ ೧',
+    sec_c22: 'ಅಧ್ಯಾಯ ೨ - ವಲ್ಲಿ ೨',
+    sec_c23: 'ಅಧ್ಯಾಯ ೨ - ವಲ್ಲಿ ೩',
+    footer_stats: 'ಕಠೋಪನಿಷತ್ ವೀಕ್ಷಕ • 171 ಪುಟಗಳು • 5657 ಸಾಲುಗಳು',
+    welcome_chat: 'ಹರೇ ಕೃಷ್ಣ! ಕಠೋಪನಿಷತ್ ಸಂಶೋಧಕಕ್ಕೆ ಸುಸ್ವಾಗತ. ಜೀವನ, ಮರಣ ಮತ್ತು ಆತ್ಮಜ್ಞಾನದ ಆಳವಾದ ರಹಸ್ಯಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ಕೆಳಗಿನ ಪ್ರಶ್ನೆಗಳಲ್ಲಿ ಒಂದನ್ನು ಆರಿಸಿ.',
+    chat_suggestions: [
+      { text: "ನಚಿಕೇತನ ಮೂರು ವರಗಳು ಯಾವುವು?", label: "ಮೂರು ವರಗಳು" },
+      { text: "ರಥದ ರೂಪಕವನ್ನು ವಿವರಿಸಿ.", label: "ರಥದ ರೂಪಕ" },
+      { text: "ಶ್ರೇಯಸ್ಸು ಮತ್ತು ಪ್ರೇಯಸ್ಸು ಎಂದರೇನು?", label: "ಶ್ರೇಯಸ್ಸು vs ಪ್ರೇಯಸ್ಸು" },
+      { text: "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಯೋಗವನ್ನು ಹೇಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ?", label: "ಯೋಗದ ವ್ಯಾಖ್ಯಾನ" }
+    ],
+    defaultResponse: "ಕಠೋಪನಿಷತ್ ಬಗ್ಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳನ್ನು ವಿವರಿಸಲು ನಾನು ಸಂತೋಷಪಡುತ್ತೇನೆ!"
+  },
+  en: {
+    brand_name: 'Katopanishad · <em>Tatva Jalam</em>',
+    brand_crumb: 'Bannanje Govindacharya',
+    tab_browse: 'Browse',
+    tab_focus: 'Focus',
+    tab_chapters: 'Chapters',
+    tab_map: 'Map',
+    tab_chat: 'Chat',
+    search_placeholder: 'Search pages, verses, concepts...',
+    sec_intro: 'Introduction & Shantipatha',
+    sec_commentary: 'Kannada Exposition & Commentary',
+    sec_poetic: 'Kannada Poetic Translation',
+    sec_sanskrit: 'Original Sanskrit Shlokas',
+    sec_c11: 'Adhyaya 1 - Valli 1',
+    sec_c12: 'Adhyaya 1 - Valli 2',
+    sec_c13: 'Adhyaya 1 - Valli 3',
+    sec_c21: 'Adhyaya 2 - Valli 1',
+    sec_c22: 'Adhyaya 2 - Valli 2',
+    sec_c23: 'Adhyaya 2 - Valli 3',
+    footer_stats: 'Katopanishad Viewer • 171 Pages • 5657 Lines',
+    welcome_chat: 'Hare Krishna! Welcome to the Katopanishad explorer. Choose a question below or search to discover the deep mysteries of life, death, and self-knowledge.',
+    chat_suggestions: [
+      { text: "What are Nachiketa's three boons?", label: "3 Boons" },
+      { text: "Explain the Chariot Metaphor.", label: "Chariot Metaphor" },
+      { text: "What is Shreyas vs Preyas?", label: "Shreyas vs Preyas" },
+      { text: "How is Yoga defined in Katopanishad?", label: "Definition of Yoga" }
+    ],
+    defaultResponse: "I'm happy to help explain anything about the Katopanishad!"
+  }
+};
 
-document.getElementById('btn-lang-en').addEventListener('click', () => {
-  currentLanguage = 'en';
-  document.getElementById('btn-lang-en').classList.add('on');
-  document.getElementById('btn-lang-kn').classList.remove('on');
+function updateLanguage(lang) {
+  currentLanguage = lang;
+  
+  // Set class on body for CSS styling
+  document.body.className = `lang-${lang}`;
+  
+  // Update header text
+  document.querySelector('header .brand .name').innerHTML = UI_TRANSLATIONS[lang].brand_name;
+  document.querySelector('header .brand .crumb').textContent = UI_TRANSLATIONS[lang].brand_crumb;
+  
+  // Update tab buttons
+  document.getElementById('tab-browse').textContent = UI_TRANSLATIONS[lang].tab_browse;
+  document.getElementById('tab-focus').textContent = UI_TRANSLATIONS[lang].tab_focus;
+  document.getElementById('tab-chapters').textContent = UI_TRANSLATIONS[lang].tab_chapters;
+  document.getElementById('tab-map').textContent = UI_TRANSLATIONS[lang].tab_map;
+  document.getElementById('tab-chat').textContent = UI_TRANSLATIONS[lang].tab_chat;
+  
+  // Update search input placeholder
+  document.getElementById('search-input').placeholder = UI_TRANSLATIONS[lang].search_placeholder;
+  
+  // Update section titles in Browse view
+  const browseTitles = document.querySelectorAll('#view-browse .section-title');
+  if (browseTitles.length >= 4) {
+    browseTitles[0].textContent = UI_TRANSLATIONS[lang].sec_intro;
+    browseTitles[1].textContent = UI_TRANSLATIONS[lang].sec_commentary;
+    browseTitles[2].textContent = UI_TRANSLATIONS[lang].sec_poetic;
+    browseTitles[3].textContent = UI_TRANSLATIONS[lang].sec_sanskrit;
+  }
+  
+  // Update section titles in Chapters view
+  const chapterTitles = document.querySelectorAll('#view-chapters .section-title');
+  if (chapterTitles.length >= 6) {
+    chapterTitles[0].textContent = UI_TRANSLATIONS[lang].sec_c11;
+    chapterTitles[1].textContent = UI_TRANSLATIONS[lang].sec_c12;
+    chapterTitles[2].textContent = UI_TRANSLATIONS[lang].sec_c13;
+    chapterTitles[3].textContent = UI_TRANSLATIONS[lang].sec_c21;
+    chapterTitles[4].textContent = UI_TRANSLATIONS[lang].sec_c22;
+    chapterTitles[5].textContent = UI_TRANSLATIONS[lang].sec_c23;
+  }
+  
+  // Update footer stats
+  document.querySelector('footer span').textContent = UI_TRANSLATIONS[lang].footer_stats;
+  
+  // Update chat suggestions and welcome message
+  const chatBox = document.getElementById('chat-box');
+  chatBox.innerHTML = `<div class="chat-bubble bot">${UI_TRANSLATIONS[lang].welcome_chat}</div>`;
+  
+  const suggestionsDiv = document.querySelector('.chat-suggestions');
+  suggestionsDiv.innerHTML = '';
+  UI_TRANSLATIONS[lang].chat_suggestions.forEach(s => {
+    const chip = document.createElement('div');
+    chip.className = 'suggestion-chip';
+    chip.textContent = s.label;
+    chip.addEventListener('click', () => {
+      askQuestion(s.text);
+    });
+    suggestionsDiv.appendChild(chip);
+  });
+  
+  // Re-render components with the new language state
+  renderPageLists();
   renderFocusPage();
+  renderMap();
   renderConceptDetails(selectedConceptId);
-});
+}
 
 // Render Page lists
 function renderPageLists() {
@@ -715,8 +826,9 @@ function renderPageLists() {
   PAGES.forEach(page => {
     const item = document.createElement('div');
     item.className = 'page-item';
+    const titleText = currentLanguage === 'en' ? page.title_en : page.title;
     item.innerHTML = `
-      <span class="title">${page.num}. ${page.title}</span>
+      <span class="title">${page.num}. ${titleText}</span>
       <span class="badge">Page ${page.num}</span>
     `;
     item.addEventListener('click', () => {
@@ -773,17 +885,27 @@ function renderFocusPage() {
   const page = PAGES.find(p => p.num === currentFocusPage);
   if (!page) return;
   
-  document.getElementById('focus-title').textContent = `${page.num}. ${page.title}`;
+  const pageTitle = currentLanguage === 'en' ? page.title_en : page.title;
+  document.getElementById('focus-title').textContent = `${page.num}. ${pageTitle}`;
   const textField = document.getElementById('focus-text');
   
-  // Custom script rendering depending on state
-  textField.textContent = page.content;
   if (currentLanguage === 'en') {
-    // English transliteration helper/note if applicable
-    textField.classList.remove('body-text');
     textField.className = 'body-text large-font';
+    let htmlContent = `
+      <div style="background: rgba(158, 58, 26, 0.05); border-left: 4px solid var(--rust); padding: 16px; margin-bottom: 24px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: var(--ink-soft);">
+        <strong style="color: var(--rust); display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">English Summary & Translation</strong>
+        ${page.summary_en}
+      </div>
+      <div style="opacity: 0.85; font-size: 15px; border-top: 1px dashed var(--rule); padding-top: 16px;">
+        <strong style="color: var(--ink-fade); display: block; margin-bottom: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;">Original Kannada / Sanskrit</strong>
+        ${page.content.replace(/
+/g, '<br>')}
+      </div>
+    `;
+    textField.innerHTML = htmlContent;
   } else {
     textField.className = 'body-text';
+    textField.textContent = page.content;
   }
 }
 
@@ -804,30 +926,30 @@ document.getElementById('focus-next').addEventListener('click', () => {
 // Search functionality
 document.getElementById('search-input').addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase().trim();
-  if (!query) {
-    renderPageLists();
-    return;
-  }
   
   // Filter lists in view
-  const filterList = (listElement, sectionTitle) => {
-    const items = listElement.querySelectorAll('.page-item');
-    items.forEach(item => {
-      const title = item.querySelector('.title').textContent.toLowerCase();
-      const pageNum = item.querySelector('.badge').textContent.toLowerCase();
-      if (title.includes(query) || pageNum.includes(query)) {
-        item.style.display = 'flex';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  };
-  
-  const allLists = ['list-intro', 'list-commentary', 'list-poetic', 'list-sanskrit', 'list-c11', 'list-c12', 'list-c13', 'list-c21', 'list-c22', 'list-c23'];
-  allLists.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) filterList(el);
+  document.querySelectorAll('.page-item').forEach(item => {
+    const title = item.querySelector('.title').textContent.toLowerCase();
+    const pageNum = item.querySelector('.badge').textContent.toLowerCase();
+    if (title.includes(query) || pageNum.includes(query)) {
+      item.style.display = 'flex';
+    } else {
+      item.style.display = 'none';
+    }
   });
+});
+
+// Language toggle
+document.getElementById('btn-lang-kn').addEventListener('click', () => {
+  updateLanguage('kn');
+  document.getElementById('btn-lang-kn').classList.add('on');
+  document.getElementById('btn-lang-en').classList.remove('on');
+});
+
+document.getElementById('btn-lang-en').addEventListener('click', () => {
+  updateLanguage('en');
+  document.getElementById('btn-lang-en').classList.add('on');
+  document.getElementById('btn-lang-kn').classList.remove('on');
 });
 
 // Ontology Map & Nodes layout
@@ -956,10 +1078,45 @@ function renderConceptDetails(id) {
 
 // Chat responses mapping
 const CHAT_RESPONSES = {
-  "What are Nachiketa's three boons?": "Nachiketa requested three boons from Lord Yama:\n1. **First Boon (Paternal Peace)**: That his father Uddalaka Gautama be peaceful, satisfied, and free from anger towards him upon his return.\n2. **Second Boon (Swargya Agni)**: The knowledge of the sacred fire sacrifice that leads to the heavenly realm and immortality.\n3. **Third Boon (Self-Knowledge)**: The answer to the mystery of death (Preta Vicikitsa) — does the soul exist after death or not?",
-  "Explain the Chariot Metaphor.": "In Kata Upanishad (1.3.3-4), Yama explains the chariot metaphor to describe the path to self-realization:\n- **Chariot Owner (Rathi)**: The Atman (individual self).\n- **Chariot (Ratha)**: The Physical Body.\n- **Charioteer (Sarathi)**: The Intellect (Buddhi).\n- **Reins (Pragraha)**: The Mind (Manas).\n- **Horses (Haya)**: The Senses (Indriyas).\n- **Paths (Gocara)**: The Sense Objects.\nWhen the mind is controlled by the intellect, the senses behave like good horses and lead the soul to liberation.",
-  "What is Shreyas vs Preyas?": "Yama teaches in verse 1.2.1 that there are two distinct paths available to mankind:\n- **Shreyas (The Good/Spiritual)**: Leads to eternal spiritual welfare, liberation, and peace. It requires discrimination and self-control.\n- **Preyas (The Pleasant/Materialistic)**: Leads to temporary sensory pleasures. It binds the soul to the worldly cycle of birth and death.",
-  "How is Yoga defined in Katopanishad?": "Yoga is explicitly defined in Kata Upanishad (2.3.11) as:\n**\"Sthiram Indriya Dharanam\"** (ಸ್ಥಿರ ಇಂದ್ರಿಯ ಧಾರಣೆ) — the steady, quiet control of the senses, where the mind and intellect become perfectly still. This state is the threshold to liberation."
+  kn: {
+    "ನಚಿಕೇತನ ಮೂರು ವರಗಳು ಯಾವುವು?": "ನಚಿಕೇತನು ಯಮಧರ್ಮನಿಂದ ಮೂರು ವರಗಳನ್ನು ಕೇಳಿದನು:
+1. **ಮೊದಲನೇ ವರ (ಪಿತೃ ಪ್ರಸಾದ)**: ತಾನು ಹಿಂತಿರುಗಿದಾಗ ತಂದೆ ಉದ್ದಾಲಕ ಗೌತಮನು ಪ್ರಶಾಂತನಾಗಿರಬೇಕು ಮತ್ತು ತನ್ನ ಮೇಲಿನ ಸಿಟ್ಟು ದೂರವಾಗಬೇಕು.
+2. **ಎರಡನೇ ವರ (ಸ್ವರ್ಗ್ಯ ಅಗ್ನಿ ವಿದ್ಯಾ)**: ಸ್ವರ್ಗಲೋಕ ಮತ್ತು ಅಮೃತತ್ವಕ್ಕೆ ಕಾರಣವಾಗುವ ಪವಿತ್ರ ಅಗ್ನಿಯ ಯಜ್ಞ ವಿಧಾನದ ಜ್ಞಾನ.
+3. **ಮೂರನೇ ವರ (ಆತ್ಮಜ್ಞಾನ)**: ಮರಣದ ನಂತರ ಜೀವಿಯು ಇರುತ್ತಾನೋ ಇಲ್ಲವೋ ಎಂಬ ರಹಸ್ಯ (ಪ್ರೇತ ವಿಚಿಕಿತ್ಸಾ) ಹಾಗೂ ಆತ್ಮ ತತ್ವದ ಜ್ಞಾನ.",
+    "ರಥದ ರೂಪಕವನ್ನು ವಿವರಿಸಿ.": "ಕಠೋಪನಿಷತ್ತಿನ (೧.೩.೩-೪) ರಥದ ರೂಪಕವು ಆತ್ಮಸಾಕ್ಷಾತ್ಕಾರದ ಹಾದಿಯನ್ನು ವಿವರಿಸುತ್ತದೆ:
+- **ರಥಿಕ (ಯಜಮಾನ)**: ಆತ್ಮನ್ (ಜೀವ)
+- **ರಥ**: ಶರೀರ
+- **ಸಾರಥಿ**: ಬುದ್ಧಿ
+- **ಕಡಿವಾಣ (ಹಗ್ಗ)**: ಮನಸ್ಸು
+- **ಕುದುರೆಗಳು**: ಇಂದ್ರಿಯಗಳು
+- **ದಾರಿಗಳು (ವಿಷಯಗಳು)**: ಶಬ್ದ, ಸ್ಪರ್ಶ, ರೂಪ ಮುಂತಾದ ಭೋಗವಿಷಯಗಳು.
+ಬುದ್ಧಿಯಿಂದ ಮನಸ್ಸನ್ನು ನಿಯಂತ್ರಿಸಿದಾಗ ಇಂದ್ರಿಯಗಳು ಒಳ್ಳೆಯ ಕುದುರೆಗಳಂತೆ ವರ್ತಿಸಿ ಮೋಕ್ಷಕ್ಕೆ ಕೊಂಡೊಯ್ಯುತ್ತವೆ.",
+    "ಶ್ರೇಯಸ್ಸು ಮತ್ತು ಪ್ರೇಯಸ್ಸು ಎಂದರೇನು?": "ಯಮನು ೧.೨.೧ ರಲ್ಲಿ ಮನುಷ್ಯನಿಗೆ ಲಭ್ಯವಿರುವ ಎರಡು ಮಾರ್ಗಗಳನ್ನು ವಿವರಿಸುತ್ತಾನೆ:
+- **ಶ್ರೇಯೋಮಾರ್ಗ (ಆತ್ಮಕಲ್ಯಾಣ)**: ಇದು ಶಾಶ್ವತ ಆತ್ಮೋದ್ಧಾರ ಮತ್ತು ಮುಕ್ತಿಗೆ ಕಾರಣವಾಗುತ್ತದೆ. ಇದಕ್ಕೆ ಇಂದ್ರಿಯ ಸಂಯಮ ಮತ್ತು ವಿವೇಚನೆ ಅಗತ್ಯ.
+- **ಪ್ರೇಯೋಮಾರ್ಗ (ಭೋಗಮಾರ್ಗ)**: ಇದು ತಾತ್ಕಾಲಿಕ ಇಂದ್ರಿಯ ಸುಖಗಳನ್ನು ನೀಡುತ್ತದೆ. ಆದರೆ ಜೀವಿಯನ್ನು ಸಂಸಾರ ಚಕ್ರದಲ್ಲಿ ಬಂಧಿಸುತ್ತದೆ.",
+    "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಯೋಗವನ್ನು ಹೇಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ?": "ಕಠೋಪನಿಷತ್ತಿನ ೨.೩.೧೧ ರಲ್ಲಿ ಯೋಗವನ್ನು ಹೀಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ:
+* ಇಂದ್ರಿಯಗಳು, ಮನಸ್ಸು ಮತ್ತು ಬುದ್ಧಿಯು ಚಂಚಲತೆಯಿಲ್ಲದೆ ಸ್ಥಿರವಾಗುವ ಸ್ಥಿತಿಯೇ ಯೋಗ ('ಸ್ಥಿರಾಂ ಇಂದ್ರಿಯಧಾರಣಾಂ').
+* ಈ ಸ್ಥಿತಿಯಲ್ಲಿ ಯೋಗಿಯು ಅಪ್ರಮತ್ತನಾಗಿರುತ್ತಾನೆ (ಎಚ್ಚರದಿಂದಿರುತ್ತಾನೆ)."
+  },
+  en: {
+    "What are Nachiketa's three boons?": "Nachiketa requested three boons from Lord Yama:
+1. **First Boon (Paternal Peace)**: That his father Uddalaka Gautama be peaceful, satisfied, and free from anger towards him upon his return.
+2. **Second Boon (Swargya Agni)**: The knowledge of the sacred fire sacrifice that leads to the heavenly realm and immortality.
+3. **Third Boon (Self-Knowledge)**: The answer to the mystery of death (Preta Vicikitsa) — does the soul exist after death or not?",
+    "Explain the Chariot Metaphor.": "In Kata Upanishad (1.3.3-4), Yama explains the chariot metaphor to describe the path to self-realization:
+- **Chariot Owner (Rathi)**: The Atman (individual self).
+- **Chariot (Ratha)**: The Physical Body.
+- **Charioteer (Sarathi)**: The Intellect (Buddhi).
+- **Reins (Pragraha)**: The Mind (Manas).
+- **Horses (Haya)**: The Senses (Indriyas).
+- **Paths (Gocara)**: The Sense Objects.
+When the mind is controlled by the intellect, the senses behave like good horses and lead the soul to liberation.",
+    "What is Shreyas vs Preyas?": "Yama teaches in verse 1.2.1 that there are two distinct paths available to mankind:
+- **Shreyas (The Good/Spiritual)**: Leads to eternal spiritual welfare, liberation, and peace. It requires discrimination and self-control.
+- **Preyas (The Pleasant/Materialistic)**: Leads to temporary sensory pleasures. It binds the soul to the worldly cycle of birth and death.",
+    "How is Yoga defined in Katopanishad?": "Yoga is explicitly defined in Kata Upanishad (2.3.11) as:
+**"Sthiram Indriya Dharanam"** (ಸ್ಥಿರ ಇಂದ್ರಿಯ ಧಾರಣೆ) — the steady, quiet control of the senses, where the mind and intellect become perfectly still. This state is the threshold to liberation."
+  }
 };
 
 function askQuestion(qText) {
@@ -978,15 +1135,15 @@ function askQuestion(qText) {
   setTimeout(() => {
     const bBubble = document.createElement('div');
     bBubble.className = 'chat-bubble bot';
-    bBubble.textContent = CHAT_RESPONSES[qText] || "I'm happy to help explain anything about the Katopanishad!";
+    const resp = CHAT_RESPONSES[currentLanguage][qText] || UI_TRANSLATIONS[currentLanguage].defaultResponse || "I'm happy to help explain anything about the Katopanishad!";
+    bBubble.textContent = resp;
     box.appendChild(bBubble);
     box.scrollTop = box.scrollHeight;
   }, 300);
 }
 
-// Initial renders
-renderPageLists();
-renderMap();
+// Initial load
+updateLanguage('kn');
 </script>
 </body>
 </html>
