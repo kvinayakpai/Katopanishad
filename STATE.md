@@ -181,3 +181,4 @@ git remote get-url origin
 - Source book is sole authority — never fill gaps from general knowledge
 - Never normalise Sanskrit/Kannada spelling to standard forms
 - If a source page is unclear or ambiguous, place a `[NOTE: unclear — needs page N re-read]` placeholder and flag to user
+
