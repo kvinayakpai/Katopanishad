@@ -673,6 +673,11 @@ function switchView(viewName) {
   }
 }
 
+function viewPage(pageNum) {
+  currentFocusPage = pageNum;
+  switchView('focus');
+}
+
 // UI Translations dictionary
 const UI_TRANSLATIONS = {
   kn: {
@@ -826,15 +831,12 @@ function renderPageLists() {
   PAGES.forEach(page => {
     const item = document.createElement('div');
     item.className = 'page-item';
+    item.setAttribute('onclick', `viewPage(${page.num})`);
     const titleText = currentLanguage === 'en' ? page.title_en : page.title;
     item.innerHTML = `
       <span class="title">${page.num}. ${titleText}</span>
       <span class="badge">Page ${page.num}</span>
     `;
-    item.addEventListener('click', () => {
-      currentFocusPage = page.num;
-      switchView('focus');
-    });
     
     // Categorize
     if (page.num <= 7) {
@@ -849,10 +851,6 @@ function renderPageLists() {
     
     // Map to chapter lists
     const chapItem = item.cloneNode(true);
-    chapItem.addEventListener('click', () => {
-      currentFocusPage = page.num;
-      switchView('focus');
-    });
     
     // Chapter mapping by page ranges
     if (page.num >= 8 && page.num <= 27) lists.c11.appendChild(chapItem);
