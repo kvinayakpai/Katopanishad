@@ -24,11 +24,11 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 
 | Page | Status    | Notes |
 |------|-----------|-------|
-| 1    | ✅ Done   | |
-| 2    | ✅ Done   | |
-| 3    | ✅ Done   | |
-| 4    | ✅ Done   | |
-| 5    | ✅ Done   | |
+| 1    | ✅ Re-transcribed | Cover page re-transcribed from scratch |
+| 2    | ✅ Re-transcribed | Table of Contents re-transcribed from scratch |
+| 3    | ✅ Re-transcribed | Table of Contents contd. re-transcribed from scratch |
+| 4    | ✅ Re-transcribed | Preface 1 re-transcribed from scratch |
+| 5    | ✅ Re-transcribed | Preface 2 re-transcribed from scratch |
 | 6    | ✅ Done   | |
 | 7    | ✅ Done   | |
 | 8    | ✅ Done   | |

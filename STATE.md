@@ -81,10 +81,21 @@ Notes:
 
 ## Session Log
 
-### Session: 2026-07-02 (this session)
+### Session: 2026-07-03 (this session)
+
+**What was done:**
+- Set up programmatic guardrails: Created `.agents/AGENTS.md` to automatically load rules for future Antigravity agents.
+- Created `verify_text.py` script to check for double spaces, detached matras, unmatched brackets, and diacritic errors.
+- Created `build_docx.py` to compile `kata-upanishad-text.txt` into a clean Word document `kata-upanishad.docx`.
+- Re-transcribed Pages 1 to 5 from scratch via vision-reading the images, eliminating all legacy typos and hallucinations.
+- Validated Pages 1 to 5 successfully using `verify_text.py` (0 errors, 0 warnings).
+- Compiled and saved the updated Word document `kata-upanishad.docx`.
+
+### Session: 2026-07-02 (prior session)
 
 **What was done:**
 - Confirmed pages 53–57 have already been transcribed by previous session, covering the completion of Adhyāya 2, Prathamā Vallī (shlokas 2-2-8 to 2-2-15).
+
 - Transcribed Pages 58–66 (printed pages 57–65) for Adhyāya 2, Dvitīyā Vallī, covering shlokas 1–15 and completing the entire Dvitīyā Vallī.
 - Transcribed Pages 67–71 (printed pages 66–70) for Adhyāya 2, Tṛtīyā Vallī, covering shlokas 1–6. This includes the cosmic Ashvattha tree, Brahman's terrifying power (vajra) for the wicked, human body as the unique vehicle for spiritual realization, visual clarity of Brahman in different realms (dreamlike vs. sathyaloka), and the role of indwelling deities.
 - Verified and appended pages 86–93 (printed pages 85–92) and pages 94–109 (printed pages 93–108) of the Kannada Poetic Translation section, covering Adhyāya 1, Vallī 1 (Verses 17–29) and Adhyāya 1, Vallī 2 (Verses 1–21).
