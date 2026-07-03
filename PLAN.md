@@ -29,16 +29,16 @@ Katha Upanishad commentary in Kannada) into accurate Kannada text in
 | 3    | ✅ Re-transcribed | Table of Contents contd. re-transcribed from scratch |
 | 4    | ✅ Re-transcribed | Preface 1 re-transcribed from scratch |
 | 5    | ✅ Re-transcribed | Preface 2 re-transcribed from scratch |
-| 6    | ✅ Done   | |
-| 7    | ✅ Done   | |
-| 8    | ✅ Done   | |
-| 9    | ✅ Done   | |
-| 10   | ✅ Done   | |
-| 11   | ✅ Done   | |
-| 12   | ✅ Done   | |
-| 13   | ✅ Done   | |
-| 14   | ✅ Done   | |
-| 15   | ✅ Done   | |
+| 6    | ✅ Re-transcribed | Re-transcribed from scratch |
+| 7    | ✅ Re-transcribed | Re-transcribed from scratch |
+| 8    | ✅ Re-transcribed | Re-transcribed from scratch |
+| 9    | ✅ Re-transcribed | Re-transcribed from scratch |
+| 10   | ✅ Re-transcribed | Re-transcribed from scratch |
+| 11   | ✅ Re-transcribed | Re-transcribed from scratch |
+| 12   | ✅ Re-transcribed | Re-transcribed from scratch |
+| 13   | ✅ Re-transcribed | Re-transcribed from scratch |
+| 14   | ✅ Re-transcribed | Re-transcribed from scratch |
+| 15   | ✅ Re-transcribed | Re-transcribed from scratch |
 | 16   | ✅ Done   | |
 | 17   | ✅ Done   | |
 | 18   | ✅ Done   | |

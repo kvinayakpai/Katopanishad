@@ -87,8 +87,8 @@ Notes:
 - Set up programmatic guardrails: Created `.agents/AGENTS.md` to automatically load rules for future Antigravity agents.
 - Created `verify_text.py` script to check for double spaces, detached matras, unmatched brackets, and diacritic errors.
 - Created `build_docx.py` to compile `kata-upanishad-text.txt` into a clean Word document `kata-upanishad.docx`.
-- Re-transcribed Pages 1 to 5 from scratch via vision-reading the images, eliminating all legacy typos and hallucinations.
-- Validated Pages 1 to 5 successfully using `verify_text.py` (0 errors, 0 warnings).
+- Re-transcribed Pages 1 to 15 from scratch via vision-reading the images, eliminating all legacy typos and hallucinations.
+- Validated Pages 1 to 15 successfully using `verify_text.py` (0 errors, 0 warnings for the re-transcribed pages).
 - Compiled and saved the updated Word document `kata-upanishad.docx`.
 
 ### Session: 2026-07-02 (prior session)
