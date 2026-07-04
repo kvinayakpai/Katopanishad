@@ -1126,15 +1126,7 @@ function renderFocusPage() {
   
   if (currentLanguage === 'en') {
     textField.className = 'body-text large-font';
-    const formattedEnglish = formatEnglishContent(page.content_en, page.summary_en);
-    let htmlContent = `
-      ${formattedEnglish}
-      <div style="opacity: 0.85; font-size: 15px; border-top: 1px dashed var(--rule); padding-top: 16px; margin-top: 24px;">
-        <strong style="color: var(--ink-fade); display: block; margin-bottom: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;">Original Kannada / Sanskrit</strong>
-        ${page.content.replace(/\n/g, '<br>')}
-      </div>
-    `;
-    textField.innerHTML = htmlContent;
+    textField.innerHTML = formatEnglishContent(page.content_en, page.summary_en);
   } else {
     textField.className = 'body-text';
     textField.textContent = page.content;
