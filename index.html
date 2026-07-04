@@ -487,6 +487,170 @@ footer {
   z-index: 10;
 }
 
+/* ============ GITA LINKS VIEW ============ */
+.gita-wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 16px;
+  min-height: calc(100vh - 220px);
+}
+@media (max-width: 768px) {
+  .gita-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+.gita-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--paper-2);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+.gita-conn-item {
+  padding: 10px 12px;
+  background: var(--paper);
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.gita-conn-item:hover, .gita-conn-item.active {
+  border-color: var(--rust);
+  transform: translateY(-1px);
+}
+.gita-conn-item.active {
+  background: var(--paper-2);
+  border-width: 2px;
+}
+.gita-conn-item .title-kn {
+  font-family: 'Noto Sans Kannada', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.gita-conn-item .title-en {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+.gita-conn-item .ref-badge {
+  font-size: 10px;
+  color: var(--ink-fade);
+  margin-top: 6px;
+  display: block;
+}
+
+.gita-detail-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.gita-detail-card h3 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--rust);
+}
+body.lang-kn .gita-detail-card h3 {
+  font-family: 'Noto Sans Kannada', sans-serif;
+  font-size: 20px;
+}
+.gita-detail-card .explanation {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  white-space: pre-wrap;
+}
+body.lang-kn .gita-detail-card .explanation {
+  font-family: 'Noto Sans Kannada', sans-serif;
+  font-size: 15.5px;
+}
+.gita-verses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-top: 1px dashed var(--rule);
+  border-bottom: 1px dashed var(--rule);
+  padding: 16px 0;
+}
+@media (max-width: 600px) {
+  .gita-verses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.gita-verse-box {
+  background: rgba(158, 58, 26, 0.03);
+  border-left: 3px solid var(--rust);
+  padding: 12px;
+  border-radius: 0 8px 8px 0;
+}
+.gita-verse-box .source-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-fade);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.gita-verse-box .verse-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--ink);
+}
+body.lang-kn .gita-verse-box .verse-text {
+  font-family: 'Tiro Kannada', 'Noto Sans Kannada', serif;
+  font-size: 16px;
+  font-style: normal;
+}
+.gita-verse-box .verse-ref {
+  font-size: 11px;
+  color: var(--rust);
+  font-weight: 600;
+  margin-top: 6px;
+  display: block;
+}
+.gita-actions {
+  display: flex;
+  gap: 12px;
+}
+.gita-action-btn {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.gita-action-btn:hover {
+  background: var(--rule-soft);
+  color: var(--ink);
+}
+.gita-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: var(--ink-fade);
+  text-align: center;
+}
+
 /* ============ UTILITIES ============ */
 .hidden {
   display: none !important;
@@ -498,8 +662,8 @@ footer {
 
   <header class="top">
     <div class="brand">
-      <span class="name">Katopanishad · <em>Tatva Jalam</em></span>
-      <span class="crumb">Bannanje Govindacharya</span>
+      <span class="name">Katopanishad · <em>Tatva Jaalam</em></span>
+      <span class="crumb">Madhwa</span>
     </div>
     <div class="lang">
       <button id="btn-lang-kn" class="on">KN</button>
@@ -513,6 +677,7 @@ footer {
     <button id="tab-chapters">Chapters</button>
     <button id="tab-map">Map</button>
     <button id="tab-chat">Chat</button>
+    <button id="tab-gita">Gītā Links</button>
   </nav>
 
   <section class="search">
@@ -629,6 +794,14 @@ footer {
         </div>
       </div>
     </div>
+
+    <!-- Gita Connections View -->
+    <div id="view-gita" class="hidden">
+      <div class="gita-wrap">
+        <div class="gita-list" id="gita-connections-list"></div>
+        <div class="gita-detail-panel" id="gita-connection-details"></div>
+      </div>
+    </div>
   </main>
 
 </div>
@@ -646,12 +819,15 @@ let activeView = 'browse';
 let currentFocusPage = 1;
 let currentLanguage = 'kn';
 
-// Tab switching
-const tabs = ['browse', 'focus', 'chapters', 'map', 'chat'];
+// Tab switching via hash
+const tabs = ['browse', 'focus', 'chapters', 'map', 'chat', 'gita'];
 tabs.forEach(tab => {
-  document.getElementById(`tab-${tab}`).addEventListener('click', () => {
-    switchView(tab);
-  });
+  const btn = document.getElementById(`tab-${tab}`);
+  if (btn) {
+    btn.addEventListener('click', () => {
+      window.location.hash = tab;
+    });
+  }
 });
 
 function switchView(viewName) {
@@ -659,12 +835,14 @@ function switchView(viewName) {
   tabs.forEach(tab => {
     const btn = document.getElementById(`tab-${tab}`);
     const view = document.getElementById(`view-${tab}`);
-    if (tab === viewName) {
-      btn.classList.add('on');
-      view.classList.remove('hidden');
-    } else {
-      btn.classList.remove('on');
-      view.classList.add('hidden');
+    if (btn && view) {
+      if (tab === viewName) {
+        btn.classList.add('on');
+        view.classList.remove('hidden');
+      } else {
+        btn.classList.remove('on');
+        view.classList.add('hidden');
+      }
     }
   });
   
@@ -673,16 +851,20 @@ function switchView(viewName) {
   }
 }
 
-function viewPage(pageNum) {
+function viewPage(pageNum, verseRef) {
   currentFocusPage = pageNum;
-  switchView('focus');
+  if (verseRef) {
+    window.location.hash = `page=${pageNum}?verse=${verseRef}`;
+  } else {
+    window.location.hash = `page=${pageNum}`;
+  }
 }
 
 // UI Translations dictionary
 const UI_TRANSLATIONS = {
   kn: {
-    brand_name: 'ಕಠೋಪನಿಷತ್ · <em>ತತ್ವ ಜಲಂ</em>',
-    brand_crumb: 'ಬನ್ನಂಜೆ ಗೋವಿಂದಾಚಾರ್ಯ',
+    brand_name: 'ಕಠೋಪನಿಷತ್ · <em>ತತ್ವ ಜಾಲಂ</em>',
+    brand_crumb: 'ಮಾಧ್ವ',
     tab_browse: 'ವಿಷಯ ಸೂಚಿ',
     tab_focus: 'ಏಕಾಗ್ರತೆ',
     tab_chapters: 'ಅಧ್ಯಾಯಗಳು',
@@ -707,11 +889,12 @@ const UI_TRANSLATIONS = {
       { text: "ಶ್ರೇಯಸ್ಸು ಮತ್ತು ಪ್ರೇಯಸ್ಸು ಎಂದರೇನು?", label: "ಶ್ರೇಯಸ್ಸು vs ಪ್ರೇಯಸ್ಸು" },
       { text: "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಯೋಗವನ್ನು ಹೇಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ?", label: "ಯೋಗದ ವ್ಯಾಖ್ಯಾನ" }
     ],
-    defaultResponse: "ಕಠೋಪನಿಷತ್ ಬಗ್ಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳನ್ನು ವಿವರಿಸಲು ನಾನು ಸಂತೋಷಪಡುತ್ತೇನೆ!"
+    defaultResponse: "ಕಠೋಪನಿಷತ್ ಬಗ್ಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳನ್ನು ವಿವರಿಸಲು ನಾನು ಸಂತೋಷಪಡುತ್ತೇನೆ!",
+    tab_gita: 'ಗೀತಾ ಕೊಂಡಿಗಳು'
   },
   en: {
-    brand_name: 'Katopanishad · <em>Tatva Jalam</em>',
-    brand_crumb: 'Bannanje Govindacharya',
+    brand_name: 'Katopanishad · <em>Tatva Jaalam</em>',
+    brand_crumb: 'Madhwa',
     tab_browse: 'Browse',
     tab_focus: 'Focus',
     tab_chapters: 'Chapters',
@@ -736,7 +919,8 @@ const UI_TRANSLATIONS = {
       { text: "What is Shreyas vs Preyas?", label: "Shreyas vs Preyas" },
       { text: "How is Yoga defined in Katopanishad?", label: "Definition of Yoga" }
     ],
-    defaultResponse: "I'm happy to help explain anything about the Katopanishad!"
+    defaultResponse: "I'm happy to help explain anything about the Katopanishad!",
+    tab_gita: 'Gita Connection'
   }
 };
 
@@ -799,11 +983,18 @@ function updateLanguage(lang) {
     suggestionsDiv.appendChild(chip);
   });
   
+  // Update gita tab button
+  const tabGita = document.getElementById('tab-gita');
+  if (tabGita) {
+    tabGita.textContent = UI_TRANSLATIONS[lang].tab_gita;
+  }
+
   // Re-render components with the new language state
   renderPageLists();
   renderFocusPage();
   renderMap();
   renderConceptDetails(selectedConceptId);
+  renderGitaLinks();
 }
 
 // Render Page lists
@@ -909,14 +1100,12 @@ function renderFocusPage() {
 // Focus navigation
 document.getElementById('focus-prev').addEventListener('click', () => {
   if (currentFocusPage > 1) {
-    currentFocusPage--;
-    renderFocusPage();
+    viewPage(currentFocusPage - 1);
   }
 });
 document.getElementById('focus-next').addEventListener('click', () => {
   if (currentFocusPage < PAGES.length) {
-    currentFocusPage++;
-    renderFocusPage();
+    viewPage(currentFocusPage + 1);
   }
 });
 
@@ -1039,8 +1228,18 @@ function renderMap() {
 function selectConcept(id) {
   selectedConceptId = id;
   const panel = document.getElementById('concept-details-panel');
-  panel.classList.add('active');
+  if (panel) {
+    panel.classList.add('active');
+    setTimeout(() => {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 50);
+  }
   renderConceptDetails(id);
+  
+  const newHash = `map?concept=${id}`;
+  if (window.location.hash.substring(1) !== newHash) {
+    window.location.hash = newHash;
+  }
 }
 
 function renderConceptDetails(id) {
@@ -1049,28 +1248,42 @@ function renderConceptDetails(id) {
   if (!node) return;
   
   const badge = document.getElementById('concept-badge-field');
-  badge.textContent = node.tier;
-  badge.style.setProperty('--color', `var(--t-${node.tier})`);
+  if (badge) {
+    badge.textContent = node.tier;
+    badge.style.setProperty('--color', `var(--t-${node.tier})`);
+  }
   
-  document.getElementById('concept-title-field').textContent = currentLanguage === 'kn' ? node.title.kn : node.title.en;
-  document.getElementById('concept-desc-field').textContent = currentLanguage === 'kn' ? node.note.kn : node.note.en;
+  const titleField = document.getElementById('concept-title-field');
+  if (titleField) {
+    titleField.textContent = currentLanguage === 'kn' ? node.title.kn : node.title.en;
+  }
+  
+  const descField = document.getElementById('concept-desc-field');
+  if (descField) {
+    descField.textContent = currentLanguage === 'kn' ? node.note.kn : node.note.en;
+  }
   
   // Render linked pages
   const linksField = document.getElementById('concept-links-field');
-  linksField.innerHTML = '';
-  
-  // Parse page list from note refs (e.g., "Page 12 · Page 82")
-  const pagesList = node.refs.split('·').map(p => parseInt(p.replace(/[^\d]/g, '')));
-  pagesList.forEach(pNum => {
-    const link = document.createElement('a');
-    link.className = 'concept-link';
-    link.textContent = `Page ${pNum}`;
-    link.addEventListener('click', () => {
-      currentFocusPage = pNum;
-      switchView('focus');
+  if (linksField) {
+    linksField.innerHTML = '';
+    
+    // Parse page list from note refs (e.g., "Page 39#1.3.3")
+    const refsParts = node.refs.split('·').map(r => r.trim());
+    refsParts.forEach(refStr => {
+      const [pStr, verseRef] = refStr.split('#');
+      const pNum = parseInt(pStr.replace(/[^\d]/g, ''));
+      if (!isNaN(pNum)) {
+        const link = document.createElement('a');
+        link.className = 'concept-link';
+        link.textContent = verseRef ? `Page ${pNum} (${verseRef})` : `Page ${pNum}`;
+        link.addEventListener('click', () => {
+          viewPage(pNum, verseRef || '');
+        });
+        linksField.appendChild(link);
+      }
     });
-    linksField.appendChild(link);
-  });
+  }
 }
 
 // Chat responses mapping
@@ -1112,8 +1325,319 @@ function askQuestion(qText) {
   }, 300);
 }
 
+// Gītā Connections state
+let selectedGitaConnectionId = null;
+
+function renderGitaLinks() {
+  const listContainer = document.getElementById('gita-connections-list');
+  const detailContainer = document.getElementById('gita-connection-details');
+  if (!listContainer || !detailContainer) return;
+  
+  listContainer.innerHTML = '';
+  
+  if (typeof GITA_CONNECTIONS === 'undefined') {
+    listContainer.innerHTML = '<div style="padding: 12px; color: var(--ink-fade);">No connections data available</div>';
+    return;
+  }
+  
+  GITA_CONNECTIONS.forEach(conn => {
+    const item = document.createElement('div');
+    item.className = 'gita-conn-item';
+    if (selectedGitaConnectionId === conn.id) {
+      item.classList.add('active');
+    }
+    
+    const titleText = currentLanguage === 'kn' ? conn.title.kn : conn.title.en;
+    
+    // Extract Katha page number for badge
+    const pMatch = conn.kathaRef.match(/Page\s+(\d+)/i);
+    const pageBadgeText = pMatch ? `Page ${pMatch[1]}` : '';
+    
+    item.innerHTML = `
+      <div class="title-kn">${conn.title.kn}</div>
+      <div class="title-en">${conn.title.en}</div>
+      <span class="ref-badge">${pageBadgeText} · ${conn.gitaRef}</span>
+    `;
+    
+    item.addEventListener('click', () => {
+      selectGitaConnection(conn.id);
+    });
+    listContainer.appendChild(item);
+  });
+  
+  renderGitaConnectionDetails();
+}
+
+function selectGitaConnection(id) {
+  selectedGitaConnectionId = id;
+  
+  // Highlight in list
+  const items = document.querySelectorAll('.gita-conn-item');
+  items.forEach((item, idx) => {
+    if (typeof GITA_CONNECTIONS !== 'undefined' && GITA_CONNECTIONS[idx] && GITA_CONNECTIONS[idx].id === id) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+  
+  renderGitaConnectionDetails();
+  
+  // update hash
+  const newHash = `gita?connection=${id}`;
+  if (window.location.hash.substring(1) !== newHash) {
+    window.location.hash = newHash;
+  }
+}
+
+function renderGitaConnectionDetails() {
+  const detailContainer = document.getElementById('gita-connection-details');
+  if (!detailContainer) return;
+  
+  if (!selectedGitaConnectionId && typeof GITA_CONNECTIONS !== 'undefined' && GITA_CONNECTIONS.length > 0) {
+    // Select first by default
+    selectedGitaConnectionId = GITA_CONNECTIONS[0].id;
+    // Highlight list item
+    const firstItem = document.querySelector('.gita-conn-item');
+    if (firstItem) firstItem.classList.add('active');
+  }
+  
+  const conn = typeof GITA_CONNECTIONS !== 'undefined' ? GITA_CONNECTIONS.find(c => c.id === selectedGitaConnectionId) : null;
+  
+  if (!conn) {
+    detailContainer.innerHTML = `
+      <div class="gita-empty-state">
+        <h3 style="margin-bottom: 8px;">Select a Gītā Connection</h3>
+        <p>Explore how Sri Krishna's teachings in the Bhagavadgita parallel and build upon the ancient Katha Upanishad.</p>
+      </div>
+    `;
+    return;
+  }
+  
+  const title = currentLanguage === 'kn' ? conn.title.kn : conn.title.en;
+  const explanation = currentLanguage === 'kn' ? conn.connection.kn : conn.connection.en;
+  
+  // Parse page number for Katha action button
+  const pMatch = conn.kathaRef.match(/Page\s+(\d+)/i);
+  const pageNum = pMatch ? parseInt(pMatch[1]) : null;
+  
+  // Extract verse number for highlight (e.g. "1.3.3")
+  let verseRef = '';
+  if (conn.id === "eternity_of_soul") verseRef = "1.2.18";
+  else if (conn.id === "chariot_metaphor") verseRef = "1.3.3";
+  else if (conn.id === "ashvattha_tree") verseRef = "2.3.1";
+  else if (conn.id === "brahman_light") verseRef = "2.2.15";
+  else if (conn.id === "vaisvanara_fire") verseRef = "1.1.7";
+  else if (conn.id === "eleven_gates") verseRef = "2.2.1";
+  else if (conn.id === "triple_disciplines") verseRef = "1.1.17";
+  else if (conn.id === "hierarchy_purusha") verseRef = "1.3.10";
+  else if (conn.id === "shraddha_faith") verseRef = "1.1.9";
+  
+  // Create external link to Bhagavadgita portal
+  const bgPortalUrl = `../Bhagavadgita/viewer.html#map?concept=${conn.gitaNode}`;
+  
+  detailContainer.innerHTML = `
+    <div class="gita-detail-card">
+      <h3 class="card-title">${title}</h3>
+      
+      <div class="gita-verses-grid">
+        <div class="gita-verse-box">
+          <div class="source-label">Katha Upanishad</div>
+          <div class="verse-text">${conn.kathaShloka}</div>
+          <div class="verse-ref">${conn.kathaRef}</div>
+        </div>
+        <div class="gita-verse-box">
+          <div class="source-label">Bhagavad Gita</div>
+          <div class="verse-text">${conn.gitaShloka}</div>
+          <div class="verse-ref">${conn.gitaRef}</div>
+        </div>
+      </div>
+      
+      <div class="explanation">${explanation}</div>
+      
+      <div class="gita-actions">
+        ${pageNum ? `
+          <button class="gita-action-btn" onclick="viewPage(${pageNum}, '${verseRef}')">
+            ${currentLanguage === 'kn' ? 'ಕಠೋಪನಿಷತ್ ಪುಟ ನೋಡಿ' : 'View Katha Page'}
+          </button>
+        ` : ''}
+        <a class="gita-action-btn" style="text-decoration: none; text-align: center; line-height: 1.5;" href="${bgPortalUrl}" target="_blank">
+          ${currentLanguage === 'kn' ? 'ಗೀತೆಯ ಪರಿಕಲ್ಪನೆ ನೋಡಿ' : 'View Gita Concept'}
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+// Router routing logic
+function handleRouting() {
+  const hash = window.location.hash.substring(1);
+  if (!hash) {
+    switchView('browse');
+    return;
+  }
+  
+  // Parse path and query parameters
+  let path = hash;
+  let queryStr = '';
+  
+  if (hash.includes('?')) {
+    const parts = hash.split('?');
+    path = parts[0];
+    queryStr = parts[1] || '';
+  } else if (hash.includes('&')) {
+    const idx = hash.indexOf('&');
+    path = hash.substring(0, idx);
+    queryStr = hash.substring(idx + 1);
+  }
+  
+  const params = {};
+  if (queryStr) {
+    queryStr.split('&').forEach(pair => {
+      const [k, v] = pair.split('=');
+      if (k) params[k] = decodeURIComponent(v || '');
+    });
+  }
+  
+  if (path.startsWith('page=')) {
+    const pageNum = parseInt(path.split('=')[1]);
+    if (!isNaN(pageNum)) {
+      currentFocusPage = pageNum;
+      switchView('focus');
+      
+      setTimeout(() => {
+        if (params.verse) {
+          highlightAndScroll(params.verse);
+        } else if (params.q) {
+          highlightAndScroll(params.q);
+        }
+      }, 100);
+    }
+  } else if (path === 'map') {
+    switchView('map');
+    if (params.concept) {
+      setTimeout(() => {
+        // Visual selection in map
+        const nodes = document.querySelectorAll('.map-node');
+        nodes.forEach(n => {
+          const textEl = n.querySelector('text');
+          if (textEl && textEl.textContent.trim().toLowerCase() === params.concept.toLowerCase()) {
+            n.dispatchEvent(new Event('click'));
+          }
+        });
+        
+        // Select logic
+        const matchedNode = NODES.find(n => n.id === params.concept);
+        if (matchedNode) {
+          selectConcept(matchedNode.id);
+        }
+      }, 200);
+    }
+  } else if (path === 'gita') {
+    switchView('gita');
+    if (params.connection) {
+      selectGitaConnection(params.connection);
+    } else {
+      renderGitaLinks();
+    }
+  } else {
+    // browse, chapters, chat
+    if (tabs.includes(path)) {
+      switchView(path);
+    }
+  }
+}
+
+// Section highlighting & scrolling
+function highlightAndScroll(targetText) {
+  const textField = document.getElementById('focus-text');
+  if (!textField) return;
+  
+  // Clean up previous highlights
+  removeHighlights(textField);
+  
+  if (!targetText) return;
+  
+  const regex = new RegExp(`(${escapeRegExp(targetText)})`, 'gi');
+  const targetTextKn = translateToKannadaDigits(targetText);
+  const regexKn = new RegExp(`(${escapeRegExp(targetTextKn)})`, 'gi');
+  
+  let found = false;
+  
+  // Traverse text nodes to avoid replacing inside HTML tags
+  const walker = document.createTreeWalker(textField, NodeFilter.SHOW_TEXT, null, false);
+  let node;
+  const nodesToReplace = [];
+  while (node = walker.nextNode()) {
+    if (regex.test(node.nodeValue) || regexKn.test(node.nodeValue)) {
+      nodesToReplace.push(node);
+    }
+  }
+  
+  nodesToReplace.forEach(textNode => {
+    const parent = textNode.parentNode;
+    if (parent && parent.tagName !== 'MARK') {
+      const val = textNode.nodeValue;
+      const span = document.createElement('span');
+      let html = val.replace(regex, '<mark class="highlight" style="background: #ffd54f; padding: 2px 4px; border-radius: 4px; font-weight: bold; color: #000;">$1</mark>');
+      html = html.replace(regexKn, '<mark class="highlight" style="background: #ffd54f; padding: 2px 4px; border-radius: 4px; font-weight: bold; color: #000;">$1</mark>');
+      span.innerHTML = html;
+      parent.replaceChild(span, textNode);
+      found = true;
+    }
+  });
+  
+  if (found) {
+    setTimeout(() => {
+      const firstMark = textField.querySelector('mark.highlight');
+      if (firstMark) {
+        firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 150);
+  }
+}
+
+function removeHighlights(element) {
+  const marks = element.querySelectorAll('mark.highlight');
+  marks.forEach(mark => {
+    const parent = mark.parentNode;
+    if (parent) {
+      const text = document.createTextNode(mark.textContent);
+      parent.replaceChild(text, mark);
+      if (parent.tagName === 'SPAN' && parent.childNodes.length === 1) {
+        const grandParent = parent.parentNode;
+        if (grandParent) grandParent.replaceChild(text.cloneNode(true), parent);
+      }
+    }
+  });
+}
+
+function translateToKannadaDigits(numStr) {
+  const digits = {
+    '0': '೦', '1': '೧', '2': '೨', '3': '೩', '4': '೪',
+    '5': '೫', '6': '೬', '7': '೭', '8': '೮', '9': '೯'
+  };
+  return numStr.split('').map(c => digits[c] || c).join('');
+}
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^\${}()|[\]\\]/g, '\\$&');
+}
+
+// Global hooks
+window.viewPage = viewPage;
+
+// Listen for routing changes
+window.addEventListener('hashchange', handleRouting);
+
 // Initial load
-updateLanguage('kn');
+if (window.location.hash) {
+  updateLanguage('kn');
+  handleRouting();
+} else {
+  updateLanguage('kn');
+  window.location.hash = 'browse';
+}
 </script>
 </body>
 </html>
