@@ -792,6 +792,7 @@ body.lang-kn .gita-verse-box .verse-text {
           <div class="suggestion-chip" onclick="askQuestion('What is Shreyas vs Preyas?')">Shreyas vs Preyas</div>
           <div class="suggestion-chip" onclick="askQuestion('How is Yoga defined in Katopanishad?')">Definition of Yoga</div>
         </div>
+      </div>
     </div>
 
     <!-- Gita Connections View -->
@@ -1068,6 +1069,52 @@ function renderPageLists() {
   });
 }
 
+// Helper to format English content beautifully with Devanagari and IAST styles
+function formatEnglishContent(content_en, summary_en) {
+  if (!content_en) {
+    return `
+      <div style="background: rgba(158, 58, 26, 0.05); border-left: 4px solid var(--rust); padding: 16px; margin-bottom: 24px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: var(--ink-soft);">
+        <strong style="color: var(--rust); display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">English Summary</strong>
+        ${summary_en}
+      </div>
+    `;
+  }
+
+  const lines = content_en.split('\n');
+  let html = '<div class="english-translation-content" style="font-family: \'Inter\', sans-serif; font-size: 16px; line-height: 1.6; color: var(--ink-soft);">';
+  let lastWasDev = false;
+
+  lines.forEach(line => {
+    line = line.trim();
+    if (!line) return;
+
+    const isDev = /[\u0900-\u097F]/.test(line);
+
+    if (line.startsWith("Source:") || line.startsWith("Source ")) {
+      html += `<div style="text-align: right; font-size: 12px; color: var(--ink-fade); margin-top: 16px; font-style: italic;">${line}</div>`;
+      lastWasDev = false;
+    } else if (isDev) {
+      html += `<div style="text-align: center; font-weight: 700; font-size: 17px; margin: 12px 0 2px 0; color: var(--ink); font-family: 'Noto Sans Devanagari', serif;">${line}</div>`;
+      lastWasDev = true;
+    } else if (lastWasDev) {
+      html += `<div style="text-align: center; font-style: italic; font-size: 14.5px; color: var(--rust); margin: 0 0 12px 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; letter-spacing: 0.2px;">${line}</div>`;
+      lastWasDev = false;
+    } else if (line.startsWith('[') && line.endsWith(']')) {
+      html += `<div style="font-style: italic; font-size: 15px; color: var(--ink-soft); margin: 10px 0; padding-left: 16px; border-left: 2px solid var(--rule-soft);">${line}</div>`;
+      lastWasDev = false;
+    } else if (line.startsWith('✦')) {
+      html += `<div style="text-align: center; margin: 16px 0; font-weight: bold; color: var(--rust);">${line}</div>`;
+      lastWasDev = false;
+    } else {
+      html += `<p style="margin: 0 0 12px 0; text-align: justify; text-justify: inter-word;">${line}</p>`;
+      lastWasDev = false;
+    }
+  });
+
+  html += '</div>';
+  return html;
+}
+
 // Render Focus page
 function renderFocusPage() {
   const page = PAGES.find(p => p.num === currentFocusPage);
@@ -1079,12 +1126,10 @@ function renderFocusPage() {
   
   if (currentLanguage === 'en') {
     textField.className = 'body-text large-font';
+    const formattedEnglish = formatEnglishContent(page.content_en, page.summary_en);
     let htmlContent = `
-      <div style="background: rgba(158, 58, 26, 0.05); border-left: 4px solid var(--rust); padding: 16px; margin-bottom: 24px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: var(--ink-soft);">
-        <strong style="color: var(--rust); display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">English Summary & Translation</strong>
-        ${page.summary_en}
-      </div>
-      <div style="opacity: 0.85; font-size: 15px; border-top: 1px dashed var(--rule); padding-top: 16px;">
+      ${formattedEnglish}
+      <div style="opacity: 0.85; font-size: 15px; border-top: 1px dashed var(--rule); padding-top: 16px; margin-top: 24px;">
         <strong style="color: var(--ink-fade); display: block; margin-bottom: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;">Original Kannada / Sanskrit</strong>
         ${page.content.replace(/\n/g, '<br>')}
       </div>
