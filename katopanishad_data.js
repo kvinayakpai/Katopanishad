@@ -1252,7 +1252,7 @@ const NODES = [
       "en": "In Kata Upanishad, Purusha is the highest principle, transcending Avyakta (the unmanifest). He is the supreme goal (1.3.11).",
       "kn": "ಕಠೋಪನಿಷತ್ತಿನ ಪ್ರಕಾರ ಪುರುಷನಿಗಿಂತ ಮಿಗಿಲಾದದ್ದು ಯಾವುದೂ ಇಲ್ಲ. ಅವನೇ ಅಂತಿಮ ಗುರಿ (೧.೩.೧೧)."
     },
-    "refs": "Page 121 · Page 164"
+    "refs": "Page 121#2.3.8 · Page 164#1.3.11"
   },
   {
     "id": "atman",
@@ -1267,7 +1267,7 @@ const NODES = [
       "en": "The eternal inner self of the individual. It is not born, nor does it die (1.2.18). It is smaller than the smallest and greater than the greatest (1.2.20).",
       "kn": "ಆತ್ಮನು ಜನ್ಮರಹಿತನು, ಮರಣರಹಿತನು. ಅವನು ಅಣುವಿಗಿಂತ ಅಣು, ಮಹತ್ತಿಗಿಂತ ಮಹತ್ತು (೧.೨.೧೮, ೧.೨.೨೦)."
     },
-    "refs": "Page 34 · Page 110 · Page 161"
+    "refs": "Page 34#1.2.18 · Page 110#1.2.18 · Page 161#1.2.18"
   },
   {
     "id": "preta_vicikitsa",
@@ -1282,7 +1282,7 @@ const NODES = [
       "en": "Nachiketa's third boon request: the doubt regarding what happens to a person after death — some say he exists, others say he does not (1.1.20).",
       "kn": "ನಚಿಕೇತನ ಮೂರನೇ ವರ: ಮೃತರಾದ ನಂತರ ಜೀವಿಯು ಇರುತ್ತಾನೋ ಇಲ್ಲವೋ ಎಂಬ ಅತೀಂದ್ರಿಯ ಪ್ರಶ್ನೆ (೧.೧.೨೦)."
     },
-    "refs": "Page 19 · Page 86 · Page 158"
+    "refs": "Page 19#1.1.20 · Page 86#1.1.20 · Page 158#1.1.20"
   },
   {
     "id": "shreyas",
@@ -1297,7 +1297,7 @@ const NODES = [
       "en": "The path of spiritual goodness and eternal welfare. It leads to liberation but requires discrimination to choose over pleasure (1.2.1).",
       "kn": "ಆತ್ಮಕಲ್ಯಾಣಕ್ಕೆ ದಾರಿಯಾದ ಶ್ರೇಯೋಮಾರ್ಗ. ಇದು ಮೋಕ್ಷಕ್ಕೆ ಕಾರಣವಾಗುತ್ತದೆ (೧.೨.೧)."
     },
-    "refs": "Page 28 · Page 98 · Page 160"
+    "refs": "Page 28#1.2.1 · Page 98#1.2.1 · Page 160#1.2.1"
   },
   {
     "id": "preyas",
@@ -1312,7 +1312,7 @@ const NODES = [
       "en": "The path of material pleasure and immediate gratification. Choosing preyas binds the soul to the cycle of rebirth (1.2.1).",
       "kn": "ಐಹಿಕ ಸುಖಗಳಿಗೆ ದಾರಿಯಾದ ಪ್ರೇಯೋಮಾರ್ಗ. ಇದನ್ನು ಆರಿಸಿಕೊಳ್ಳುವವನು ಜನ್ಮ-ಮರಣಗಳ ಚಕ್ರಕ್ಕೆ ಸಿಲುಕುತ್ತಾನೆ (೧.೨.೧)."
     },
-    "refs": "Page 28 · Page 98 · Page 160"
+    "refs": "Page 28#1.2.1 · Page 98#1.2.1 · Page 160#1.2.1"
   },
   {
     "id": "nachiketa_agni",
@@ -1327,7 +1327,7 @@ const NODES = [
       "en": "The special fire sacrifice taught by Yama to Nachiketa as the second boon, leading to heavenly realms and immortality (1.1.13-16).",
       "kn": "ಯಮನು ನಚಿಕೇತನಿಗೆ ಬೋಧಿಸಿದ ವಿಶೇಷ ಅಗ್ನಿವಿದ್ಯೆ (ಎರಡನೇ ವರ), ಇದು ಸ್ವರ್ಗಲೋಕ ಮತ್ತು ಮೋಕ್ಷಕ್ಕೆ ಕಾರಣವಾಗುತ್ತದೆ (೧.೧.೧೩-೧೬)."
     },
-    "refs": "Page 12 · Page 82 · Page 157"
+    "refs": "Page 12#1.1.13 · Page 82#1.1.13 · Page 157#1.1.13"
   },
   {
     "id": "yoga_definition",
@@ -1342,7 +1342,7 @@ const NODES = [
       "en": "Yoga is defined in Kata Upanishad as the steady control of the senses, intellect, and mind (Sthiram Indriya Dharanam) (2.3.11).",
       "kn": "ಇಂದ್ರಿಯಗಳು ಮತ್ತು ಮನಸ್ಸಿನ ಸ್ಥಿರವಾದ ನಿಗ್ರಹವೇ ಯೋಗ (೨.೩.೧೧)."
     },
-    "refs": "Page 70 · Page 150 · Page 170"
+    "refs": "Page 70#2.3.11 · Page 150#2.3.11 · Page 170#2.3.11"
   },
   {
     "id": "ratha_metaphor",
@@ -1357,7 +1357,7 @@ const NODES = [
       "en": "The famous metaphor of the chariot (1.3.3-4): the soul is the passenger, body is the chariot, intellect is the charioteer, mind is the reins, senses are the horses.",
       "kn": "ಕಠೋಪನಿಷತ್ತಿನ ಪ್ರಸಿದ್ಧ ರಥ ಕಲ್ಪನೆ: ಶರೀರವೇ ರಥ, ಬುದ್ಧಿಯೇ ಸಾರಥಿ, ಮನಸ್ಸೇ ಕಡಿವಾಣ, ಇಂದ್ರಿಯಗಳೇ ಕುದುರೆಗಳು, ಆತ್ಮನೇ ರಥಿಕ (೧.೩.೩-೪)."
     },
-    "refs": "Page 39 · Page 113 · Page 163"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
   },
   {
     "id": "buddhi",
@@ -1372,7 +1372,7 @@ const NODES = [
       "en": "The charioteer (sarathi). It must be wakeful and discriminate to lead the chariot safely to the goal.",
       "kn": "ರಥ ಕಲ್ಪನೆಯಲ್ಲಿ 'ಸಾರಥಿ'. ಇದು ತಪ್ಪು-ಸರಿಗಳನ್ನು ವಿವೇಚಿಸಿ ರಥವನ್ನು ಸರಿಯಾದ ದಾರಿಯಲ್ಲಿ ಮುನ್ನಡೆಸುತ್ತದೆ (೧.೩.೩)."
     },
-    "refs": "Page 39 · Page 113 · Page 163"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
   },
   {
     "id": "manas",
@@ -1387,7 +1387,7 @@ const NODES = [
       "en": "The reins (pragraha). It links the intellect (charioteer) to the senses (horses). If uncontrolled, the horses run wild.",
       "kn": "ರಥ ಕಲ್ಪನೆಯಲ್ಲಿ 'ಕಡಿವಾಣ'. ಇದು ಸಾರಥಿಯ ಹಿಡಿತದಲ್ಲಿದ್ದರೆ ಮಾತ್ರ ಕುದುರೆಗಳನ್ನು ನಿಯಂತ್ರಿಸಬಹುದು (೧.೩.೩)."
     },
-    "refs": "Page 39 · Page 113 · Page 163"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
   },
   {
     "id": "indriya",
@@ -1402,7 +1402,7 @@ const NODES = [
       "en": "The horses (haya). They run after sense objects (roads). If undisciplined, they lead the soul to destruction.",
       "kn": "ರಥ ಕಲ್ಪನೆಯಲ್ಲಿ 'ಕುದುರೆಗಳು'. ಇವು ವಿಷಯಗಳೆಂಬ ದಾರಿಯಲ್ಲಿ ಓಡುತ್ತವೆ (೧.೩.೪)."
     },
-    "refs": "Page 39 · Page 113 · Page 163"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
   },
   {
     "id": "moksha",
@@ -1417,7 +1417,7 @@ const NODES = [
       "en": "The state of eternal peace, immortality (Amritatva), and freedom from the cycle of birth and death, attained by realizing the Purusha.",
       "kn": "ಹುಟ್ಟು-ಸಾವಿನ ಚಕ್ರದಿಂದ ಬಿಡುಗಡೆ ಪಡೆದು ನಿರಂತರ ಆನಂದವನ್ನು ಹೊಂದುವ ಸ್ಥಿತಿ (೨.೩.೧೪)."
     },
-    "refs": "Page 72 · Page 151 · Page 170"
+    "refs": "Page 72#2.3.14 · Page 151#2.3.14 · Page 170#2.3.14"
   }
 ];
 
@@ -1487,5 +1487,162 @@ const EDGES = [
     "target": "indriya",
     "type": "leads-to",
     "label": "reins in"
+  }
+];
+
+
+const GITA_CONNECTIONS = [
+  {
+    "id": "eternity_of_soul",
+    "kathaNode": "atman",
+    "gitaNode": "jiva",
+    "title": {
+      "kn": "ಆತ್ಮನ ನಿತ್ಯತ್ವ (ಜನ್ಮರಹಿತ/ಮರಣರಹಿತ)",
+      "en": "Eternity of the Soul (Birthless & Deathless)"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೨, ಶ್ಲೋಕ ೧೮ (Page 36)",
+    "gitaRef": "BG 2.20",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತಿನ 'ನ ಜಾಯತೇ ಮ್ರಿಯತೇ ವಾ...' ಎಂಬ ಶ್ಲೋಕವು ಭಗವದ್ಗೀತೆಯ ಎರಡನೇ ಅಧ್ಯಾಯದಲ್ಲಿ (೨.೨೦) ಸಣ್ಣ ವ್ಯತ್ಯಾಸದೊಂದಿಗೆ ಪುನರಾವರ್ತನೆಯಾಗಿದೆ. ಎರಡರಲ್ಲೂ ಆತ್ಮನು ಹುಟ್ಟು-ಸಾವುಗಳಿಂದ ಮುಕ್ತನಾಗಿದ್ದಾನೆ ಮತ್ತು ಶರೀರವು ನಾಶವಾದರೂ ಆತ್ಮನು ನಾಶವಾಗುವುದಿಲ್ಲ ಎಂದು ಸಾರಲಾಗಿದೆ.",
+      "en": "The famous verse 'na jāyate mriyate vā...' from Katha Upanishad (1.2.18) is reproduced nearly word-for-word by Sri Krishna in Bhagavad Gita (2.20). Both declare that the soul is birthless, eternal, and undecaying, remaining untouched even when the body is slain."
+    },
+    "kathaShloka": "ನ ಜಾಯತೇ ಮ್ರಿಯತೇ ವಾ ವಿಪಶ್ಚಿನ್\nನಾಯಂ ಕುತಶ್ಚಿನ್ ನ ಬಭೂವ ಕಶ್ಚಿತ್ |\nಅಜೋ ನಿತ್ಯಃ ಶಾಶ್ವತೋಽಯಂ ಪುರಾಣೋ\nನ ಹನ್ಯತೇ ಹನ್ಯಮಾನೇ ಶರೀರೇ ||",
+    "gitaShloka": "ನ ಜಾಯತೇ ಮ್ರಿಯತೇ ವಾ ಕದಾಚಿನ್\nನಾಯಂ ಭೂತ್ವಾ ಭವಿತಾ ವಾ ನ ಭೂಯಃ |\nಅಜೋ ನಿತ್ಯಃ ಶಾಶ್ವತೋಽಯಂ ಪುರಾಣೋ\nನ ಹನ್ಯತೇ ಹನ್ಯಮಾನೇ ಶರೀರೇ ||"
+  },
+  {
+    "id": "chariot_metaphor",
+    "kathaNode": "ratha_metaphor",
+    "gitaNode": "ratha_rupaka",
+    "title": {
+      "kn": "ರಥ ಕಲ್ಪನೆ ಮತ್ತು ಇಂದ್ರಿಯ ನಿಗ್ರಹ",
+      "en": "The Chariot Metaphor & Sense Control"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೩, ಶ್ಲೋಕ ೩-೪ (Page 40-41)",
+    "gitaRef": "BG 18.61 & BG Setting",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಬರುವ ರಥದ ಕಲ್ಪನೆ (ಶರೀರವೇ ರಥ, ಬುದ್ಧಿಯೇ ಸಾರಥಿ, ಮನಸ್ಸೇ ಕಡಿವಾಣ, ಇಂದ್ರಿಯಗಳೇ ಕುದುರೆಗಳು) ಭಗವದ್ಗೀತೆಯ ಕಲ್ಪನೆಗೆ ಆಧಾರವಾಗಿದೆ. ಭಗವದ್ಗೀತೆಯಲ್ಲಿ ಭಗವಾನ್ ಕೃಷ್ಣನೇ ಸಾರಥಿಯಾಗಿ ಅರ್ಜುನನೆಂಬ ಜೀವವನ್ನು ಮುನ್ನಡೆಸುವ ಮೂಲಕ ಈ ರೂಪಕವು ಸಾಕಾರಗೊಂಡಿದೆ.",
+      "en": "The famous Chariot Metaphor of Katha Upanishad (1.3.3-4) — where the body is the chariot, intellect is the charioteer, mind is the reins, and senses are the horses — is physically dramatized in the Bhagavad Gita, with Sri Krishna acting as the divine Charioteer guiding Arjuna (the jīva)."
+    },
+    "kathaShloka": "ಆತ್ಮಾನಂ ರಥಿನಂ ವಿದ್ಧಿ ಶರೀರಂ ರಥಮೇವ ತು |\nಬುದ್ಧಿಂ ತು ಸಾರಥಿಂ ವಿದ್ಧಿ ಮನಃ ಪ್ರಗ್ರಹಮೇವ ಚ ||\nಇಂದ್ರಿಯانی ಹಯಾನಾಹುರ್ವಿಷಯಾಂಸ್ತೇಷು ಗೋಚರಾನ್ |\nಆತ್ಮೇಂದ್ರಿಯಮನೋಯುಕ್ತಂ ಭೋಕ್ತೇತ್ಯಾಹುರ್ಮನೀಷಿಣಃ ||",
+    "gitaShloka": "ಈಶ್ವರಃ ಸರ್ವಭೂತಾನಾಂ ಹೃದ್ದೇಶೇಽರ್ಜುನ ತಿಷ್ಠತಿ |\nಭ್ರಾಮಯನ್ ಸರ್ವಭೂತಾನಿ ಯಂತ್ರಾರೂಢಾನಿ ಮಾಯಯಾ ||"
+  },
+  {
+    "id": "ashvattha_tree",
+    "kathaNode": "atman",
+    "gitaNode": "ashvattha",
+    "title": {
+      "kn": "ಸಂಸಾರ ವೃಕ್ಷ (ಅಶ್ವತ್ಥ)",
+      "en": "The Cosmic Ashvattha Tree"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೨, ವಲ್ಲೀ ೩, ಶ್ಲೋಕ ೧ (Page 67)",
+    "gitaRef": "BG 15.1",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತಿನ ಕೊನೆಯ ವಲ್ಲಿಯಲ್ಲಿ ಬರುವ 'ಊರ್ಧ್ವಮೂಲೋಽವಾಕ್ಶಾಖ...' ಎಂಬ ಅಶ್ವತ್ಥ ವೃಕ್ಷದ ವರ್ಣನೆಯೇ ಭಗವದ್ಗೀತೆಯ ಹದಿನೈದನೇ ಅಧ್ಯಾಯದ ಆರಂಭದಲ್ಲಿ ಬರುತ್ತದೆ. ಭಗವದ್ಗೀತೆಯು ಈ ಮರದ ಎಲೆಗಳೇ ವೇದಗಳು ಎಂದು ಹೆಚ್ಚುವರಿಯಾಗಿ ವಿವರಿಸುತ್ತದೆ. ಎರಡರಲ್ಲೂ ಈ ಜಗತ್ತು ಕ್ಷಣಿಕ ಮತ್ತು ನಿರಂತರ ಚಲನಶೀಲವಾಗಿದೆ ಎಂದು ಬಣ್ಣಿಸಲಾಗಿದೆ.",
+      "en": "The description of the cosmic Ashvattha tree with its roots above (Brahman) and branches below in Katha Upanishad (2.3.1) is directly expanded by Sri Krishna in Bhagavad Gita (15.1). The Gita adds that its leaves are the Vedic hymns, symbolizing the temporary yet continuous nature of the material universe."
+    },
+    "kathaShloka": "ಊರ್ಧ್ವಮೂಲೋಽವಾಕ್ಶಾಖ ಏಷೋಽಶ್ವತ್ಥಃ ಸನಾತನಃ |\nತದೇವ ಶುಕ್ರಂ ತದ್ಬ್ರಹ್ಮ ತದೇವಾಮೃತಮುಚ್ಯತೇ ||",
+    "gitaShloka": "ಊರ್ಧ್ವಮೂಲಮಧಃಶಾಖಮಶ್ವತ್ಥಂ ಪ್ರಾಹುರವ್ಯಯಮ್ |\nಛಂದಾಂಸಿ ಯಸ್ಯ ಪರ್ಣಾನಿ ಯಸ್ತಂ ವೇದ ಸ ವೇದವಿತ್ ||"
+  },
+  {
+    "id": "brahman_light",
+    "kathaNode": "moksha",
+    "gitaNode": "jyotir_jyoti",
+    "title": {
+      "kn": "ಪರಂಜ್ಯೋತಿಯ ಸ್ವಯಂಪ್ರಕಾಶತ್ವ",
+      "en": "Brahman as the Source of All Light"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೨, ವಲ್ಲೀ ೨, ಶ್ಲೋಕ ೧೫ (Page 65-66)",
+    "gitaRef": "BG 15.6",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತಿನ 'ನ ತತ್ರ ಸೂರ್ಯೋ ಭಾತಿ...' ಎಂಬ ಶ್ಲೋಕವು ಭಗವಂತನ ಧಾಮದಲ್ಲಿ ಭೌತಿಕ ಸೂರ್ಯ, ಚಂದ್ರ ಅಥವಾ ಅಗ್ನಿ ಪ್ರಕಾಶಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ, ಏಕೆಂದರೆ ಸಮಸ್ತ ಜಗತ್ತು ಆತನ ಬೆಳಕಿನಿಂದಲೇ ಪ್ರಕಾಶಿಸುತ್ತದೆ ಎಂದು ಸಾರುತ್ತದೆ. ಇದನ್ನೇ ಶ್ರೀಕೃಷ್ಣನು ಗೀತೆಯಲ್ಲಿ (೧೫.೬) 'ನ ತದ್ ಭಾಸಯತೇ ಸೂರ್ಯೋ...' ಎಂದು ವಿವರಿಸುತ್ತಾನೆ.",
+      "en": "Katha Upanishad (2.2.15) asserts that the sun, moon, stars, and fire cannot illuminate the supreme reality, as they all shine only by reflecting His light. Sri Krishna echoes this in Bhagavad Gita (15.6), stating that His supreme abode needs no sun, moon, or fire to light it."
+    },
+    "kathaShloka": "ನ ತತ್ರ ಸೂರ್ಯೋ ಭಾತಿ ನ ಚಂದ್ರತಾರಕಂ\nನೇಮಾ ವಿದ್ಯುತೋ ಭಾಂತಿ ಕುತೋಽಯಮಗ್ನಿಃ |\nತಮೇವ ಭಾಂತಮನುಭಾತಿ ಸರ್ವಂ\nತಸ್ಯ ಭಾಸಾ ಸರ್ವಮಿದಂ ವಿಭಾತಿ ||",
+    "gitaShloka": "ನ ತದ್ ಭಾಸಯತೇ ಸೂರ್ಯೋ ನ ಶಶಾಂಕೋ ನ ಪಾವಕಃ |\nಯದ್ ಗತ್ವಾ ನ ನಿವರ್ತಂತೇ ತದ್ ಧಾಮ ಪರಮಂ ಮಮ ||"
+  },
+  {
+    "id": "vaisvanara_fire",
+    "kathaNode": "nachiketa_agni",
+    "gitaNode": "antaryamin",
+    "title": {
+      "kn": "ವೈಶ್ವಾನರ ರೂಪದ ಭಗವಂತ",
+      "en": "Vaishvanara - The Indwelling Fire"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೧, ಶ್ಲೋಕ ೭ (Page 16)",
+    "gitaRef": "BG 15.14",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಹಸಿದ ಜ್ಞಾನಿ ಅತಿಥಿಯನ್ನು ಹೊಟ್ಟೆಯಲ್ಲಿ ವೈಶ್ವಾನರನನ್ನಿಟ್ಟುಕೊಂಡ ಬ್ರಾಹ್ಮಣನಿಗೆ ಹೋಲಿಸಲಾಗಿದೆ. ಬನ್ನಂಜೆ ಗೋವಿಂದಾಚಾರ್ಯರು ತಮ್ಮ ವಿವರಣೆಯಲ್ಲಿ ಭಗವದ್ಗೀತೆಯ ೧೫.೧೪ ಶ್ಲೋಕವನ್ನು ಉಲ್ಲೇಖಿಸಿ, ಭಗವಂತನೇ ಎಲ್ಲ ಜೀವಿಗಳ ದೇಹದಲ್ಲಿ ವೈಶ್ವಾನರ ಅಗ್ನಿಯಾಗಿ ನೆಲೆಸಿದ್ದಾನೆ ಎಂಬುದನ್ನು ಸ್ಪಷ್ಟಪಡಿಸಿದ್ದಾರೆ.",
+      "en": "Katha Upanishad (1.1.7) compares a guest to the sacred fire (Vaishvanara) entering a household. In his commentary, Bannanje Govindacharya links this to Bhagavad Gita (15.14), where Sri Krishna states: 'I am the Vaishvanara fire abiding in the bodies of all living beings, digesting their food.'"
+    },
+    "kathaShloka": "ವೈಶ್ವಾನರಃ ಪ್ರವಿಶತ್ಯತಿಥಿರ್ಬ್ರಾಹ್ಮಣೋ ಗೃಹಾನ್ |\nತಸ್ಯೈತಾಂ ಶಾಂತಿಂ ಕುರ್ವಂತಿ ಹರ ವೈವಸ್ವತೋದಕಮ್ ||",
+    "gitaShloka": "ಅಹಂ ವೈಶ್ವಾನರೋ ಭೂತ್ವಾ prāṇināṃ ದೇಹಮಾಶ್ರಿತಃ |\nಪ್ರಾಣಾಪಾನಸಮಾಯುಕ್ತಃ ಪಚಾಮಿನ್ನಂ ಚತುರ್ವಿಧಮ್ ||"
+  },
+  {
+    "id": "eleven_gates",
+    "kathaNode": "atman",
+    "gitaNode": "kshetra_field",
+    "title": {
+      "kn": "ದೇಹದ ಹನ್ನೊಂದು ದ್ವಾರಗಳು",
+      "en": "City of Eleven vs. Nine Gates"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೨, ವಲ್ಲೀ ೨, ಶ್ಲೋಕ ೧ (Page 57)",
+    "gitaRef": "BG 5.13",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತು ಶರೀರವನ್ನು ಹನ್ನೊಂದು ದ್ವಾರಗಳಿರುವ ಪಟ್ಟಣಕ್ಕೆ ಹೋಲಿಸುತ್ತದೆ (ಒಂಬತ್ತು ಪ್ರಸಿದ್ಧ ದ್ವಾರಗಳ ಜೊತೆಗೆ ನಾಭಿ ಮತ್ತು ಬ್ರಹ್ಮರಂಧ್ರ). ಭಗವದ್ಗೀತೆಯಲ್ಲಿ (೫.೧೩) ಕೃಷ್ಣನು ದೇಹವನ್ನು ಒಂಬತ್ತು ದ್ವಾರಗಳ ಪಟ್ಟಣವೆಂದು ಕರೆದು, ಜ್ಞಾನಿಯು ಇದರಲ್ಲಿ ಸುಖವಾಗಿ ನೆಲೆಸಿರುತ್ತಾನೆ ಎಂದು ವಿವರಿಸುತ್ತಾನೆ.",
+      "en": "Katha Upanishad (2.2.1) compares the body to a city of eleven gates (adding the navel and the crown of the head/sahasrara). In Bhagavad Gita (5.13), Sri Krishna describes the body as a city of nine gates, where the self-controlled soul rests peacefully without acting."
+    },
+    "kathaShloka": "ಪುರಮೇಕಾದಶದ್ವಾರಮಜಸ್ಯಾವಕ್ರಚೇತಸಃ |\nಅನುಷ್ಠಾಯ ನ ಶೋಚತಿ ವಿಮುಕ್ತಶ್ಚ ವಿಮುಚ್ಯತೇ ||",
+    "gitaShloka": "ಸರ್ವಕರ್ಮಾಣಿ ಮನಸಾ ಸಂನ್ಯಸ್ಯಾಸ್ತೇ ಸುಖಂ ವಶೀ |\nನವದ್ವಾರೇ ಪುರೇ ದೇಹೀ ನೈವ ಕುರ್ವನ್ ನ ಕಾರಯನ್ ||"
+  },
+  {
+    "id": "triple_disciplines",
+    "kathaNode": "nachiketa_agni",
+    "gitaNode": "sadhana",
+    "title": {
+      "kn": "ಯಜ್ಞ, ದಾನ ಮತ್ತು ತಪಸ್ಸು",
+      "en": "Yajna, Dana, and Tapas"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೧, ಶ್ಲೋಕ ೧೭ (Page 19-20)",
+    "gitaRef": "BG 17.5 & 18.5",
+    "connection": {
+      "kn": "ಯಮನು ತ್ರಿನಾಚಿಕೇತ ಅಗ್ನಿಯ ಉಪಾಸನೆಗೆ 'ತ್ರಿಕರ್ಮಕೃತ್' (ಯಜ್ಞ, ದಾನ, ತಪಸ್ಸು ಎಂಬ ಮೂರು ಕರ್ಮಗಳನ್ನು ಮಾಡುವವನು) ಆಗಿರಬೇಕು ಎಂದು ಹೇಳುತ್ತಾನೆ. ಬನ್ನಂಜೆ ಗೋವಿಂದಾಚಾರ್ಯರು ತಮ್ಮ ವಿವರಣೆಯಲ್ಲಿ ಭಗವದ್ಗೀತೆಯ ೧೭ ಮತ್ತು ೧೮ನೇ ಅಧ್ಯಾಯವನ್ನು ಉಲ್ಲೇಖಿಸಿ, ಇವುಗಳನ್ನು ನಿತ್ಯಜೀವನದಲ್ಲಿ ಹೇಗೆ ಅಳವಡಿಸಿಕೊಳ್ಳಬೇಕು ಎಂದು ವಿವರಿಸಿದ್ದಾರೆ.",
+      "en": "Lord Yama states that to master the Nachiketa fire, one must perform three duties ('tri-karma-krit'): Yajna, Dana, and Tapas. In his commentary, Bannanje Govindacharya references Bhagavad Gita Chapter 17, explaining how these three actions must be offered selflessly for purification."
+    },
+    "kathaShloka": "ತ್ರಿಣಾಚಿಕೇತಸ್ತ್ರಿಭಿರೇತ್ಯ ಸಂಧಿಂ ತ್ರಿಕರ್ಮಕೃತ್ತರತಿ ಜನ್ಮಮೃತ್ಯೂ ||",
+    "gitaShloka": "ಯಜ್ಞದಾನತಪಃಕರ್ಮ ನ ತ್ಯಾಜ್ಯಂ ಕಾರ್ಯಮೇವ ತತ್ |\nಯಜ್ಞೋ ದಾನಂ ತಪಶ್ಚೈವ ಪಾವನಾನಿ ಮನೀಷಿಣಾಮ್ ||"
+  },
+  {
+    "id": "hierarchy_purusha",
+    "kathaNode": "purusha",
+    "gitaNode": "purushottama",
+    "title": {
+      "kn": "ಇಂದ್ರಿಯಗಳಿಗಿಂತ ಪರಮಪುರುಷ ಶ್ರೇಷ್ಠ",
+      "en": "Hierarchy of Senses & Purusha"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೩, ಶ್ಲೋಕ ೧೦-೧೧ (Page 44-45)",
+    "gitaRef": "BG 3.42",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತು ಇಂದ್ರಿಯಗಳಿಗಿಂತ ಮನಸ್ಸು, ಬುದ್ಧಿ ಮತ್ತು ಅವ್ಯಕ್ತಗಳು ಹಂತಹಂತವಾಗಿ ಶ್ರೇಷ್ಠವೆಂದು ಹೇಳುತ್ತಾ ಕೊನೆಗೆ ಪರಮಪುರುಷನೇ ಅಂತಿಮ ಮಿತಿ ಎಂದು ಸಾರುತ್ತದೆ. ಭಗವದ್ಗೀತೆಯಲ್ಲಿ (೩.೪೨) ಶ್ರೀಕೃಷ್ಣನು ಇದೇ ಶ್ರೇಣಿಯನ್ನು ವಿವರಿಸಿ, ಬುದ್ಧಿಗಿಂತಲೂ ಮಿಗಿಲಾದವನೇ ಭಗವಂತ ಎಂದು ತಿಳಿಸುತ್ತಾನೆ.",
+      "en": "Katha Upanishad (1.3.10-11) describes a ladder of reality: senses, mind, intellect, unmanifest, and finally the Purusha, beyond whom there is nothing. Sri Krishna simplifies this hierarchy in Bhagavad Gita (3.42), asserting that the self is higher than the intellect."
+    },
+    "kathaShloka": "ಮಹತಃ ಪರಮವ್ಯಕ್ತಮವ್ಯಕ್ತಾದ್ಪುರುಷಃ ಪರಃ |\nಪುರುಷಾನ್ನ ಪರಂ ಕಿಂಚಿತ್ ಸಾ ಕಾಷ್ಠಾ ಸಾ ಪರಾ ಗತಿಃ ||",
+    "gitaShloka": "ಇಂದ್ರಿಯಾಣಿ ಪರಾಣ್ಯಾಹುರಿಂದ್ರಿಯೇಭ್ಯಃ ಪರಂ ಮನಃ |\nಮನಸಸ್ತು ಪರಾ ಬುದ್ಧಿರ್ಯೋ ಬುದ್ಧೇಃ ಪರತಸ್ತು ಸಃ ||"
+  },
+  {
+    "id": "shraddha_faith",
+    "kathaNode": "atman",
+    "gitaNode": "sadhana",
+    "title": {
+      "kn": "ಶ್ರದ್ಧೆಯಿಂದ ಜ್ಞಾನ ಸಿದ್ಧಿ",
+      "en": "Shraddha as Pre-requisite"
+    },
+    "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೧, ಶ್ಲೋಕ ೯ (Page 13)",
+    "gitaRef": "BG 4.39",
+    "connection": {
+      "kn": "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಬಾಲಕ ನಚಿಕೇತನ ಶ್ರದ್ಧೆ ಮತ್ತು ಸಂಕಲ್ಪವನ್ನು ಕಂಡು ಯಮನು ವರಗಳನ್ನು ನೀಡುತ್ತಾನೆ. ಬನ್ನಂಜೆ ಗೋವಿಂದಾಚಾರ್ಯರು ಇದಕ್ಕೆ ಪೂರಕವಾಗಿ ಗೀತೆಯ 'ಶ್ರದ್ಧಾವಾನ್ ಲಭತೇ ಜ್ಞಾನಂ' ಎಂಬ ತತ್ವವನ್ನು ಉಲ್ಲೇಖಿಸಿ, ಭಗವಂತ ಮತ್ತು ಜ್ಞಾನಿಗಳಲ್ಲಿ ಶ್ರದ್ಧೆ ಇಡುವುದು ಅಧ್ಯಾತ್ಮ ಜ್ಞಾನದ ಮೊದಲ ಹಂತ ಎಂದು ಪ್ರತಿಪಾದಿಸುತ್ತಾರೆ.",
+      "en": "Lord Yama yields to Nachiketa because of his unwavering resolve and faith (Shraddha). Bannanje Govindacharya connects this to Sri Krishna's famous declaration in Bhagavad Gita (4.39): 'The man of faith, who is devoted and has controlled his senses, attains spiritual wisdom.'"
+    },
+    "kathaShloka": "ತ್ವತ್ತೋ ವರಂ ಕಶ್ಚಿದ್ ವೃಣೀತಾತಿಥಿರ್ಬ್ರಾಹ್ಮಣೋ ಮಮ ||",
+    "gitaShloka": "ಶ್ರದ್ಧಾವಾನ್ ಲಭತೇ ಜ್ಞಾನಂ ತತ್ಪರಃ ಸಂಯತೇಂದ್ರಿಯಃ |\nಜ್ಞಾನಂ ಲಬ್ಧ್ವಾ ಪರಾಂ ಶಾಂತಿಮಚಿರೇಣಾಧಿಗಚ್ಛತಿ ||"
   }
 ];
