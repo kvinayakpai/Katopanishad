@@ -7,7 +7,7 @@
 <title>Katopanishad · Tatva Jalam</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #f4ead8;
@@ -561,6 +561,11 @@ footer {
   font-weight: 700;
   color: var(--rust);
 }
+.devanagari-text {
+  font-family: 'Noto Sans Devanagari', 'Mangal', 'Kokila', system-ui, sans-serif;
+  line-height: 1.8;
+}
+
 body.lang-kn .gita-detail-card h3 {
   font-family: 'Noto Sans Kannada', sans-serif;
   font-size: 20px;
@@ -668,6 +673,8 @@ body.lang-kn .gita-verse-box .verse-text {
     <div class="lang">
       <button id="btn-lang-kn" class="on">KN</button>
       <button id="btn-lang-en">EN</button>
+      <button id="btn-lang-hi">HI</button>
+      <button id="btn-lang-sa">SA</button>
     </div>
   </header>
 
@@ -921,6 +928,66 @@ const UI_TRANSLATIONS = {
     ],
     defaultResponse: "I'm happy to help explain anything about the Katopanishad!",
     tab_gita: 'Gita Connection'
+  },
+  hi: {
+    brand_name: 'कठोपनिषत् · <em>तत्व जालं</em>',
+    brand_crumb: 'माध्व',
+    tab_browse: 'विषय सूची',
+    tab_focus: 'एकाग्रता',
+    tab_chapters: 'अध्याय',
+    tab_map: 'मानचित्र',
+    tab_chat: 'संवाद',
+    search_placeholder: 'पृष्ठ, श्लोक, अवधारणाएँ खोजें...',
+    sec_intro: 'प्रस्तावना और शांतिपाठ',
+    sec_commentary: 'कन्नड विवरण और टिप्पणी',
+    sec_poetic: 'कन्नड पद्यरूप',
+    sec_sanskrit: 'मूल संस्कृत श्लोक',
+    sec_c11: 'अध्याय १ - वल्ली १',
+    sec_c12: 'अध्याय १ - वल्ली २',
+    sec_c13: 'अध्याय १ - वल्ली ३',
+    sec_c21: 'अध्याय २ - वल्ली १',
+    sec_c22: 'अध्याय २ - वल्ली २',
+    sec_c23: 'अध्याय २ - वल्ली ३',
+    footer_stats: 'कठोपनिषत् दर्शक • १७१ पृष्ठ • ५६५७ पंक्तियाँ',
+    welcome_chat: 'हरे कृष्ण! कठोपनिषत् अन्वेषक में स्वागत है। जीवन, मृत्यु और आत्मज्ञान के गहन रहस्यों को जानने के लिए नीचे प्रश्न चुनें।',
+    chat_suggestions: [
+      { text: "नचिकेत के तीन वर क्या थे?", label: "तीन वर" },
+      { text: "रथ के रूपक को समझाइए।", label: "रथ रूपक" },
+      { text: "श्रेयस् और प्रेयस् क्या है?", label: "श्रेयस् vs प्रेयस्" },
+      { text: "कठोपनिषत् में योग की परिभाषा क्या है?", label: "योग की परिभाषा" }
+    ],
+    defaultResponse: "कठोपनिषत् के बारे में किसी भी प्रश्न का उत्तर देने में मुझे प्रसन्नता होगी!",
+    tab_gita: 'गीता संबंध'
+  },
+  sa: {
+    brand_name: 'कठोपनिषत् · <em>तत्त्वजालम्</em>',
+    brand_crumb: 'माध्वम्',
+    tab_browse: 'विषयसूची',
+    tab_focus: 'एकाग्रता',
+    tab_chapters: 'अध्यायाः',
+    tab_map: 'मानचित्रम्',
+    tab_chat: 'संवादः',
+    search_placeholder: 'पृष्ठानि, श्लोकाः, अवधारणाः अन्विष्यन्तु...',
+    sec_intro: 'प्रस्तावना च शान्तिपाठः',
+    sec_commentary: 'कन्नड विवरणम् च टिप्पणी',
+    sec_poetic: 'कन्नड पद्यरूपम्',
+    sec_sanskrit: 'मूलसंस्कृतश्लोकाः',
+    sec_c11: 'अध्यायः १ - वल्ली १',
+    sec_c12: 'अध्यायः १ - वल्ली २',
+    sec_c13: 'अध्यायः १ - वल्ली ३',
+    sec_c21: 'अध्यायः २ - वल्ली १',
+    sec_c22: 'अध्यायः २ - वल्ली २',
+    sec_c23: 'अध्यायः २ - वल्ली ३',
+    footer_stats: 'कठोपनिषद्दर्शकः • १७१ पृष्ठानि • ५६५७ पङ्क्तयः',
+    welcome_chat: 'हरे कृष्ण! कठोपनिषद् अन्वेषकं स्वागतम्। जीवनस्य मृत्योः आत्मज्ञानस्य च गहनरहस्यानि जिज्ञासवः अधो प्रश्नं वृणुत।',
+    chat_suggestions: [
+      { text: "नचिकेतस्य त्रयो वराः के?", label: "त्रयो वराः" },
+      { text: "रथस्य रूपकं विवृणुत।", label: "रथरूपकम्" },
+      { text: "श्रेयश्च प्रेयश्च किम्?", label: "श्रेयः vs प्रेयः" },
+      { text: "कठोपनिषदि योगस्य लक्षणं किम्?", label: "योगलक्षणम्" }
+    ],
+    defaultResponse: "कठोपनिषदि यद्यपि किञ्चित् प्रश्नयति, तस्य उत्तरं दातुं मे आनन्दः!",
+    tab_gita: 'गीतासम्बन्धः'
   }
 };
 
@@ -1115,6 +1182,35 @@ function formatEnglishContent(content_en, summary_en) {
   return html;
 }
 
+// Format Devanagari content (Hindi / Sanskrit) with shloka-aware styling
+function formatDevanagariContent(content, summary_en) {
+  if (!content) {
+    return `
+      <div style="background: rgba(158, 58, 26, 0.05); border-left: 4px solid var(--rust); padding: 16px; margin-bottom: 24px; border-radius: 4px; font-family: 'Noto Sans Devanagari', system-ui, sans-serif; font-size: 16px; line-height: 1.8; color: var(--ink-soft);">
+        <strong style="color: var(--rust); display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Summary</strong>
+        ${summary_en || ''}
+      </div>
+    `;
+  }
+  const lines = content.split('\n');
+  let html = '<div class="devanagari-content" style="font-family: \'Noto Sans Devanagari\', \'Mangal\', system-ui, sans-serif; font-size: 17px; line-height: 1.9; color: var(--ink);">';
+  lines.forEach(line => {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      html += '<div style="height: 10px;"></div>';
+      return;
+    }
+    // Shloka lines: contain । or ॥
+    if (/[।॥]/.test(trimmed)) {
+      html += `<div style="font-weight: 600; color: var(--rust); margin: 10px 0 4px; font-size: 16px; border-left: 3px solid var(--rust); padding-left: 10px;">${trimmed}</div>`;
+    } else {
+      html += `<p style="margin: 0 0 10px;">${trimmed}</p>`;
+    }
+  });
+  html += '</div>';
+  return html;
+}
+
 // Render Focus page
 function renderFocusPage() {
   const page = PAGES.find(p => p.num === currentFocusPage);
@@ -1127,6 +1223,12 @@ function renderFocusPage() {
   if (currentLanguage === 'en') {
     textField.className = 'body-text large-font';
     textField.innerHTML = formatEnglishContent(page.content_en, page.summary_en);
+  } else if (currentLanguage === 'hi') {
+    textField.className = 'body-text large-font devanagari-text';
+    textField.innerHTML = formatDevanagariContent(page.content_hi, page.summary_en);
+  } else if (currentLanguage === 'sa') {
+    textField.className = 'body-text large-font devanagari-text';
+    textField.innerHTML = formatDevanagariContent(page.content_sa, page.summary_en);
   } else {
     textField.className = 'body-text';
     textField.textContent = page.content;
@@ -1162,17 +1264,16 @@ document.getElementById('search-input').addEventListener('input', (e) => {
 });
 
 // Language toggle
-document.getElementById('btn-lang-kn').addEventListener('click', () => {
-  updateLanguage('kn');
-  document.getElementById('btn-lang-kn').classList.add('on');
-  document.getElementById('btn-lang-en').classList.remove('on');
-});
-
-document.getElementById('btn-lang-en').addEventListener('click', () => {
-  updateLanguage('en');
-  document.getElementById('btn-lang-en').classList.add('on');
-  document.getElementById('btn-lang-kn').classList.remove('on');
-});
+function setLangButton(activeLang) {
+  ['kn', 'en', 'hi', 'sa'].forEach(lang => {
+    const btn = document.getElementById(`btn-lang-${lang}`);
+    if (btn) btn.classList.toggle('on', lang === activeLang);
+  });
+}
+document.getElementById('btn-lang-kn').addEventListener('click', () => { updateLanguage('kn'); setLangButton('kn'); });
+document.getElementById('btn-lang-en').addEventListener('click', () => { updateLanguage('en'); setLangButton('en'); });
+document.getElementById('btn-lang-hi').addEventListener('click', () => { updateLanguage('hi'); setLangButton('hi'); });
+document.getElementById('btn-lang-sa').addEventListener('click', () => { updateLanguage('sa'); setLangButton('sa'); });
 
 // Ontology Map & Nodes layout
 let selectedConceptId = null;
