@@ -1764,7 +1764,8 @@ const NODES = [
       "en": "In Kata Upanishad, Purusha is the highest principle, transcending Avyakta (the unmanifest). He is the supreme goal (1.3.11).",
       "kn": "ಕಠೋಪನಿಷತ್ತಿನ ಪ್ರಕಾರ ಪುರುಷನಿಗಿಂತ ಮಿಗಿಲಾದದ್ದು ಯಾವುದೂ ಇಲ್ಲ. ಅವನೇ ಅಂತಿಮ ಗುರಿ (೧.೩.೧೧)."
     },
-    "refs": "Page 121#2.3.8 · Page 164#1.3.11"
+    "refs": "Page 121#2.3.8 · Page 164#1.3.11",
+    "sa": "पुरुषः"
   },
   {
     "id": "atman",
@@ -1779,7 +1780,8 @@ const NODES = [
       "en": "The eternal inner self of the individual. It is not born, nor does it die (1.2.18). It is smaller than the smallest and greater than the greatest (1.2.20).",
       "kn": "ಆತ್ಮನು ಜನ್ಮರಹಿತನು, ಮರಣರಹಿತನು. ಅವನು ಅಣುವಿಗಿಂತ ಅಣು, ಮಹತ್ತಿಗಿಂತ ಮಹತ್ತು (೧.೨.೧೮, ೧.೨.೨೦)."
     },
-    "refs": "Page 34#1.2.18 · Page 110#1.2.18 · Page 161#1.2.18"
+    "refs": "Page 34#1.2.18 · Page 110#1.2.18 · Page 161#1.2.18",
+    "sa": "आत्मा"
   },
   {
     "id": "preta_vicikitsa",
@@ -1794,7 +1796,8 @@ const NODES = [
       "en": "Nachiketa's third boon request: the doubt regarding what happens to a person after death — some say he exists, others say he does not (1.1.20).",
       "kn": "ನಚಿಕೇತನ ಮೂರನೇ ವರ: ಮೃತರಾದ ನಂತರ ಜೀವಿಯು ಇರುತ್ತಾನೋ ಇಲ್ಲವೋ ಎಂಬ ಅತೀಂದ್ರಿಯ ಪ್ರಶ್ನೆ (೧.೧.೨೦)."
     },
-    "refs": "Page 19#1.1.20 · Page 86#1.1.20 · Page 158#1.1.20"
+    "refs": "Page 19#1.1.20 · Page 86#1.1.20 · Page 158#1.1.20",
+    "sa": "प्रेतविचिकित्सा"
   },
   {
     "id": "shreyas",
@@ -1809,7 +1812,8 @@ const NODES = [
       "en": "The path of spiritual goodness and eternal welfare. It leads to liberation but requires discrimination to choose over pleasure (1.2.1).",
       "kn": "ಆತ್ಮಕಲ್ಯಾಣಕ್ಕೆ ದಾರಿಯಾದ ಶ್ರೇಯೋಮಾರ್ಗ. ಇದು ಮೋಕ್ಷಕ್ಕೆ ಕಾರಣವಾಗುತ್ತದೆ (೧.೨.೧)."
     },
-    "refs": "Page 28#1.2.1 · Page 98#1.2.1 · Page 160#1.2.1"
+    "refs": "Page 28#1.2.1 · Page 98#1.2.1 · Page 160#1.2.1",
+    "sa": "श्रेयः"
   },
   {
     "id": "preyas",
@@ -1824,7 +1828,8 @@ const NODES = [
       "en": "The path of material pleasure and immediate gratification. Choosing preyas binds the soul to the cycle of rebirth (1.2.1).",
       "kn": "ಐಹಿಕ ಸುಖಗಳಿಗೆ ದಾರಿಯಾದ ಪ್ರೇಯೋಮಾರ್ಗ. ಇದನ್ನು ಆರಿಸಿಕೊಳ್ಳುವವನು ಜನ್ಮ-ಮರಣಗಳ ಚಕ್ರಕ್ಕೆ ಸಿಲುಕುತ್ತಾನೆ (೧.೨.೧)."
     },
-    "refs": "Page 28#1.2.1 · Page 98#1.2.1 · Page 160#1.2.1"
+    "refs": "Page 28#1.2.1 · Page 98#1.2.1 · Page 160#1.2.1",
+    "sa": "प्रेयः"
   },
   {
     "id": "nachiketa_agni",
@@ -1839,7 +1844,8 @@ const NODES = [
       "en": "The special fire sacrifice taught by Yama to Nachiketa as the second boon, leading to heavenly realms and immortality (1.1.13-16).",
       "kn": "ಯಮನು ನಚಿಕೇತನಿಗೆ ಬೋಧಿಸಿದ ವಿಶೇಷ ಅಗ್ನಿವಿದ್ಯೆ (ಎರಡನೇ ವರ), ಇದು ಸ್ವರ್ಗಲೋಕ ಮತ್ತು ಮೋಕ್ಷಕ್ಕೆ ಕಾರಣವಾಗುತ್ತದೆ (೧.೧.೧೩-೧೬)."
     },
-    "refs": "Page 12#1.1.13 · Page 82#1.1.13 · Page 157#1.1.13"
+    "refs": "Page 12#1.1.13 · Page 82#1.1.13 · Page 157#1.1.13",
+    "sa": "नाचिकेताग्निः"
   },
   {
     "id": "yoga_definition",
@@ -1854,7 +1860,8 @@ const NODES = [
       "en": "Yoga is defined in Kata Upanishad as the steady control of the senses, intellect, and mind (Sthiram Indriya Dharanam) (2.3.11).",
       "kn": "ಇಂದ್ರಿಯಗಳು ಮತ್ತು ಮನಸ್ಸಿನ ಸ್ಥಿರವಾದ ನಿಗ್ರಹವೇ ಯೋಗ (೨.೩.೧೧)."
     },
-    "refs": "Page 70#2.3.11 · Page 150#2.3.11 · Page 170#2.3.11"
+    "refs": "Page 70#2.3.11 · Page 150#2.3.11 · Page 170#2.3.11",
+    "sa": "योगलक्षणम्"
   },
   {
     "id": "ratha_metaphor",
@@ -1869,7 +1876,8 @@ const NODES = [
       "en": "The famous metaphor of the chariot (1.3.3-4): the soul is the passenger, body is the chariot, intellect is the charioteer, mind is the reins, senses are the horses.",
       "kn": "ಕಠೋಪನಿಷತ್ತಿನ ಪ್ರಸಿದ್ಧ ರಥ ಕಲ್ಪನೆ: ಶರೀರವೇ ರಥ, ಬುದ್ಧಿಯೇ ಸಾರಥಿ, ಮನಸ್ಸೇ ಕಡಿವಾಣ, ಇಂದ್ರಿಯಗಳೇ ಕುದುರೆಗಳು, ಆತ್ಮನೇ ರಥಿಕ (೧.೩.೩-೪)."
     },
-    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3",
+    "sa": "रथकल्पना"
   },
   {
     "id": "buddhi",
@@ -1884,7 +1892,8 @@ const NODES = [
       "en": "The charioteer (sarathi). It must be wakeful and discriminate to lead the chariot safely to the goal.",
       "kn": "ರಥ ಕಲ್ಪನೆಯಲ್ಲಿ 'ಸಾರಥಿ'. ಇದು ತಪ್ಪು-ಸರಿಗಳನ್ನು ವಿವೇಚಿಸಿ ರಥವನ್ನು ಸರಿಯಾದ ದಾರಿಯಲ್ಲಿ ಮುನ್ನಡೆಸುತ್ತದೆ (೧.೩.೩)."
     },
-    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3",
+    "sa": "बुद्धिः"
   },
   {
     "id": "manas",
@@ -1899,7 +1908,8 @@ const NODES = [
       "en": "The reins (pragraha). It links the intellect (charioteer) to the senses (horses). If uncontrolled, the horses run wild.",
       "kn": "ರಥ ಕಲ್ಪನೆಯಲ್ಲಿ 'ಕಡಿವಾಣ'. ಇದು ಸಾರಥಿಯ ಹಿಡಿತದಲ್ಲಿದ್ದರೆ ಮಾತ್ರ ಕುದುರೆಗಳನ್ನು ನಿಯಂತ್ರಿಸಬಹುದು (೧.೩.೩)."
     },
-    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3",
+    "sa": "मनः"
   },
   {
     "id": "indriya",
@@ -1914,7 +1924,8 @@ const NODES = [
       "en": "The horses (haya). They run after sense objects (roads). If undisciplined, they lead the soul to destruction.",
       "kn": "ರಥ ಕಲ್ಪನೆಯಲ್ಲಿ 'ಕುದುರೆಗಳು'. ಇವು ವಿಷಯಗಳೆಂಬ ದಾರಿಯಲ್ಲಿ ಓಡುತ್ತವೆ (೧.೩.೪)."
     },
-    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3"
+    "refs": "Page 39#1.3.3 · Page 113#1.3.3 · Page 163#1.3.3",
+    "sa": "इन्द्रियाणि"
   },
   {
     "id": "moksha",
@@ -1929,7 +1940,8 @@ const NODES = [
       "en": "The state of eternal peace, immortality (Amritatva), and freedom from the cycle of birth and death, attained by realizing the Purusha.",
       "kn": "ಹುಟ್ಟು-ಸಾವಿನ ಚಕ್ರದಿಂದ ಬಿಡುಗಡೆ ಪಡೆದು ನಿರಂತರ ಆನಂದವನ್ನು ಹೊಂದುವ ಸ್ಥಿತಿ (೨.೩.೧೪)."
     },
-    "refs": "Page 72#2.3.14 · Page 151#2.3.14 · Page 170#2.3.14"
+    "refs": "Page 72#2.3.14 · Page 151#2.3.14 · Page 170#2.3.14",
+    "sa": "मोक्षः/अमृतत्वम्"
   }
 ];
 
@@ -2043,7 +2055,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "jiva",
     "title": {
       "kn": "ಆತ್ಮನ ನಿತ್ಯತ್ವ (ಜನ್ಮರಹಿತ/ಮರಣರಹಿತ)",
-      "en": "Eternity of the Soul (Birthless & Deathless)"
+      "en": "Eternity of the Soul (Birthless & Deathless)",
+      "sa": "आत्मनः नित्यत्वम्"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೨, ಶ್ಲೋಕ ೧೮ (Page 36)",
     "gitaRef": "BG 2.20",
@@ -2060,7 +2073,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "ratha_rupaka",
     "title": {
       "kn": "ರಥ ಕಲ್ಪನೆ ಮತ್ತು ಇಂದ್ರಿಯ ನಿಗ್ರಹ",
-      "en": "The Chariot Metaphor & Sense Control"
+      "en": "The Chariot Metaphor & Sense Control",
+      "sa": "रथकल्पना च इन्द्रियनिग्रहः"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೩, ಶ್ಲೋಕ ೩-೪ (Page 40-41)",
     "gitaRef": "BG 18.61 & BG Setting",
@@ -2077,7 +2091,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "ashvattha",
     "title": {
       "kn": "ಸಂಸಾರ ವೃಕ್ಷ (ಅಶ್ವತ್ಥ)",
-      "en": "The Cosmic Ashvattha Tree"
+      "en": "The Cosmic Ashvattha Tree",
+      "sa": "अश्वत्थवृक्षः (अधोमूलम्)"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೨, ವಲ್ಲೀ ೩, ಶ್ಲೋಕ ೧ (Page 67)",
     "gitaRef": "BG 15.1",
@@ -2094,7 +2109,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "jyotir_jyoti",
     "title": {
       "kn": "ಪರಂಜ್ಯೋತಿಯ ಸ್ವಯಂಪ್ರಕಾಶತ್ವ",
-      "en": "Brahman as the Source of All Light"
+      "en": "Brahman as the Source of All Light",
+      "sa": "ब्रह्मणः स्वयम्प्रकाशता"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೨, ವಲ್ಲೀ ೨, ಶ್ಲೋಕ ೧೫ (Page 65-66)",
     "gitaRef": "BG 15.6",
@@ -2111,7 +2127,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "antaryamin",
     "title": {
       "kn": "ವೈಶ್ವಾನರ ರೂಪದ ಭಗವಂತ",
-      "en": "Vaishvanara - The Indwelling Fire"
+      "en": "Vaishvanara - The Indwelling Fire",
+      "sa": "वैश्वानराग्निः"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೧, ಶ್ಲೋಕ ೭ (Page 16)",
     "gitaRef": "BG 15.14",
@@ -2128,7 +2145,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "kshetra_field",
     "title": {
       "kn": "ದೇಹದ ಹನ್ನೊಂದು ದ್ವಾರಗಳು",
-      "en": "City of Eleven vs. Nine Gates"
+      "en": "City of Eleven vs. Nine Gates",
+      "sa": "एकादशद्वारं पुरम्"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೨, ವಲ್ಲೀ ೨, ಶ್ಲೋಕ ೧ (Page 57)",
     "gitaRef": "BG 5.13",
@@ -2145,7 +2163,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "sadhana",
     "title": {
       "kn": "ಯಜ್ಞ, ದಾನ ಮತ್ತು ತಪಸ್ಸು",
-      "en": "Yajna, Dana, and Tapas"
+      "en": "Yajna, Dana, and Tapas",
+      "sa": "यज्ञ-दान-तपांसि"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೧, ಶ್ಲೋಕ ೧೭ (Page 19-20)",
     "gitaRef": "BG 17.5 & 18.5",
@@ -2162,7 +2181,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "purushottama",
     "title": {
       "kn": "ಇಂದ್ರಿಯಗಳಿಗಿಂತ ಪರಮಪುರುಷ ಶ್ರೇಷ್ಠ",
-      "en": "Hierarchy of Senses & Purusha"
+      "en": "Hierarchy of Senses & Purusha",
+      "sa": "तत्त्वक्रमः — पुरुषः परः"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೩, ಶ್ಲೋಕ ೧೦-೧೧ (Page 44-45)",
     "gitaRef": "BG 3.42",
@@ -2179,7 +2199,8 @@ const GITA_CONNECTIONS = [
     "gitaNode": "sadhana",
     "title": {
       "kn": "ಶ್ರದ್ಧೆಯಿಂದ ಜ್ಞಾನ ಸಿದ್ಧಿ",
-      "en": "Shraddha as Pre-requisite"
+      "en": "Shraddha as Pre-requisite",
+      "sa": "श्रद्धा"
     },
     "kathaRef": "ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೧, ಶ್ಲೋಕ ೯ (Page 13)",
     "gitaRef": "BG 4.39",

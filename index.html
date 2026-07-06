@@ -1670,6 +1670,26 @@ function updateLanguage(lang) {
   // Update focus nav button labels
   updateFocusNavLabels();
 
+  // Update map tier filter labels
+  (function() {
+    const tierLabels = {
+      kn: { parabrahma: 'ಪರಬ್ರಹ್ಮ', jiva: 'ಜೀವಾತ್ಮ', antahkarana: 'ಅಂತಃಕರಣ', dharma: 'ಮಾರ್ಗ', sadhana: 'ಸಾಧನ', phala: 'ಫಲ' },
+      en: { parabrahma: 'Parabrahma', jiva: 'Jivatma', antahkarana: 'Antaḥkaraṇa', dharma: 'Mārga', sadhana: 'Sādhana', phala: 'Phala' },
+      hi: { parabrahma: 'परब्रह्म', jiva: 'जीवात्मा', antahkarana: 'अन्तःकरण', dharma: 'मार्ग', sadhana: 'साधन', phala: 'फल' },
+      sa: { parabrahma: 'परब्रह्म', jiva: 'जीवात्मा', antahkarana: 'अन्तःकरणम्', dharma: 'मार्गः', sadhana: 'साधनम्', phala: 'फलम्' }
+    };
+    const labels = tierLabels[lang] || tierLabels.en;
+    document.querySelectorAll('.map-filter-btn').forEach(function(btn) {
+      var tier = btn.dataset.tier;
+      if (tier && labels[tier]) {
+        // Keep the dot span, replace only the text
+        var dot = btn.querySelector('.dot');
+        btn.textContent = labels[tier];
+        if (dot) btn.insertBefore(dot, btn.firstChild);
+      }
+    });
+  })();
+
   // Update keyboard hint language
   const kbdHint = document.getElementById('focus-kbd-hint');
   if (kbdHint) {
@@ -1711,7 +1731,7 @@ function renderPageLists() {
     const item = document.createElement('div');
     item.className = 'page-item';
     item.setAttribute('onclick', `viewPage(${page.num})`);
-    const titleText = currentLanguage === 'en' ? page.title_en : page.title;
+    const titleText = (currentLanguage === 'en' || currentLanguage === 'hi' || currentLanguage === 'sa') ? page.title_en : page.title;
     item.innerHTML = `
       <span class="title">${page.num}. ${titleText}</span>
       <span class="badge">${
@@ -1842,7 +1862,7 @@ function renderFocusPage() {
   const page = PAGES.find(p => p.num === currentFocusPage);
   if (!page) return;
   
-  const pageTitle = currentLanguage === 'en' ? page.title_en : page.title;
+  const pageTitle = (currentLanguage === 'en' || currentLanguage === 'hi' || currentLanguage === 'sa') ? page.title_en : page.title;
   document.getElementById('focus-title').textContent = `${page.num}. ${pageTitle}`;
   const textField = document.getElementById('focus-text');
   
@@ -2149,7 +2169,9 @@ function drawNodes() {
     ctx.shadowBlur = 0;
 
     // Short label inside node
-    const label = currentLanguage === 'kn' ? n.kn : n.en;
+    const label = currentLanguage === 'kn' ? n.kn :
+                  currentLanguage === 'sa' ? (n.sa || n.en) :
+                  currentLanguage === 'hi' ? (n.kn || n.en) : n.en;
     const shortLabel = label.length > 10 ? label.substring(0, 9) + '…' : label;
     ctx.font = `bold ${isSelected ? 12 : 11}px Inter, system-ui`;
     ctx.fillStyle = isSelected ? '#fff' : '#1f1a13';
@@ -2519,19 +2541,24 @@ function renderGitaLinks() {
       item.classList.add('active');
     }
     
-    const titleText = currentLanguage === 'kn' ? conn.title.kn : conn.title.en;
+    const titleText = currentLanguage === 'kn' ? conn.title.kn : currentLanguage === 'sa' ? (conn.title.sa || conn.title.en) : conn.title.en;
     
     // Extract Katha page number for badge
     const pMatch = conn.kathaRef.match(/Page\s+(\d+)/i);
     const pageBadgeText = pMatch ? `Page ${pMatch[1]}` : '';
     
     const isKannadaLike = (currentLanguage === 'kn');
+    const isSA = (currentLanguage === 'sa');
     const pageLbl = isKannadaLike
       ? (pageBadgeText ? pageBadgeText.replace('Page', 'ಪುಟ') : '')
+      : isSA
+      ? (pageBadgeText ? pageBadgeText.replace('Page', 'पृष्ठम्') : '')
       : pageBadgeText;
+    const displayTitle = isKannadaLike ? conn.title.kn
+      : isSA ? (conn.title.sa || conn.title.en)
+      : conn.title.en;
     item.innerHTML = `
-      ${isKannadaLike ? '' : `<div class="title-kn">${conn.title.kn}</div>`}
-      <div class="${isKannadaLike ? 'title-kn' : 'title-en'}">${isKannadaLike ? conn.title.kn : conn.title.en}</div>
+      <div class="${isKannadaLike || isSA ? 'title-kn' : 'title-en'}">${displayTitle}</div>
       <span class="ref-badge">${pageLbl ? pageLbl + ' · ' : ''}${conn.gitaRef}</span>
     `;
     
@@ -2590,7 +2617,7 @@ function renderGitaConnectionDetails() {
     return;
   }
   
-  const title = currentLanguage === 'kn' ? conn.title.kn : conn.title.en;
+  const title = currentLanguage === 'kn' ? conn.title.kn : currentLanguage === 'sa' ? (conn.title.sa || conn.title.en) : conn.title.en;
   const explanation = currentLanguage === 'kn' ? conn.connection.kn : conn.connection.en;
   
   // Parse page number for Katha action button
