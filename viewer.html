@@ -919,6 +919,7 @@ body.dark .app {
 .map-canvas-wrap {
   position: relative;
   width: 100%;
+  min-height: 500px;
   border: 1px solid var(--rule);
   border-radius: 12px;
   overflow: hidden;
@@ -1445,9 +1446,13 @@ function switchView(viewName) {
       }
     }
   });
-  
+
   if (viewName === 'focus') {
     renderFocusPage();
+  }
+  if (viewName === 'map') {
+    // Re-init after tab is visible so canvas.offsetWidth is correct
+    requestAnimationFrame(() => window.renderMap());
   }
 }
 
@@ -2169,8 +2174,9 @@ function drawMinimap() {
 
 // ── Main render loop ──
 function render() {
-  canvas.width = canvas.offsetWidth || 800;
-  W = canvas.width;
+  const measured = canvas.offsetWidth;
+  if (measured > 0) { canvas.width = measured; W = measured; }
+  else if (W <= 0) { W = 800; canvas.width = 800; }
 
   ctx.clearRect(0, 0, W, H);
 
@@ -2383,33 +2389,48 @@ window.renderMap = function() {
   ctx = canvas.getContext('2d');
   mmCtx = mmCanvas ? mmCanvas.getContext('2d') : null;
 
-  // Set canvas height
-  canvas.style.height = '500px';
-  canvas.height = 500;
+  // Always set explicit height
   H = 500;
+  canvas.height = H;
 
-  if (nodes.length === 0) {
-    initNodes();
-  }
-  setupPointerEvents();
-  setupZoomButtons();
-  setupFilters();
-  setupSearch();
+  // canvas.offsetWidth is 0 when tab is hidden (display:none).
+  // Defer width measurement to next frame after the tab is visible.
+  function startWithWidth() {
+    // Use measured width, fall back to container width, then 800
+    const wrap = document.getElementById('map-canvas-wrap');
+    W = canvas.offsetWidth || (wrap ? wrap.offsetWidth : 0) || 800;
+    canvas.width = W;
 
-  // Run simulation for 120 frames then settle
-  simRunning = true;
-  let frame = 0;
-  function simTick() {
-    simulate();
-    render();
-    frame++;
-    if (frame < 120) requestAnimationFrame(simTick);
-    else {
-      simRunning = false;
-      render();
+    if (nodes.length === 0) {
+      initNodes();
     }
+    setupPointerEvents();
+    setupZoomButtons();
+    setupFilters();
+    setupSearch();
+
+    // Run simulation for 120 frames then settle
+    simRunning = true;
+    let frame = 0;
+    function simTick() {
+      simulate();
+      render();
+      frame++;
+      if (frame < 120) requestAnimationFrame(simTick);
+      else {
+        simRunning = false;
+        render();
+      }
+    }
+    requestAnimationFrame(simTick);
   }
-  requestAnimationFrame(simTick);
+
+  // If canvas is not yet visible, defer one frame
+  if (canvas.offsetWidth === 0) {
+    requestAnimationFrame(startWithWidth);
+  } else {
+    startWithWidth();
+  }
 };
 
 // Re-render on window resize
