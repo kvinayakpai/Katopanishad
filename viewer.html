@@ -2356,7 +2356,7 @@ function setupPointerEvents() {
       const pos = getPos(e);
       const n = hitNode(pos.x, pos.y);
       if (n) { selectConcept(n.id); requestAnimationFrame(render); }
-      else { selectedId = null; document.getElementById('concept-details-panel').classList.remove('active'); requestAnimationFrame(render); }
+      else { selectedId = null; selectedConceptId = null; renderConceptDetails(null); requestAnimationFrame(render); }
     }
     dragging = false;
   });
@@ -2457,11 +2457,124 @@ function setupSearch() {
   });
 }
 
-// ── selectConcept: override the global one for map ──
+// ============================================================
+// RENDER CONCEPT DETAILS (called when a node is clicked on map)
+// ============================================================
+const TIER_COLORS_MAP = {
+  parabrahma: '#e8951f',
+  jiva:       '#5a9e2f',
+  antahkarana:'#18998e',
+  dharma:     '#2980b9',
+  sadhana:    '#c0621e',
+  phala:      '#c0a020'
+};
+
+const TIER_LABELS = {
+  kn: { parabrahma: 'ಪರಬ್ರಹ್ಮ', jiva: 'ಜೀವಾತ್ಮ', antahkarana: 'ಅಂತಃಕರಣ', dharma: 'ಮಾರ್ಗ', sadhana: 'ಸಾಧನ', phala: 'ಫಲ' },
+  en: { parabrahma: 'Parabrahma', jiva: 'Jivatma', antahkarana: 'Antaḥkaraṇa', dharma: 'Mārga', sadhana: 'Sādhana', phala: 'Phala' },
+  hi: { parabrahma: 'परब्रह्म', jiva: 'जीवात्मा', antahkarana: 'अन्तःकरण', dharma: 'मार्ग', sadhana: 'साधन', phala: 'फल' },
+  sa: { parabrahma: 'परब्रह्म', jiva: 'जीवात्मा', antahkarana: 'अन्तःकरणम्', dharma: 'मार्गः', sadhana: 'साधनम्', phala: 'फलम्' }
+};
+
+function renderConceptDetails(id) {
+  const panel = document.getElementById('concept-details-panel');
+  if (!panel) return;
+
+  if (!id) {
+    panel.classList.remove('active');
+    return;
+  }
+
+  const node = (typeof NODES !== 'undefined') ? NODES.find(function(n) { return n.id === id; }) : null;
+  if (!node) return;
+
+  const lang = currentLanguage;
+
+  // Title
+  const titleEl = document.getElementById('concept-title-field');
+  if (titleEl) {
+    const t = node.title || {};
+    titleEl.textContent = lang === 'kn' ? (t.kn || node.kn || id)
+      : lang === 'sa' ? (node.sa || t.en || id)
+      : lang === 'hi' ? (t.kn || t.en || id)
+      : (t.en || id);
+  }
+
+  // Tier badge
+  const badgeEl = document.getElementById('concept-badge-field');
+  if (badgeEl) {
+    const color = TIER_COLORS_MAP[node.tier] || '#7a6c54';
+    const tierLabels = TIER_LABELS[lang] || TIER_LABELS.en;
+    badgeEl.textContent = tierLabels[node.tier] || node.tier;
+    badgeEl.style.setProperty('--color', color);
+    badgeEl.style.background = color + '18';
+    badgeEl.style.color = color;
+    badgeEl.style.borderColor = color;
+  }
+
+  // Description / note
+  const descEl = document.getElementById('concept-desc-field');
+  if (descEl) {
+    const n = node.note || {};
+    descEl.textContent = lang === 'kn' ? (n.kn || n.en || '')
+      : lang === 'sa' ? (n.sa || n.en || '')
+      : lang === 'hi' ? (n.hi || n.en || '')
+      : (n.en || '');
+  }
+
+  // Page reference chips — each chip navigates to that page in Focus view
+  const linksEl = document.getElementById('concept-links-field');
+  if (linksEl && node.refs) {
+    linksEl.innerHTML = '';
+    // refs format: "Page 34#1.2.18 · Page 110#1.2.18"
+    const refParts = node.refs.split(' · ');
+    refParts.forEach(function(ref) {
+      var m = ref.match(/Page (\d+)(?:#([^\s]+))?/);
+      if (!m) return;
+      var pageNum = parseInt(m[1]);
+      var verseRef = m[2] || '';
+      var chip = document.createElement('button');
+      chip.className = 'page-chip';
+
+      var pageLbl = lang === 'kn' ? 'ಪುಟ ' + pageNum
+        : lang === 'sa' ? 'पृष्ठम् ' + pageNum
+        : lang === 'hi' ? 'पृष्ठ ' + pageNum
+        : 'Page ' + pageNum;
+      chip.textContent = pageLbl + (verseRef ? ' — ' + verseRef : '');
+
+      chip.addEventListener('click', function() {
+        // Navigate to that page in Focus view
+        window.location.hash = 'page=' + pageNum + (verseRef ? '?verse=' + verseRef : '');
+        // switchView to focus
+        if (typeof switchView === 'function') switchView('focus');
+      });
+      linksEl.appendChild(chip);
+    });
+
+    // Add "View all related pages" count
+    if (refParts.length > 0) {
+      var summary = document.createElement('div');
+      summary.style.cssText = 'font-size:11px;color:var(--ink-fade);margin-top:8px;letter-spacing:.05em;';
+      var goLbl = lang === 'kn' ? 'ಪುಟ ತೆರೆಯಲು ಕ್ಲಿಕ್ ಮಾಡಿ'
+        : lang === 'sa' ? 'पृष्ठं दृष्टुं स्पृशतु'
+        : lang === 'hi' ? 'पृष्ठ खोलने के लिए क्लिक करें'
+        : 'Click a page chip to open it in Focus view';
+      summary.textContent = goLbl;
+      linksEl.appendChild(summary);
+    }
+  }
+
+  panel.classList.add('active');
+
+  // Smooth scroll panel into view on mobile
+  setTimeout(function() { panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 150);
+}
+
+
+// ── selectConcept: show detail panel and scroll to it ──
 function selectConcept(id) {
   selectedId = id;
-  const panel = document.getElementById('concept-details-panel');
-  if (panel) panel.classList.add('active');
+  selectedConceptId = id;
   renderConceptDetails(id);
   const newHash = 'map?concept=' + id;
   if (window.location.hash.substring(1) !== newHash) window.location.hash = newHash;
