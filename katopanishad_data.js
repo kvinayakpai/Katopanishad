@@ -1938,67 +1938,100 @@ const EDGES = [
     "source": "purusha",
     "target": "atman",
     "type": "includes",
-    "label": "inner self of"
+    "label": "inner self of",
+    "label_kn": "ಆಂತರ್ಯಾಮಿ",
+    "label_hi": "अन्तरात्मा",
+    "label_sa": "अन्तरात्मा"
   },
   {
     "source": "shreyas",
     "target": "moksha",
     "type": "leads-to",
-    "label": "leads to"
+    "label": "leads to",
+    "label_kn": "ಕಾರಣವಾಗುವುದು",
+    "label_hi": "ले जाता है",
+    "label_sa": "नयति"
   },
   {
     "source": "preyas",
     "target": "preta_vicikitsa",
     "type": "leads-to",
-    "label": "binds to birth/death"
+    "label": "binds to birth/death",
+    "label_kn": "ಜನ್ಮ-ಮೃತ್ಯುವಿಗೆ ಬಂಧಿಸುತ್ತದೆ",
+    "label_hi": "जन्म-मृत्यु में बाँधता है",
+    "label_sa": "जन्म-मृत्यौ बध्नाति"
   },
   {
     "source": "nachiketa_agni",
     "target": "moksha",
     "type": "leads-to",
-    "label": "enables heaven/liberation"
+    "label": "enables heaven/liberation",
+    "label_kn": "ಸ್ವರ್ಗ/ಮೋಕ್ಷ ಸಾಧಿಸುತ್ತದೆ",
+    "label_hi": "स्वर्ग/मोक्ष देता है",
+    "label_sa": "स्वर्ग/मोक्षं ददाति"
   },
   {
     "source": "yoga_definition",
     "target": "moksha",
     "type": "leads-to",
-    "label": "leads to"
+    "label": "leads to",
+    "label_kn": "ಕಾರಣವಾಗುವುದು",
+    "label_hi": "ले जाता है",
+    "label_sa": "नयति"
   },
   {
     "source": "ratha_metaphor",
     "target": "atman",
     "type": "includes",
-    "label": "soul as passenger"
+    "label": "soul as passenger",
+    "label_kn": "ಆತ್ಮ ರಥಿಕ",
+    "label_hi": "आत्मा यात्री",
+    "label_sa": "आत्मा रथी"
   },
   {
     "source": "ratha_metaphor",
     "target": "buddhi",
     "type": "includes",
-    "label": "intellect as charioteer"
+    "label": "intellect as charioteer",
+    "label_kn": "ಬುದ್ಧಿ ಸಾರಥಿ",
+    "label_hi": "बुद्धि सारथी",
+    "label_sa": "बुद्धिः सारथिः"
   },
   {
     "source": "ratha_metaphor",
     "target": "manas",
     "type": "includes",
-    "label": "mind as reins"
+    "label": "mind as reins",
+    "label_kn": "ಮನಸ್ಸು ಕಡಿವಾಣ",
+    "label_hi": "मन लगाम",
+    "label_sa": "मनः प्रग्रहः"
   },
   {
     "source": "ratha_metaphor",
     "target": "indriya",
     "type": "includes",
-    "label": "senses as horses"
+    "label": "senses as horses",
+    "label_kn": "ಇಂದ್ರಿಯಗಳು ಕುದುರೆ",
+    "label_hi": "इंद्रियाँ घोड़े",
+    "label_sa": "इन्द्रियाणि हयाः"
   },
   {
     "source": "buddhi",
     "target": "manas",
     "type": "leads-to",
-    "label": "controls"
+    "label": "controls",
+    "label_kn": "ನಿಯಂತ್ರಿಸುತ್ತದೆ",
+    "label_hi": "नियंत्रित करता है",
+    "label_sa": "नियच्छति"
   },
   {
     "source": "manas",
     "target": "indriya",
     "type": "leads-to",
-    "label": "reins in"
+    "label": "reins in",
+    "label_kn": "ಹಿಡಿತದಲ್ಲಿಡುತ್ತದೆ",
+    "label_hi": "लगाम देता है",
+    "label_sa": "संयमयति"
   }
 ];
 
