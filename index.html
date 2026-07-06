@@ -90,14 +90,9 @@ header .brand {
 header .brand .name {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   color: var(--ink);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
-  display: inline-block;
 }
 
 header .brand .name em {
@@ -1431,7 +1426,10 @@ tabs.forEach(tab => {
   const btn = document.getElementById(`tab-${tab}`);
   if (btn) {
     btn.addEventListener('click', () => {
-      window.location.hash = tab;
+      // Call switchView directly for reliability in offline/content:// context
+      // Also update hash for deep-linking on regular browsers
+      switchView(tab);
+      try { window.location.hash = tab; } catch(e) {}
     });
   }
 });
