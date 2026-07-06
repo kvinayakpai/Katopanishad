@@ -1262,7 +1262,7 @@ body.dark .app {
           </div>
           <h2 id="focus-title">Page Title</h2>
           <div id="page-indicator"></div>
-          <div class="kbd-hint"><kbd>←</kbd> Previous &nbsp; <kbd>→</kbd> Next &nbsp; <kbd>/</kbd> Search</div>
+          <div class="kbd-hint" id="focus-kbd-hint"><kbd>←</kbd> Previous &nbsp; <kbd>→</kbd> Next &nbsp; <kbd>/</kbd> Search</div>
           <div class="body-text" id="focus-text">Page Content</div>
         </div>
       </div>
@@ -1660,6 +1660,20 @@ function updateLanguage(lang) {
   renderMap();
   renderConceptDetails(selectedConceptId);
   renderGitaLinks();
+
+  // Update keyboard hint language
+  const kbdHint = document.getElementById('focus-kbd-hint');
+  if (kbdHint) {
+    if (lang === 'kn') {
+      kbdHint.innerHTML = '<kbd>←</kbd> ಹಿಂದಿನ &nbsp; <kbd>→</kbd> ಮುಂದಿನ &nbsp; <kbd>/</kbd> ಹುಡುಕಿ';
+    } else if (lang === 'hi') {
+      kbdHint.innerHTML = '<kbd>←</kbd> पिछला &nbsp; <kbd>→</kbd> अगला &nbsp; <kbd>/</kbd> खोज';
+    } else if (lang === 'sa') {
+      kbdHint.innerHTML = '<kbd>←</kbd> पूर्वम् &nbsp; <kbd>→</kbd> अग्रे &nbsp; <kbd>/</kbd> अन्वेषण';
+    } else {
+      kbdHint.innerHTML = '<kbd>←</kbd> Previous &nbsp; <kbd>→</kbd> Next &nbsp; <kbd>/</kbd> Search';
+    }
+  }
 }
 
 // Render Page lists
@@ -2472,10 +2486,14 @@ function renderGitaLinks() {
     const pMatch = conn.kathaRef.match(/Page\s+(\d+)/i);
     const pageBadgeText = pMatch ? `Page ${pMatch[1]}` : '';
     
+    const isKannadaLike = (currentLanguage === 'kn');
+    const pageLbl = isKannadaLike
+      ? (pageBadgeText ? pageBadgeText.replace('Page', 'ಪುಟ') : '')
+      : pageBadgeText;
     item.innerHTML = `
-      <div class="title-kn">${conn.title.kn}</div>
-      <div class="title-en">${conn.title.en}</div>
-      <span class="ref-badge">${pageBadgeText} · ${conn.gitaRef}</span>
+      ${isKannadaLike ? '' : `<div class="title-kn">${conn.title.kn}</div>`}
+      <div class="${isKannadaLike ? 'title-kn' : 'title-en'}">${isKannadaLike ? conn.title.kn : conn.title.en}</div>
+      <span class="ref-badge">${pageLbl ? pageLbl + ' · ' : ''}${conn.gitaRef}</span>
     `;
     
     item.addEventListener('click', () => {
@@ -2902,7 +2920,18 @@ const _origRenderFocusPage = renderFocusPage;
 function renderFocusPage() {
   _origRenderFocusPage();
   const ind = document.getElementById('page-indicator');
-  if (ind) ind.textContent = 'Page ' + currentFocusPage + ' of ' + PAGES.length;
+  if (ind) {
+    const lang = currentLanguage;
+    if (lang === 'kn') {
+      ind.textContent = 'ಪುಟ ' + currentFocusPage + ' / ' + PAGES.length;
+    } else if (lang === 'hi') {
+      ind.textContent = 'पृष्ठ ' + currentFocusPage + ' / ' + PAGES.length;
+    } else if (lang === 'sa') {
+      ind.textContent = 'पृष्ठम् ' + currentFocusPage + ' / ' + PAGES.length;
+    } else {
+      ind.textContent = 'Page ' + currentFocusPage + ' of ' + PAGES.length;
+    }
+  }
 }
 
 // ============================================================
@@ -2918,7 +2947,13 @@ if (_searchInput && _searchCount) {
       const visibleItems = document.querySelectorAll('.page-item:not(.hidden-item)');
       const q = _searchInput.value.trim();
       if (q) {
-        _searchCount.textContent = visibleItems.length + ' result' + (visibleItems.length !== 1 ? 's' : '');
+        const lang = currentLanguage;
+        let countText;
+        if (lang === 'kn') countText = visibleItems.length + ' ಫಲಿತಾಂಶ';
+        else if (lang === 'hi') countText = visibleItems.length + ' परिणाम';
+        else if (lang === 'sa') countText = visibleItems.length + ' फलितानि';
+        else countText = visibleItems.length + ' result' + (visibleItems.length !== 1 ? 's' : '');
+        _searchCount.textContent = countText;
         _searchCount.classList.add('visible');
       } else {
         _searchCount.classList.remove('visible');
