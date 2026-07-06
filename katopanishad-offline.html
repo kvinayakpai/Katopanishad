@@ -5242,37 +5242,17 @@ function renderGitaLinks() {
   var listContainer = document.getElementById('gita-connections-list');
   var detailContainer = document.getElementById('gita-connection-details');
 
-  // If containers missing, create them dynamically inside gita-list-view
-  if (!listContainer) {
-    var lv = document.getElementById('gita-list-view');
-    if (lv) {
-      var wrap = document.createElement('div');
-      wrap.className = 'gita-wrap';
-      var lc = document.createElement('div');
-      lc.className = 'gita-list';
-      lc.id = 'gita-connections-list';
-      var dc = document.createElement('div');
-      dc.className = 'gita-detail-panel';
-      dc.id = 'gita-connection-details';
-      wrap.appendChild(lc);
-      wrap.appendChild(dc);
-      lv.innerHTML = '';
-      lv.appendChild(wrap);
-      listContainer = lc;
-      detailContainer = dc;
-    }
-  }
-  if (!listContainer) {
-    console.error('renderGitaLinks: gita-connections-list not found');
+  if (!listContainer || !detailContainer) {
+    // Containers not in DOM -- nothing to do
     return;
   }
-  
-  listContainer.innerHTML = '';
   
   if (typeof GITA_CONNECTIONS === 'undefined' || !GITA_CONNECTIONS || !GITA_CONNECTIONS.length) {
     listContainer.innerHTML = '<div style="padding:16px;color:var(--ink-fade);font-size:14px;">ಗೀತಾ ಸಂಪರ್ಕಗಳು ಲಭ್ಯವಿಲ್ಲ / Gita connections not available</div>';
     return;
   }
+
+  listContainer.innerHTML = '';
   
   GITA_CONNECTIONS.forEach(conn => {
     const item = document.createElement('div');
