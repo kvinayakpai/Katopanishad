@@ -656,6 +656,185 @@ body.lang-kn .gita-verse-box .verse-text {
   text-align: center;
 }
 
+/* ============ READING PROGRESS BAR ============ */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--rust), #c0622e);
+  z-index: 1000;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ============ FONT SIZE & DARK MODE CONTROLS ============ */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ctrl-btn {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--ink-soft);
+  padding: 5px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+.ctrl-btn:hover {
+  background: var(--rule-soft);
+  color: var(--ink);
+}
+.ctrl-btn.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ============ DARK MODE ============ */
+body.dark {
+  --bg: #1a1510;
+  --bg-2: #221d16;
+  --ink: #f0e8d8;
+  --ink-soft: #c8b89a;
+  --ink-fade: #8a7a60;
+  --rule: #3a3020;
+  --rule-soft: #2e2618;
+  --paper: #221d16;
+  --paper-2: #2a2318;
+  --hl: #5a4010;
+  --rust: #d0622e;
+}
+body.dark header.top,
+body.dark .subhead,
+body.dark .search,
+body.dark footer {
+  background: var(--bg);
+}
+body.dark .app {
+  background: rgba(34, 29, 22, 0.6);
+}
+
+/* ============ MOBILE SCROLLABLE TABS ============ */
+.subhead {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0;
+}
+.subhead::-webkit-scrollbar { display: none; }
+.subhead button {
+  flex: 0 0 auto;
+  min-width: 70px;
+  white-space: nowrap;
+}
+
+/* ============ PAGE INDICATOR ============ */
+#page-indicator {
+  font-size: 11px;
+  color: var(--ink-fade);
+  text-align: center;
+  padding: 4px 0 10px;
+  letter-spacing: 0.08em;
+}
+
+/* ============ BACK TO TOP ============ */
+#back-to-top {
+  position: fixed;
+  bottom: 60px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: var(--rust);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 50;
+  transition: opacity 0.2s, transform 0.2s;
+}
+#back-to-top.visible {
+  display: flex;
+}
+#back-to-top:hover {
+  transform: translateY(-2px);
+}
+
+/* ============ SEARCH COUNT BADGE ============ */
+#search-count {
+  font-size: 11px;
+  color: var(--ink-fade);
+  padding: 4px 0 0;
+  text-align: right;
+  display: none;
+}
+#search-count.visible { display: block; }
+
+/* ============ CHAT INPUT ============ */
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--rule-soft);
+  background: var(--paper);
+}
+.chat-input-row input {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  background: var(--bg);
+  font: inherit;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+}
+.chat-input-row input:focus {
+  border-color: var(--rust);
+}
+.chat-input-row button {
+  background: var(--rust);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 9px 18px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.chat-input-row button:hover {
+  opacity: 0.9;
+}
+
+/* ============ KEYBOARD SHORTCUT HINT ============ */
+.kbd-hint {
+  text-align: center;
+  font-size: 11px;
+  color: var(--ink-fade);
+  padding: 4px 0 8px;
+  letter-spacing: 0.06em;
+}
+.kbd-hint kbd {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-family: monospace;
+  font-size: 10px;
+}
+
 /* ============ UTILITIES ============ */
 .hidden {
   display: none !important;
@@ -663,6 +842,8 @@ body.lang-kn .gita-verse-box .verse-text {
 </style>
 </head>
 <body class="lang-kn">
+<div id="reading-progress"></div>
+<div id="back-to-top" title="Back to top" aria-label="Back to top">↑</div>
 <div class="app">
 
   <header class="top">
@@ -675,6 +856,11 @@ body.lang-kn .gita-verse-box .verse-text {
       <button id="btn-lang-en">EN</button>
       <button id="btn-lang-hi">HI</button>
       <button id="btn-lang-sa">SA</button>
+    </div>
+    <div class="header-controls">
+      <button class="ctrl-btn" id="btn-font-dec" title="Decrease font size">A−</button>
+      <button class="ctrl-btn" id="btn-font-inc" title="Increase font size">A+</button>
+      <button class="ctrl-btn" id="btn-dark" title="Toggle dark mode">☾</button>
     </div>
   </header>
 
@@ -689,6 +875,7 @@ body.lang-kn .gita-verse-box .verse-text {
 
   <section class="search">
     <input id="search-input" type="search" placeholder="Search pages, verses, concepts..." autocomplete="off" />
+    <div id="search-count"></div>
   </section>
 
   <main>
@@ -721,6 +908,8 @@ body.lang-kn .gita-verse-box .verse-text {
             <button id="focus-next">Next →</button>
           </div>
           <h2 id="focus-title">Page Title</h2>
+          <div id="page-indicator"></div>
+          <div class="kbd-hint"><kbd>←</kbd> Previous &nbsp; <kbd>→</kbd> Next &nbsp; <kbd>/</kbd> Search</div>
           <div class="body-text" id="focus-text">Page Content</div>
         </div>
       </div>
@@ -798,6 +987,9 @@ body.lang-kn .gita-verse-box .verse-text {
           <div class="suggestion-chip" onclick="askQuestion('Explain the Chariot Metaphor.')">Chariot Metaphor</div>
           <div class="suggestion-chip" onclick="askQuestion('What is Shreyas vs Preyas?')">Shreyas vs Preyas</div>
           <div class="suggestion-chip" onclick="askQuestion('How is Yoga defined in Katopanishad?')">Definition of Yoga</div>
+        <div class="chat-input-row">
+          <input id="chat-input-text" type="text" placeholder="Ask anything about the Katopanishad..." autocomplete="off" />
+          <button id="chat-send-btn">Send</button>
         </div>
       </div>
     </div>
@@ -1775,6 +1967,250 @@ if (window.location.hash) {
   updateLanguage('kn');
   window.location.hash = 'browse';
 }
+
+// ============================================================
+// READING PROGRESS BAR
+// ============================================================
+function updateReadingProgress() {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  const bar = document.getElementById('reading-progress');
+  if (bar) bar.style.width = pct + '%';
+
+  // Back-to-top visibility
+  const btt = document.getElementById('back-to-top');
+  if (btt) {
+    if (scrollTop > 300) btt.classList.add('visible');
+    else btt.classList.remove('visible');
+  }
+}
+window.addEventListener('scroll', updateReadingProgress, { passive: true });
+document.getElementById('back-to-top').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ============================================================
+// FONT SIZE CONTROL
+// ============================================================
+let fontScale = 1.0;
+const FONT_STEP = 0.1;
+const FONT_MIN = 0.7;
+const FONT_MAX = 1.5;
+
+function applyFontScale() {
+  document.documentElement.style.fontSize = (fontScale * 16) + 'px';
+  try { localStorage.setItem('kata_font_scale', fontScale); } catch(e) {}
+}
+
+try {
+  const saved = parseFloat(localStorage.getItem('kata_font_scale'));
+  if (!isNaN(saved) && saved >= FONT_MIN && saved <= FONT_MAX) {
+    fontScale = saved;
+    applyFontScale();
+  }
+} catch(e) {}
+
+document.getElementById('btn-font-dec').addEventListener('click', () => {
+  if (fontScale > FONT_MIN) {
+    fontScale = Math.max(FONT_MIN, Math.round((fontScale - FONT_STEP) * 10) / 10);
+    applyFontScale();
+  }
+});
+document.getElementById('btn-font-inc').addEventListener('click', () => {
+  if (fontScale < FONT_MAX) {
+    fontScale = Math.min(FONT_MAX, Math.round((fontScale + FONT_STEP) * 10) / 10);
+    applyFontScale();
+  }
+});
+
+// ============================================================
+// DARK MODE
+// ============================================================
+(function() {
+  try {
+    if (localStorage.getItem('kata_dark') === '1') {
+      document.body.classList.add('dark');
+      const btn = document.getElementById('btn-dark');
+      if (btn) { btn.classList.add('active'); btn.textContent = '☀'; }
+    }
+  } catch(e) {}
+})();
+
+document.getElementById('btn-dark').addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark');
+  const btn = document.getElementById('btn-dark');
+  btn.textContent = isDark ? '☀' : '☾';
+  btn.classList.toggle('active', isDark);
+  try { localStorage.setItem('kata_dark', isDark ? '1' : '0'); } catch(e) {}
+});
+
+// ============================================================
+// BODY LANG CLASS (already set for kn, add for hi/sa)
+// ============================================================
+const _origUpdateLanguage = updateLanguage;
+// Wrap updateLanguage to also set body class
+function updateLanguageWithClass(lang) {
+  document.body.className = document.body.className.replace(/\blang-\w+/g, '').trim();
+  document.body.classList.add('lang-' + lang);
+  _origUpdateLanguage(lang);
+}
+// Override button click handlers to use wrapper
+['kn','en','hi','sa'].forEach(lang => {
+  const btn = document.getElementById('btn-lang-' + lang);
+  if (btn) {
+    // Remove old onclick by cloning
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+    newBtn.addEventListener('click', () => {
+      updateLanguageWithClass(lang);
+      setLangButton(lang);
+    });
+  }
+});
+
+// ============================================================
+// KEYBOARD SHORTCUTS
+// ============================================================
+document.addEventListener('keydown', (e) => {
+  // Don't fire when typing in inputs
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    if (activeView !== 'focus') {
+      switchView('focus');
+    }
+    if (e.key === 'ArrowLeft' && currentFocusPage > 1) {
+      currentFocusPage--;
+      window.location.hash = 'page=' + currentFocusPage;
+    } else if (e.key === 'ArrowRight' && currentFocusPage < PAGES.length) {
+      currentFocusPage++;
+      window.location.hash = 'page=' + currentFocusPage;
+    }
+    e.preventDefault();
+  }
+
+  if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+    e.preventDefault();
+    switchView('browse');
+    setTimeout(() => {
+      const si = document.getElementById('search-input');
+      if (si) si.focus();
+    }, 100);
+  }
+
+  if (e.key === 'Escape') {
+    const si = document.getElementById('search-input');
+    if (si && document.activeElement === si) si.blur();
+  }
+});
+
+// ============================================================
+// PAGE INDICATOR in Focus view
+// ============================================================
+const _origRenderFocusPage = renderFocusPage;
+function renderFocusPage() {
+  _origRenderFocusPage();
+  const ind = document.getElementById('page-indicator');
+  if (ind) ind.textContent = 'Page ' + currentFocusPage + ' of ' + PAGES.length;
+}
+
+// ============================================================
+// SEARCH COUNT BADGE
+// ============================================================
+const _searchInput = document.getElementById('search-input');
+const _searchCount = document.getElementById('search-count');
+if (_searchInput && _searchCount) {
+  const _origHandler = _searchInput.oninput;
+  _searchInput.addEventListener('input', () => {
+    // Count after a short delay to let the list render
+    setTimeout(() => {
+      const visibleItems = document.querySelectorAll('.page-item:not(.hidden-item)');
+      const q = _searchInput.value.trim();
+      if (q) {
+        _searchCount.textContent = visibleItems.length + ' result' + (visibleItems.length !== 1 ? 's' : '');
+        _searchCount.classList.add('visible');
+      } else {
+        _searchCount.classList.remove('visible');
+      }
+    }, 50);
+  });
+}
+
+// ============================================================
+// FREE-FORM CHAT INPUT
+// ============================================================
+function sendFreeChat() {
+  const inp = document.getElementById('chat-input-text');
+  if (!inp) return;
+  const text = inp.value.trim();
+  if (!text) return;
+  inp.value = '';
+
+  // Check if it matches a known question
+  const lang = currentLanguage;
+  const responses = CHAT_RESPONSES[lang] || CHAT_RESPONSES['en'];
+  const matched = Object.keys(responses).find(k =>
+    k.toLowerCase() === text.toLowerCase() ||
+    text.toLowerCase().includes(k.toLowerCase().split(' ').slice(0,3).join(' '))
+  );
+
+  // Use matched or default
+  const respText = matched ? responses[matched] : (UI_TRANSLATIONS[lang]?.defaultResponse || "I'm happy to help explain anything about the Katopanishad!");
+  askQuestion(text, respText);
+}
+
+// Patch askQuestion to accept optional response override
+const _origAskQuestion = askQuestion;
+function askQuestion(qText, overrideResp) {
+  const box = document.getElementById('chat-box');
+  if (!box) return;
+
+  const uBubble = document.createElement('div');
+  uBubble.className = 'chat-bubble user';
+  uBubble.textContent = qText;
+  box.appendChild(uBubble);
+  box.scrollTop = box.scrollHeight;
+
+  setTimeout(() => {
+    const bBubble = document.createElement('div');
+    bBubble.className = 'chat-bubble bot';
+    const lang = currentLanguage;
+    const responses = CHAT_RESPONSES[lang] || CHAT_RESPONSES['en'];
+    const resp = overrideResp || responses[qText] || (UI_TRANSLATIONS[lang]?.defaultResponse || "I'm happy to help explain anything about the Katopanishad!");
+    bBubble.textContent = resp;
+    box.appendChild(bBubble);
+    box.scrollTop = box.scrollHeight;
+  }, 300);
+}
+
+document.getElementById('chat-send-btn').addEventListener('click', sendFreeChat);
+document.getElementById('chat-input-text').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendFreeChat();
+  }
+});
+
+// ============================================================
+// SEARCH: mark hidden items (for count)
+// ============================================================
+// Re-wrap search handler to add class for counting
+(function() {
+  const si = document.getElementById('search-input');
+  if (!si) return;
+  si.addEventListener('input', () => {
+    const q = si.value.trim().toLowerCase();
+    document.querySelectorAll('.page-item').forEach(item => {
+      if (!q) {
+        item.classList.remove('hidden-item');
+      } else {
+        const text = (item.textContent || '').toLowerCase();
+        if (text.includes(q)) item.classList.remove('hidden-item');
+        else item.classList.add('hidden-item');
+      }
+    });
+  });
+})();
+
 </script>
-</body>
-</html>
