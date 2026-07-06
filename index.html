@@ -93,6 +93,11 @@ header .brand .name {
   font-size: 20px;
   line-height: 1.2;
   color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  display: inline-block;
 }
 
 header .brand .name em {
@@ -1731,7 +1736,10 @@ function renderPageLists() {
     const item = document.createElement('div');
     item.className = 'page-item';
     item.setAttribute('onclick', `viewPage(${page.num})`);
-    const titleText = (currentLanguage === 'en' || currentLanguage === 'hi' || currentLanguage === 'sa') ? page.title_en : page.title;
+    const titleText = currentLanguage === 'kn' ? page.title
+      : currentLanguage === 'sa' ? (page.title_sa || page.title_en)
+      : currentLanguage === 'hi' ? (page.title_hi || page.title_en)
+      : page.title_en;
     item.innerHTML = `
       <span class="title">${page.num}. ${titleText}</span>
       <span class="badge">${
@@ -1862,7 +1870,10 @@ function renderFocusPage() {
   const page = PAGES.find(p => p.num === currentFocusPage);
   if (!page) return;
   
-  const pageTitle = (currentLanguage === 'en' || currentLanguage === 'hi' || currentLanguage === 'sa') ? page.title_en : page.title;
+  const pageTitle = currentLanguage === 'kn' ? page.title
+    : currentLanguage === 'sa' ? (page.title_sa || page.title_en)
+    : currentLanguage === 'hi' ? (page.title_hi || page.title_en)
+    : page.title_en;
   document.getElementById('focus-title').textContent = `${page.num}. ${pageTitle}`;
   const textField = document.getElementById('focus-text');
   
