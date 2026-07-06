@@ -505,7 +505,8 @@ footer {
   padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--rule);
-  max-height: calc(100vh - 220px);
+  min-height: 100px;
+  max-height: 70vh;
   overflow-y: auto;
 }
 .gita-conn-item {
@@ -4037,6 +4038,16 @@ function switchView(viewName) {
     requestAnimationFrame(() => window.renderMap());
   }
   if (viewName === 'gita') {
+    // Ensure view-gita is actually visible before rendering
+    var vg = document.getElementById('view-gita');
+    if (vg) {
+      vg.classList.remove('hidden');
+      vg.style.display = 'block';
+    }
+    // Ensure gita-list-view is visible
+    var lv = document.getElementById('gita-list-view');
+    if (lv) lv.classList.remove('hidden-view');
+    // Render content
     renderGitaLinks();
   }
   if (viewName === 'focus') {
@@ -5228,14 +5239,38 @@ window.addEventListener('resize', () => {
 let selectedGitaConnectionId = null;
 
 function renderGitaLinks() {
-  const listContainer = document.getElementById('gita-connections-list');
-  const detailContainer = document.getElementById('gita-connection-details');
-  if (!listContainer || !detailContainer) return;
+  var listContainer = document.getElementById('gita-connections-list');
+  var detailContainer = document.getElementById('gita-connection-details');
+
+  // If containers missing, create them dynamically inside gita-list-view
+  if (!listContainer) {
+    var lv = document.getElementById('gita-list-view');
+    if (lv) {
+      var wrap = document.createElement('div');
+      wrap.className = 'gita-wrap';
+      var lc = document.createElement('div');
+      lc.className = 'gita-list';
+      lc.id = 'gita-connections-list';
+      var dc = document.createElement('div');
+      dc.className = 'gita-detail-panel';
+      dc.id = 'gita-connection-details';
+      wrap.appendChild(lc);
+      wrap.appendChild(dc);
+      lv.innerHTML = '';
+      lv.appendChild(wrap);
+      listContainer = lc;
+      detailContainer = dc;
+    }
+  }
+  if (!listContainer) {
+    console.error('renderGitaLinks: gita-connections-list not found');
+    return;
+  }
   
   listContainer.innerHTML = '';
   
-  if (typeof GITA_CONNECTIONS === 'undefined') {
-    listContainer.innerHTML = '<div style="padding: 12px; color: var(--ink-fade);">No connections data available</div>';
+  if (typeof GITA_CONNECTIONS === 'undefined' || !GITA_CONNECTIONS || !GITA_CONNECTIONS.length) {
+    listContainer.innerHTML = '<div style="padding:16px;color:var(--ink-fade);font-size:14px;">ಗೀತಾ ಸಂಪರ್ಕಗಳು ಲಭ್ಯವಿಲ್ಲ / Gita connections not available</div>';
     return;
   }
   
