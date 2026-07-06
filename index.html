@@ -1598,18 +1598,20 @@ function updateLanguage(lang) {
   document.body.className = `lang-${lang}`;
   
   // Update header text
-  document.querySelector('header .brand .name').innerHTML = UI_TRANSLATIONS[lang].brand_name;
-  document.querySelector('header .brand .crumb').textContent = UI_TRANSLATIONS[lang].brand_crumb;
+  const _brandName = document.querySelector('header .brand .name');
+  const _brandCrumb = document.querySelector('header .brand .crumb');
+  if (_brandName) _brandName.innerHTML = UI_TRANSLATIONS[lang].brand_name;
+  if (_brandCrumb) _brandCrumb.textContent = UI_TRANSLATIONS[lang].brand_crumb;
   
   // Update tab buttons
-  document.getElementById('tab-browse').textContent = UI_TRANSLATIONS[lang].tab_browse;
-  document.getElementById('tab-focus').textContent = UI_TRANSLATIONS[lang].tab_focus;
-  document.getElementById('tab-chapters').textContent = UI_TRANSLATIONS[lang].tab_chapters;
-  document.getElementById('tab-map').textContent = UI_TRANSLATIONS[lang].tab_map;
-  document.getElementById('tab-chat').textContent = UI_TRANSLATIONS[lang].tab_chat;
+  (function(){ var _el = document.getElementById('tab-browse'); if (_el) _el.textContent = UI_TRANSLATIONS[lang].tab_browse; })();
+  (function(){ var _el = document.getElementById('tab-focus'); if (_el) _el.textContent = UI_TRANSLATIONS[lang].tab_focus; })();
+  (function(){ var _el = document.getElementById('tab-chapters'); if (_el) _el.textContent = UI_TRANSLATIONS[lang].tab_chapters; })();
+  (function(){ var _el = document.getElementById('tab-map'); if (_el) _el.textContent = UI_TRANSLATIONS[lang].tab_map; })();
+  (function(){ var _el = document.getElementById('tab-chat'); if (_el) _el.textContent = UI_TRANSLATIONS[lang].tab_chat; })();
   
   // Update search input placeholder
-  document.getElementById('search-input').placeholder = UI_TRANSLATIONS[lang].search_placeholder;
+  (function(){ var _el = document.getElementById('search-input'); if (_el) _el.placeholder = UI_TRANSLATIONS[lang].search_placeholder; })();
   
   // Update section titles in Browse view
   const browseTitles = document.querySelectorAll('#view-browse .section-title');
@@ -1632,13 +1634,14 @@ function updateLanguage(lang) {
   }
   
   // Update footer stats
-  document.querySelector('footer span').textContent = UI_TRANSLATIONS[lang].footer_stats;
+  (function(){ var _fs = document.querySelector('footer span'); if (_fs) _fs.textContent = UI_TRANSLATIONS[lang].footer_stats; })();
   
   // Update chat suggestions and welcome message
   const chatBox = document.getElementById('chat-box');
-  chatBox.innerHTML = `<div class="chat-bubble bot">${UI_TRANSLATIONS[lang].welcome_chat}</div>`;
+  if (chatBox) chatBox.innerHTML = `<div class="chat-bubble bot">${UI_TRANSLATIONS[lang].welcome_chat}</div>`;
   
-  const suggestionsDiv = document.querySelector('.chat-suggestions');
+  const suggestionsDiv = document.querySelector ? document.querySelector('.chat-suggestions') : null;
+  if (suggestionsDiv) {
   suggestionsDiv.innerHTML = '';
   UI_TRANSLATIONS[lang].chat_suggestions.forEach(s => {
     const chip = document.createElement('div');
@@ -1649,6 +1652,7 @@ function updateLanguage(lang) {
     });
     suggestionsDiv.appendChild(chip);
   });
+  } // end if (suggestionsDiv)
   
   // Update gita tab button
   const tabGita = document.getElementById('tab-gita');
@@ -1659,9 +1663,9 @@ function updateLanguage(lang) {
   // Re-render components with the new language state
   renderPageLists();
   renderFocusPage();
-  renderMap();
-  renderConceptDetails(selectedConceptId);
-  renderGitaLinks();
+  if (typeof window.renderMap === 'function') window.renderMap();
+  if (typeof renderConceptDetails === 'function') renderConceptDetails(selectedConceptId);
+  if (typeof renderGitaLinks === 'function') renderGitaLinks();
 
   // Update focus nav button labels
   updateFocusNavLabels();
@@ -2829,9 +2833,7 @@ function updateReadingProgress() {
   }
 }
 window.addEventListener('scroll', updateReadingProgress, { passive: true });
-document.getElementById('back-to-top').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+(function(){ var _btt = document.getElementById('back-to-top'); if (_btt) _btt.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); }); })();
 
 // ============================================================
 // FONT SIZE CONTROL
@@ -3026,13 +3028,17 @@ function askQuestionWithResp(qText, overrideResp) {
   }, 300);
 }
 
-document.getElementById('chat-send-btn').addEventListener('click', sendFreeChat);
-document.getElementById('chat-input-text').addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' && !e.shiftKey) {
-    e.preventDefault();
-    sendFreeChat();
-  }
-});
+(function(){
+  var _csb = document.getElementById('chat-send-btn');
+  var _cit = document.getElementById('chat-input-text');
+  if (_csb) _csb.addEventListener('click', sendFreeChat);
+  if (_cit) _cit.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendFreeChat();
+    }
+  });
+})();
 
 // ============================================================
 // SEARCH: mark hidden items (for count)
@@ -3551,3 +3557,5 @@ window.renderBimap = function() {
 })(); // end IIFE bipartite map
 
 </script>
+</body>
+</html>
