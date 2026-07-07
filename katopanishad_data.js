@@ -1,5 +1,5 @@
 // Katopanishad Knowledge Graph & Page Data
-const PAGES = [
+var PAGES = [
   {
     "num": 1,
     "title": "ಮುಖಪುಟ",
@@ -2054,7 +2054,7 @@ const PAGES = [
   }
 ];
 
-const TIERS = [
+var TIERS = [
   {
     "id": "parabrahma",
     "en": "Parabrahma",
@@ -2093,7 +2093,7 @@ const TIERS = [
   }
 ];
 
-const NODES = [
+var NODES = [
   {
     "id": "purusha",
     "tier": "parabrahma",
@@ -2312,7 +2312,7 @@ const NODES = [
   }
 ];
 
-const EDGES = [
+var EDGES = [
   {
     "source": "purusha",
     "target": "atman",
@@ -2415,7 +2415,7 @@ const EDGES = [
 ];
 
 
-const GITA_CONNECTIONS = [
+var GITA_CONNECTIONS = [
   {
     "id": "eternity_of_soul",
     "kathaNode": "atman",
@@ -2449,7 +2449,7 @@ const GITA_CONNECTIONS = [
       "kn": "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಬರುವ ರಥದ ಕಲ್ಪನೆ (ಶರೀರವೇ ರಥ, ಬುದ್ಧಿಯೇ ಸಾರಥಿ, ಮನಸ್ಸೇ ಕಡಿವಾಣ, ಇಂದ್ರಿಯಗಳೇ ಕುದುರೆಗಳು) ಭಗವದ್ಗೀತೆಯ ಕಲ್ಪನೆಗೆ ಆಧಾರವಾಗಿದೆ. ಭಗವದ್ಗೀತೆಯಲ್ಲಿ ಭಗವಾನ್ ಕೃಷ್ಣನೇ ಸಾರಥಿಯಾಗಿ ಅರ್ಜುನನೆಂಬ ಜೀವವನ್ನು ಮುನ್ನಡೆಸುವ ಮೂಲಕ ಈ ರೂಪಕವು ಸಾಕಾರಗೊಂಡಿದೆ.",
       "en": "The famous Chariot Metaphor of Katha Upanishad (1.3.3-4) — where the body is the chariot, intellect is the charioteer, mind is the reins, and senses are the horses — is physically dramatized in the Bhagavad Gita, with Sri Krishna acting as the divine Charioteer guiding Arjuna (the jīva)."
     },
-    "kathaShloka": "ಆತ್ಮಾನಂ ರಥಿನಂ ವಿದ್ಧಿ ಶರೀರಂ ರಥಮೇವ ತು |\nಬುದ್ಧಿಂ ತು ಸಾರಥಿಂ ವಿದ್ಧಿ ಮನಃ ಪ್ರಗ್ರಹಮೇವ ಚ ||\nಇಂದ್ರಿಯانی ಹಯಾನಾಹುರ್ವಿಷಯಾಂಸ್ತೇಷು ಗೋಚರಾನ್ |\nಆತ್ಮೇಂದ್ರಿಯಮನೋಯುಕ್ತಂ ಭೋಕ್ತೇತ್ಯಾಹುರ್ಮನೀಷಿಣಃ ||",
+    "kathaShloka": "ಆತ್ಮಾನಂ ರಥಿನಂ ವಿದ್ಧಿ ಶರೀರಂ ರಥಮೇವ ತು |\nಬುದ್ಧಿಂ ತು ಸಾರಥಿಂ ವಿದ್ಧಿ ಮನಃ ಪ್ರಗ್ರಹಮೇವ ಚ ||\nಇಂದ್ರಿಯಾಣಿ ಹಯಾನಾಹುಃವಿಷಯಾಂಸ್ತೇಷು ಗೋಚರಾನ್ |\nಆತ್ಮೇಂದ್ರಿಯಮನೋಯುಕ್ತಂ ಭೋಕ್ತೇತ್ಯಾಹುರ್ಮನೀಷಿಣಃ ||",
     "gitaShloka": "ಈಶ್ವರಃ ಸರ್ವಭೂತಾನಾಂ ಹೃದ್ದೇಶೇಽರ್ಜುನ ತಿಷ್ಠತಿ |\nಭ್ರಾಮಯನ್ ಸರ್ವಭೂತಾನಿ ಯಂತ್ರಾರೂಢಾನಿ ಮಾಯಯಾ ||"
   },
   {
