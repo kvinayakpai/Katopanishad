@@ -487,174 +487,15 @@ footer {
   z-index: 10;
 }
 
-/* ============ GITA LINKS VIEW ============ */
-.gita-wrap {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 16px;
-  min-height: calc(100vh - 220px);
-}
 @media (max-width: 768px) {
-  .gita-wrap {
-    grid-template-columns: 1fr;
-  }
-}
-.gita-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background: var(--paper-2);
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--rule);
-  min-height: 100px;
-  max-height: 70vh;
-  overflow-y: auto;
-}
-.gita-conn-item {
-  padding: 10px 12px;
-  background: var(--paper);
-  border: 1px solid var(--rule-soft);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.15s, border-color 0.15s;
-}
-.gita-conn-item:hover, .gita-conn-item.active {
-  border-color: var(--rust);
-  transform: translateY(-1px);
-}
-.gita-conn-item.active {
-  background: var(--paper-2);
-  border-width: 2px;
-}
-.gita-conn-item .title-kn {
-  font-family: 'Noto Sans Kannada', sans-serif;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--ink);
-}
-.gita-conn-item .title-en {
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: 4px;
-}
-.gita-conn-item .ref-badge {
-  font-size: 10px;
-  color: var(--ink-fade);
-  margin-top: 6px;
-  display: block;
 }
 
-.gita-detail-card {
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.gita-detail-card h3 {
-  margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--rust);
-}
 .devanagari-text {
   font-family: 'Noto Sans Devanagari', 'Mangal', 'Kokila', system-ui, sans-serif;
   line-height: 1.8;
 }
 
-body.lang-kn .gita-detail-card h3 {
-  font-family: 'Noto Sans Kannada', sans-serif;
-  font-size: 20px;
-}
-.gita-detail-card .explanation {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: var(--ink-soft);
-  white-space: pre-wrap;
-}
-body.lang-kn .gita-detail-card .explanation {
-  font-family: 'Noto Sans Kannada', sans-serif;
-  font-size: 15.5px;
-}
-.gita-verses-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  border-top: 1px dashed var(--rule);
-  border-bottom: 1px dashed var(--rule);
-  padding: 16px 0;
-}
 @media (max-width: 600px) {
-  .gita-verses-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.gita-verse-box {
-  background: rgba(158, 58, 26, 0.03);
-  border-left: 3px solid var(--rust);
-  padding: 12px;
-  border-radius: 0 8px 8px 0;
-}
-.gita-verse-box .source-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--ink-fade);
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-.gita-verse-box .verse-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 15px;
-  font-style: italic;
-  line-height: 1.6;
-  white-space: pre-wrap;
-  color: var(--ink);
-}
-body.lang-kn .gita-verse-box .verse-text {
-  font-family: 'Tiro Kannada', 'Noto Sans Kannada', serif;
-  font-size: 16px;
-  font-style: normal;
-}
-.gita-verse-box .verse-ref {
-  font-size: 11px;
-  color: var(--rust);
-  font-weight: 600;
-  margin-top: 6px;
-  display: block;
-}
-.gita-actions {
-  display: flex;
-  gap: 12px;
-}
-.gita-action-btn {
-  background: var(--bg-2);
-  border: 1px solid var(--rule);
-  color: var(--ink-soft);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.gita-action-btn:hover {
-  background: var(--rule-soft);
-  color: var(--ink);
-}
-.gita-empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  color: var(--ink-fade);
-  text-align: center;
 }
 
 /* ============ READING PROGRESS BAR ============ */
@@ -997,96 +838,10 @@ body.dark .app {
 }
 
 
-/* ============ GITA BIPARTITE MAP ============ */
-.gita-view-toggle {
-  display: flex;
-  gap: 0;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 12px;
-  width: fit-content;
-}
-.gita-view-toggle button {
-  background: transparent;
-  border: 0;
-  padding: 7px 18px;
-  font: inherit;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--ink-fade);
-  cursor: pointer;
-  letter-spacing: .06em;
-  transition: background 0.15s, color 0.15s;
-}
-.gita-view-toggle button.on {
-  background: var(--ink);
-  color: var(--paper);
-}
-.gita-view-toggle button + button {
-  border-left: 1px solid var(--rule);
-}
 
-/* bipartite map container */
-#gita-map-view {
-  display: none;
-}
-#gita-map-view.active {
-  display: block;
-}
-#gita-list-view {
-  display: block;
-}
-#gita-list-view.hidden-view {
-  display: none;
-}
 
-.gita-bimap-wrap {
-  position: relative;
-  width: 100%;
-  border: 1px solid var(--rule);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--paper);
-  touch-action: none;
-}
-#gita-bimap-canvas {
-  display: block;
-  width: 100%;
-  cursor: default;
-}
-.gita-bimap-tooltip {
-  position: absolute;
-  background: var(--ink);
-  color: var(--paper);
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 12px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s;
-  max-width: 260px;
-  line-height: 1.5;
-  z-index: 20;
-  white-space: pre-wrap;
-}
-.gita-bimap-tooltip.visible { opacity: 1; }
 
 /* Legend */
-.gita-bimap-legend {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding: 10px 14px;
-  border: 1px solid var(--rule-soft);
-  border-radius: 8px;
-  margin-top: 10px;
-  background: var(--paper-2);
-  font-size: 12px;
-  color: var(--ink-soft);
-  align-items: center;
-}
 .legend-item {
   display: flex;
   align-items: center;
@@ -1107,62 +862,13 @@ body.dark .app {
 }
 
 /* selected connection detail (reuses concept-details styles) */
-.gita-conn-detail-map {
-  margin-top: 12px;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-radius: 12px;
-  padding: 18px;
-  display: none;
-}
-.gita-conn-detail-map.active { display: block; }
-.gita-conn-detail-map h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--rust);
-  margin: 0 0 6px;
-}
-.gita-conn-detail-map .refs-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-.gita-conn-detail-map .ref-pill {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 12px;
-  border: 1px solid var(--rule);
-  color: var(--ink-fade);
-  background: var(--bg-2);
-}
-.gita-conn-detail-map .explanation {
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--ink-soft);
-  margin-bottom: 14px;
-}
-.gita-conn-detail-map .shloka-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
 @media (max-width: 500px) {
-  .gita-conn-detail-map .shloka-pair { grid-template-columns: 1fr; }
 }
 .shloka-box {
   background: rgba(158,58,26,0.04);
   border-left: 3px solid var(--rust);
   padding: 10px 12px;
   border-radius: 0 8px 8px 0;
-}
-.shloka-box.gita-side {
-  border-left-color: #2475b0;
-  background: rgba(36,117,176,0.04);
 }
 .shloka-box .src-lbl {
   font-size: 10px;
@@ -1179,19 +885,6 @@ body.dark .app {
   color: var(--ink);
   white-space: pre-wrap;
 }
-.gita-conn-open-btn {
-  margin-top: 10px;
-  background: var(--bg-2);
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  padding: 7px 14px;
-  font: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  cursor: pointer;
-}
-.gita-conn-open-btn:hover { background: var(--rule-soft); color: var(--ink); }
 
 </style>
 </head>
@@ -1224,7 +917,6 @@ body.dark .app {
     <button id="tab-chapters">Chapters</button>
     <button id="tab-map">Map</button>
     <button id="tab-chat">Chat</button>
-    <button id="tab-gita">Gītā Links</button>
   </nav>
 
   <section class="search">
@@ -1371,89 +1063,7 @@ body.dark .app {
       </div>
     </div>
 
-    <!-- Gita Connections View -->
-    <div id="view-gita" class="hidden">
 
-      <!-- Toggle: List | Map -->
-      <div class="gita-view-toggle">
-        <button id="gita-toggle-list" class="on" onclick="switchGitaView('list')">≡ List</button>
-        <button id="gita-toggle-map" onclick="switchGitaView('map')">⬡ Map</button>
-      </div>
-
-      <!-- LIST VIEW (existing) -->
-      <div id="gita-list-view">
-        <div class="gita-wrap">
-          <div class="gita-list" id="gita-connections-list">
-          <div class="gita-conn-item" data-id="eternity_of_soul" onclick="selectGitaConnection('eternity_of_soul')">
-            <div class="title-kn">ಆತ್ಮನ ನಿತ್ಯತ್ವ (ಜನ್ಮರಹಿತ/ಮರಣರಹಿತ)</div>
-            <span class="ref-badge">ಪುಟ 36 · BG 2.20</span>
-          </div>
-          <div class="gita-conn-item" data-id="chariot_metaphor" onclick="selectGitaConnection('chariot_metaphor')">
-            <div class="title-kn">ರಥ ಕಲ್ಪನೆ ಮತ್ತು ಇಂದ್ರಿಯ ನಿಗ್ರಹ</div>
-            <span class="ref-badge">ಪುಟ 40 · BG 18.61 & BG Setting</span>
-          </div>
-          <div class="gita-conn-item" data-id="ashvattha_tree" onclick="selectGitaConnection('ashvattha_tree')">
-            <div class="title-kn">ಸಂಸಾರ ವೃಕ್ಷ (ಅಶ್ವತ್ಥ)</div>
-            <span class="ref-badge">ಪುಟ 67 · BG 15.1</span>
-          </div>
-          <div class="gita-conn-item" data-id="brahman_light" onclick="selectGitaConnection('brahman_light')">
-            <div class="title-kn">ಪರಂಜ್ಯೋತಿಯ ಸ್ವಯಂಪ್ರಕಾಶತ್ವ</div>
-            <span class="ref-badge">ಪುಟ 65 · BG 15.6</span>
-          </div>
-          <div class="gita-conn-item" data-id="vaisvanara_fire" onclick="selectGitaConnection('vaisvanara_fire')">
-            <div class="title-kn">ವೈಶ್ವಾನರ ರೂಪದ ಭಗವಂತ</div>
-            <span class="ref-badge">ಪುಟ 16 · BG 15.14</span>
-          </div>
-          <div class="gita-conn-item" data-id="eleven_gates" onclick="selectGitaConnection('eleven_gates')">
-            <div class="title-kn">ದೇಹದ ಹನ್ನೊಂದು ದ್ವಾರಗಳು</div>
-            <span class="ref-badge">ಪುಟ 57 · BG 5.13</span>
-          </div>
-          <div class="gita-conn-item" data-id="triple_disciplines" onclick="selectGitaConnection('triple_disciplines')">
-            <div class="title-kn">ಯಜ್ಞ, ದಾನ ಮತ್ತು ತಪಸ್ಸು</div>
-            <span class="ref-badge">ಪುಟ 19 · BG 17.5 & 18.5</span>
-          </div>
-          <div class="gita-conn-item" data-id="hierarchy_purusha" onclick="selectGitaConnection('hierarchy_purusha')">
-            <div class="title-kn">ಇಂದ್ರಿಯಗಳಿಗಿಂತ ಪರಮಪುರುಷ ಶ್ರೇಷ್ಠ</div>
-            <span class="ref-badge">ಪುಟ 44 · BG 3.42</span>
-          </div>
-          <div class="gita-conn-item" data-id="shraddha_faith" onclick="selectGitaConnection('shraddha_faith')">
-            <div class="title-kn">ಶ್ರದ್ಧೆಯಿಂದ ಜ್ಞಾನ ಸಿದ್ಧಿ</div>
-            <span class="ref-badge">ಪುಟ 13 · BG 4.39</span>
-          </div>
-          </div>
-          <div class="gita-detail-panel" id="gita-connection-details">
-            <div class="gita-detail-card" id="gita-detail-card-eternity_of_soul">
-              <span class="ref-badge" style="margin-bottom:8px;display:inline-block;">ಅಧ್ಯಾಯ ೧, ವಲ್ಲೀ ೨, ಶ್ಲೋಕ ೧೮ (Page 36) | BG 2.20</span>
-              <h3 id="gita-detail-title">ಆತ್ಮನ ನಿತ್ಯತ್ವ (ಜನ್ಮರಹಿತ/ಮರಣರಹಿತ)</h3>
-              <div class="explanation" id="gita-detail-explanation">ಕಠೋಪನಿಷತ್ತಿನ 'ನ ಜಾಯತೇ ಮ್ರಿಯತೇ ವಾ...' ಎಂಬ ಶ್ಲೋಕವು ಭಗವದ್ಗೀತೆಯ ಎರಡನೇ ಅಧ್ಯಾಯದಲ್ಲಿ (೨.೨೦) ಸಣ್ಣ ವ್ಯತ್ಯಾಸದೊಂದಿಗೆ ಪುನರಾವರ್ತನೆಯಾಗಿದೆ. ಎರಡರಲ್ಲೂ ಆತ್ಮನು ಹುಟ್ಟು-ಸಾವುಗಳಿಂದ ಮುಕ್ತನಾಗಿದ್ದಾನೆ ಮತ್ತು ಶರೀರವು ನಾಶವಾದರೂ ಆತ್ಮನು ನಾಶವಾಗುವುದಿಲ್ಲ ಎಂದು ಸಾರಲಾಗಿದೆ.</div>
-              <div class="gita-verses-grid"><div class="gita-verse-box"><div class="source-label">ಕಠೋಪನಿಷತ್</div><div class="verse-text">ನ ಜಾಯತೇ ಮ್ರಿಯತೇ ವಾ ವಿಪಶ್ಚಿನ್
-ನಾಯಂ ಕುತಶ್ಚಿನ್ ನ ಬಭೂವ ಕಶ್ಚಿತ್ |
-ಅಜೋ ನಿತ್ಯಃ ಶಾಶ್ವತೋಽಯಂ ಪುರಾಣೋ
-ನ ಹನ್ಯತೇ ಹನ್ಯಮಾನೇ ಶರೀರೇ ||</div></div><div class="gita-verse-box"><div class="source-label">ಭಗವದ್ಗೀತಾ</div><div class="verse-text">ನ ಜಾಯತೇ ಮ್ರಿಯತೇ ವಾ ಕದಾಚಿನ್
-ನಾಯಂ ಭೂತ್ವಾ ಭವಿತಾ ವಾ ನ ಭೂಯಃ |
-ಅಜೋ ನಿತ್ಯಃ ಶಾಶ್ವತೋಽಯಂ ಪುರಾಣೋ
-ನ ಹನ್ಯತೇ ಹನ್ಯಮಾನೇ ಶರೀರೇ ||</div></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BIPARTITE MAP VIEW (new) -->
-      <div id="gita-map-view">
-        <div class="gita-bimap-wrap">
-          <canvas id="gita-bimap-canvas" height="520"></canvas>
-          <div class="gita-bimap-tooltip" id="gita-bimap-tooltip"></div>
-        </div>
-        <div class="gita-bimap-legend">
-          <span class="legend-item"><span class="legend-dot" style="background:#c0622e;"></span>Katha Upaniṣad concept</span>
-          <span class="legend-item"><span class="legend-dot" style="background:#2475b0;"></span>Bhagavad Gītā concept</span>
-          <span class="legend-item"><span class="legend-line" style="background:#8b7355;"></span>Direct verse echo</span>
-          <span class="legend-item"><span class="legend-line" style="background:#6aab6a; border-top:2px dashed #6aab6a; height:0; border-radius:0;"></span>Thematic parallel</span>
-        </div>
-        <div class="gita-conn-detail-map" id="gita-bimap-detail"></div>
-      </div>
-
-    </div>
   </main>
 
 </div>
@@ -1472,7 +1082,7 @@ let currentFocusPage = 1;
 let currentLanguage = 'kn';
 
 // Tab switching via hash
-const tabs = ['browse', 'focus', 'chapters', 'map', 'chat', 'gita'];
+const tabs = ['browse', 'focus', 'chapters', 'map', 'chat'];
 tabs.forEach(tab => {
   const btn = document.getElementById(`tab-${tab}`);
   if (btn) {
@@ -1503,19 +1113,6 @@ function switchView(viewName) {
 
   if (viewName === 'map') {
     requestAnimationFrame(() => window.renderMap());
-  }
-  if (viewName === 'gita') {
-    // Ensure view-gita is actually visible before rendering
-    var vg = document.getElementById('view-gita');
-    if (vg) {
-      vg.classList.remove('hidden');
-      vg.style.display = 'block';
-    }
-    // Ensure gita-list-view is visible
-    var lv = document.getElementById('gita-list-view');
-    if (lv) lv.classList.remove('hidden-view');
-    // Render content
-    renderGitaLinks();
   }
   if (viewName === 'focus') {
     renderFocusPage();
@@ -1561,7 +1158,6 @@ const UI_TRANSLATIONS = {
       { text: "ಕಠೋಪನಿಷತ್ತಿನಲ್ಲಿ ಯೋಗವನ್ನು ಹೇಗೆ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆ?", label: "ಯೋಗದ ವ್ಯಾಖ್ಯಾನ" }
     ],
     defaultResponse: "ಕಠೋಪನಿಷತ್ ಬಗ್ಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳನ್ನು ವಿವರಿಸಲು ನಾನು ಸಂತೋಷಪಡುತ್ತೇನೆ!",
-    tab_gita: 'ಗೀತಾ ಕೊಂಡಿಗಳು'
   },
   en: {
     brand_name: 'Katopanishad · <em>Tatva Jaalam</em>',
@@ -1591,7 +1187,6 @@ const UI_TRANSLATIONS = {
       { text: "How is Yoga defined in Katopanishad?", label: "Definition of Yoga" }
     ],
     defaultResponse: "I'm happy to help explain anything about the Katopanishad!",
-    tab_gita: 'Gita Connection'
   },
   hi: {
     brand_name: 'कठोपनिषत् · <em>तत्व जालं</em>',
@@ -1621,7 +1216,6 @@ const UI_TRANSLATIONS = {
       { text: "कठोपनिषत् में योग की परिभाषा क्या है?", label: "योग की परिभाषा" }
     ],
     defaultResponse: "कठोपनिषत् के बारे में किसी भी प्रश्न का उत्तर देने में मुझे प्रसन्नता होगी!",
-    tab_gita: 'गीता संबंध'
   },
   sa: {
     brand_name: 'कठोपनिषत् · <em>तत्त्वजालम्</em>',
@@ -1651,7 +1245,6 @@ const UI_TRANSLATIONS = {
       { text: "कठोपनिषदि योगस्य लक्षणं किम्?", label: "योगलक्षणम्" }
     ],
     defaultResponse: "कठोपनिषदि यद्यपि किञ्चित् प्रश्नयति, तस्य उत्तरं दातुं मे आनन्दः!",
-    tab_gita: 'गीतासम्बन्धः'
   }
 };
 
@@ -1718,18 +1311,12 @@ function updateLanguage(lang) {
   });
   } // end if (suggestionsDiv)
   
-  // Update gita tab button
-  const tabGita = document.getElementById('tab-gita');
-  if (tabGita) {
-    tabGita.textContent = UI_TRANSLATIONS[lang].tab_gita;
-  }
 
   // Re-render components with the new language state
   renderPageLists();
   renderFocusPage();
   if (typeof window.renderMap === 'function') window.renderMap();
   if (typeof renderConceptDetails === 'function') renderConceptDetails(selectedConceptId);
-  if (typeof renderGitaLinks === 'function') renderGitaLinks();
 
   // Update focus nav button labels
   updateFocusNavLabels();
@@ -2703,185 +2290,9 @@ window.addEventListener('resize', () => {
 
 
 // Gītā Connections state
-let selectedGitaConnectionId = null;
 
-function renderGitaLinks() {
-  // Content is pre-rendered in HTML; just update active states and language
-  var listContainer = document.getElementById('gita-connections-list');
-  var detailContainer = document.getElementById('gita-connection-details');
 
-  // Mark first item active if none selected
-  if (listContainer && !selectedGitaConnectionId) {
-    var items = listContainer.querySelectorAll('.gita-conn-item');
-    if (items.length > 0) {
-      items[0].classList.add('active');
-      var firstId = items[0].getAttribute('data-id');
-      if (firstId) selectedGitaConnectionId = firstId;
-    }
-  }
 
-  // Update item titles for current language
-  if (listContainer && typeof GITA_CONNECTIONS !== 'undefined' && GITA_CONNECTIONS) {
-    GITA_CONNECTIONS.forEach(function(conn) {
-      var item = listContainer.querySelector('[data-id="' + conn.id + '"]');
-      if (!item) return;
-      var titleEl = item.querySelector('.title-kn');
-      if (titleEl) {
-        var lang = currentLanguage;
-        titleEl.textContent = lang === 'en' ? conn.title.en
-          : lang === 'sa' ? (conn.title.sa || conn.title.en)
-          : conn.title.kn;
-      }
-    });
-  }
-
-  // Render detail for selected connection
-  renderGitaConnectionDetails();
-
-  // Done -- list is already in HTML
-  return;
-  // Old rendering code below kept for reference but not executed
-  if (false) {
-  listContainer.innerHTML = '';
-  
-  GITA_CONNECTIONS.forEach(conn => {
-    const item = document.createElement('div');
-    item.className = 'gita-conn-item';
-    if (selectedGitaConnectionId === conn.id) {
-      item.classList.add('active');
-    }
-    
-    const titleText = currentLanguage === 'kn' ? conn.title.kn : currentLanguage === 'sa' ? (conn.title.sa || conn.title.en) : conn.title.en;
-    
-    // Extract Katha page number for badge
-    const pMatch = conn.kathaRef.match(/Page\s+(\d+)/i);
-    const pageBadgeText = pMatch ? `Page ${pMatch[1]}` : '';
-    
-    const isKannadaLike = (currentLanguage === 'kn');
-    const isSA = (currentLanguage === 'sa');
-    const pageLbl = isKannadaLike
-      ? (pageBadgeText ? pageBadgeText.replace('Page', 'ಪುಟ') : '')
-      : isSA
-      ? (pageBadgeText ? pageBadgeText.replace('Page', 'पृष्ठम्') : '')
-      : pageBadgeText;
-    const displayTitle = isKannadaLike ? conn.title.kn
-      : isSA ? (conn.title.sa || conn.title.en)
-      : conn.title.en;
-    item.innerHTML = `
-      <div class="${isKannadaLike || isSA ? 'title-kn' : 'title-en'}">${displayTitle}</div>
-      <span class="ref-badge">${pageLbl ? pageLbl + ' · ' : ''}${conn.gitaRef}</span>
-    `;
-    
-    item.addEventListener('click', () => {
-      selectGitaConnection(conn.id);
-    });
-    listContainer.appendChild(item);
-  });
-  
-  renderGitaConnectionDetails();
-  }
-}
-
-function selectGitaConnection(id) {
-  selectedGitaConnectionId = id;
-  
-  // Highlight in list
-  const items = document.querySelectorAll('.gita-conn-item');
-  items.forEach((item, idx) => {
-    if (typeof GITA_CONNECTIONS !== 'undefined' && GITA_CONNECTIONS[idx] && GITA_CONNECTIONS[idx].id === id) {
-      item.classList.add('active');
-    } else {
-      item.classList.remove('active');
-    }
-  });
-  
-  renderGitaConnectionDetails();
-  
-  // update hash
-  const newHash = `gita?connection=${id}`;
-  if (window.location.hash.substring(1) !== newHash) {
-    window.location.hash = newHash;
-  }
-}
-
-function renderGitaConnectionDetails() {
-  const detailContainer = document.getElementById('gita-connection-details');
-  if (!detailContainer) return;
-  
-  if (!selectedGitaConnectionId && typeof GITA_CONNECTIONS !== 'undefined' && GITA_CONNECTIONS.length > 0) {
-    // Select first by default
-    selectedGitaConnectionId = GITA_CONNECTIONS[0].id;
-    // Highlight list item
-    const firstItem = document.querySelector('.gita-conn-item');
-    if (firstItem) firstItem.classList.add('active');
-  }
-  
-  const conn = typeof GITA_CONNECTIONS !== 'undefined' ? GITA_CONNECTIONS.find(c => c.id === selectedGitaConnectionId) : null;
-  
-  if (!conn) {
-    detailContainer.innerHTML = `
-      <div class="gita-empty-state">
-        <h3 style="margin-bottom: 8px;">Select a Gītā Connection</h3>
-        <p>Explore how Sri Krishna's teachings in the Bhagavadgita parallel and build upon the ancient Katha Upanishad.</p>
-      </div>
-    `;
-    return;
-  }
-  
-  const title = currentLanguage === 'kn' ? conn.title.kn : currentLanguage === 'sa' ? (conn.title.sa || conn.title.en) : conn.title.en;
-  const explanation = currentLanguage === 'kn' ? conn.connection.kn : conn.connection.en;
-  
-  // Parse page number for Katha action button
-  const pMatch = conn.kathaRef.match(/Page\s+(\d+)/i);
-  const pageNum = pMatch ? parseInt(pMatch[1]) : null;
-  
-  // Extract verse number for highlight (e.g. "1.3.3")
-  let verseRef = '';
-  if (conn.id === "eternity_of_soul") verseRef = "1.2.18";
-  else if (conn.id === "chariot_metaphor") verseRef = "1.3.3";
-  else if (conn.id === "ashvattha_tree") verseRef = "2.3.1";
-  else if (conn.id === "brahman_light") verseRef = "2.2.15";
-  else if (conn.id === "vaisvanara_fire") verseRef = "1.1.7";
-  else if (conn.id === "eleven_gates") verseRef = "2.2.1";
-  else if (conn.id === "triple_disciplines") verseRef = "1.1.17";
-  else if (conn.id === "hierarchy_purusha") verseRef = "1.3.10";
-  else if (conn.id === "shraddha_faith") verseRef = "1.1.9";
-  
-  // Create external link to Bhagavadgita portal
-  const bgPortalUrl = `../Bhagavadgita/viewer.html#map?concept=${conn.gitaNode}`;
-  
-  detailContainer.innerHTML = `
-    <div class="gita-detail-card">
-      <h3 class="card-title">${title}</h3>
-      
-      <div class="gita-verses-grid">
-        <div class="gita-verse-box">
-          <div class="source-label">Katha Upanishad</div>
-          <div class="verse-text">${conn.kathaShloka}</div>
-          <div class="verse-ref">${conn.kathaRef}</div>
-        </div>
-        <div class="gita-verse-box">
-          <div class="source-label">Bhagavad Gita</div>
-          <div class="verse-text">${conn.gitaShloka}</div>
-          <div class="verse-ref">${conn.gitaRef}</div>
-        </div>
-      </div>
-      
-      <div class="explanation">${explanation}</div>
-      
-      <div class="gita-actions">
-        ${pageNum ? `
-          <button class="gita-action-btn" onclick="viewPage(${pageNum}, '${verseRef}')">
-            ${currentLanguage === 'kn' ? 'ಕಠೋಪನಿಷತ್ ಪುಟ ನೋಡಿ' : 'View Katha Page'}
-          </button>
-        ` : ''}
-        <a class="gita-action-btn" style="text-decoration: none; text-align: center; line-height: 1.5;" href="${bgPortalUrl}" target="_blank">
-          ${currentLanguage === 'kn' ? 'ಗೀತೆಯ ಪರಿಕಲ್ಪನೆ ನೋಡಿ' : 'View Gita Concept'}
-        </a>
-      </div>
-    </div>
-  `;
-}
 
 // Router routing logic
 function handleRouting() {
@@ -2946,13 +2357,6 @@ function handleRouting() {
           selectConcept(matchedNode.id);
         }
       }, 200);
-    }
-  } else if (path === 'gita') {
-    switchView('gita');
-    if (params.connection) {
-      selectGitaConnection(params.connection);
-    } else {
-      renderGitaLinks();
     }
   } else {
     // browse, chapters, chat
@@ -3301,498 +2705,9 @@ function askQuestionWithResp(qText, overrideResp) {
 
 
 // ============================================================
-// GITA VIEW TOGGLE
 // ============================================================
-function switchGitaView(mode) {
-  const listView = document.getElementById('gita-list-view');
-  const mapView  = document.getElementById('gita-map-view');
-  const btnList  = document.getElementById('gita-toggle-list');
-  const btnMap   = document.getElementById('gita-toggle-map');
-  if (mode === 'map') {
-    listView.classList.add('hidden-view');
-    mapView.classList.add('active');
-    btnList.classList.remove('on');
-    btnMap.classList.add('on');
-    initGitaBimap();
-  } else {
-    mapView.classList.remove('active');
-    listView.classList.remove('hidden-view');
-    btnList.classList.add('on');
-    btnMap.classList.remove('on');
-  }
-}
 
 // ============================================================
-// BIPARTITE KATHA ↔ GITA MAP
-// ============================================================
-(function() {
-
-let bimapInit = false;
-let selectedConnId = null;
-
-// Colour palettes
-const KATHA_COLOR = '#c0622e';   // rust/amber for Katha side
-const GITA_COLOR  = '#2475b0';   // blue for Gita side
-const EDGE_DIRECT = '#8b7355';   // tan for direct verse echoes
-const EDGE_THEME  = '#6aab6a';   // green for thematic parallels
-
-// Which connections are "direct verse echoes" (the shloka is nearly identical)
-const DIRECT_ECHO_IDS = new Set([
-  'eternity_of_soul', 'ashvattha_tree', 'brahman_light', 'chariot_metaphor', 'hierarchy_purusha'
-]);
-
-// Extra connections to show beyond GITA_CONNECTIONS
-// (already exist in commentary but not in data — we synthesise them for the map only)
-const EXTRA_EDGES = [
-  { id: '_shreyas_bg16', source_katha: 'shreyas', source_gita: 'daivi_sampat',
-    gitaRef: 'BG 16.1–3', kathaRef: '1.2.1',
-    title: 'Shreyas & Divine Qualities',
-    note_en: "Katha's sreyas (the good path) maps to the divine qualities (daivi-sampat) enumerated by Krishna in BG 16.1–3: fearlessness, purity, knowledge, and non-violence.",
-    direct: false },
-  { id: '_yoga_bg6', source_katha: 'yoga_definition', source_gita: 'dhyana_yoga',
-    gitaRef: 'BG 6.11–15', kathaRef: '2.3.11',
-    title: 'Yoga as Sense Steadiness',
-    note_en: "Katha's definition — steady holding of the senses (sthiram indriya-dharanam) — directly parallels Krishna's dhyana-yoga instructions in BG 6.",
-    direct: true }
-];
-
-function buildBimapData() {
-  if (typeof GITA_CONNECTIONS === 'undefined') return { kathaNodes: [], gitaNodes: [], edges: [] };
-
-  const kathaMap = {};
-  const gitaMap  = {};
-  const edges    = [];
-
-  // From GITA_CONNECTIONS
-  GITA_CONNECTIONS.forEach(conn => {
-    // Katha node
-    if (!kathaMap[conn.kathaNode]) {
-      const kNode = typeof NODES !== 'undefined' ? NODES.find(n => n.id === conn.kathaNode) : null;
-      kathaMap[conn.kathaNode] = {
-        id: conn.kathaNode,
-        label_en: kNode ? kNode.title.en : conn.kathaNode,
-        label_kn: kNode ? (kNode.kn || kNode.title.kn) : conn.kathaNode,
-        tier: kNode ? kNode.tier : 'jiva'
-      };
-    }
-    // Gita node (derive label from connection title + gitaRef)
-    if (!gitaMap[conn.gitaNode]) {
-      gitaMap[conn.gitaNode] = {
-        id: conn.gitaNode,
-        label_en: conn.gitaRef,
-        label_kn: conn.gitaRef,
-        title_en: conn.title.en
-      };
-    }
-    edges.push({
-      id: conn.id,
-      katha: conn.kathaNode,
-      gita:  conn.gitaNode,
-      direct: DIRECT_ECHO_IDS.has(conn.id),
-      ref: conn.gitaRef,
-      conn: conn
-    });
-  });
-
-  // Extra synthesised edges
-  EXTRA_EDGES.forEach(ex => {
-    if (!kathaMap[ex.source_katha]) return; // skip if katha node unknown
-    if (!gitaMap[ex.source_gita]) {
-      gitaMap[ex.source_gita] = {
-        id: ex.source_gita,
-        label_en: ex.gitaRef,
-        label_kn: ex.gitaRef,
-        title_en: ex.title
-      };
-    }
-    edges.push({
-      id: ex.id,
-      katha: ex.source_katha,
-      gita:  ex.source_gita,
-      direct: ex.direct,
-      ref: ex.gitaRef,
-      conn: {
-        id: ex.id,
-        title: { en: ex.title, kn: ex.title },
-        kathaRef: ex.kathaRef,
-        gitaRef: ex.gitaRef,
-        connection: { en: ex.note_en, kn: ex.note_en },
-        kathaShloka: '', gitaShloka: ''
-      }
-    });
-  });
-
-  return {
-    kathaNodes: Object.values(kathaMap),
-    gitaNodes:  Object.values(gitaMap),
-    edges
-  };
-}
-
-window.initGitaBimap = function() {
-  if (bimapInit) { renderBimap(); return; }
-  bimapInit = true;
-
-  const canvas = document.getElementById('gita-bimap-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const tip  = document.getElementById('gita-bimap-tooltip');
-  const detail = document.getElementById('gita-bimap-detail');
-
-  const { kathaNodes, gitaNodes, edges } = buildBimapData();
-
-  function layout() {
-    const W = canvas.offsetWidth || 700;
-    const H = 520;
-    canvas.width  = W;
-    canvas.height = H;
-
-    const PAD_TOP = 60, PAD_BOT = 40;
-    const usableH = H - PAD_TOP - PAD_BOT;
-    const COL_K = W * 0.22;
-    const COL_G = W * 0.78;
-    const NODE_R = 26;
-
-    // Vertical layout: spread nodes evenly, with a gap between groups
-    function vPositions(count) {
-      const spacing = usableH / (count + 1);
-      return Array.from({ length: count }, (_, i) => PAD_TOP + spacing * (i + 1));
-    }
-
-    const kyArr = vPositions(kathaNodes.length);
-    const gyArr = vPositions(gitaNodes.length);
-
-    kathaNodes.forEach((n, i) => { n.x = COL_K; n.y = kyArr[i]; n.r = NODE_R; });
-    gitaNodes.forEach((n, i)  => { n.x = COL_G; n.y = gyArr[i]; n.r = NODE_R; });
-
-    return { W, H, COL_K, COL_G, NODE_R };
-  }
-
-  function draw(dims) {
-    const { W, H } = dims;
-    const ctx2 = ctx;
-    ctx2.clearRect(0, 0, W, H);
-
-    // Background
-    ctx2.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim() || '#fbf5e6';
-    ctx2.fillRect(0, 0, W, H);
-
-    // Column headers
-    ctx2.font = 'bold 12px Inter, system-ui';
-    ctx2.textAlign = 'center';
-    ctx2.fillStyle = KATHA_COLOR;
-    ctx2.fillText('KATHA UPANIṢAD', dims.COL_K, 30);
-    ctx2.fillStyle = GITA_COLOR;
-    ctx2.fillText('BHAGAVAD GĪTĀ', dims.COL_G, 30);
-
-    // Dividing line
-    ctx2.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--rule').trim() || '#d6c599';
-    ctx2.lineWidth = 1;
-    ctx2.setLineDash([4, 4]);
-    ctx2.beginPath();
-    ctx2.moveTo(W / 2, 40);
-    ctx2.lineTo(W / 2, H - 20);
-    ctx2.stroke();
-    ctx2.setLineDash([]);
-
-    // Edges
-    edges.forEach(e => {
-      const kn = kathaNodes.find(n => n.id === e.katha);
-      const gn = gitaNodes.find(n  => n.id === e.gita);
-      if (!kn || !gn) return;
-
-      const isSelected = selectedConnId === e.id;
-      const hasSelection = selectedConnId !== null;
-      const alpha = hasSelection ? (isSelected ? 1 : 0.12) : 0.55;
-
-      ctx2.save();
-      ctx2.globalAlpha = alpha;
-
-      const color = e.direct ? EDGE_DIRECT : EDGE_THEME;
-      ctx2.strokeStyle = color;
-      ctx2.lineWidth = isSelected ? 3 : 1.5;
-      if (!e.direct) ctx2.setLineDash([6, 4]);
-
-      // Gentle S-curve
-      const cx1 = kn.x + (gn.x - kn.x) * 0.35;
-      const cy1 = kn.y;
-      const cx2 = kn.x + (gn.x - kn.x) * 0.65;
-      const cy2 = gn.y;
-
-      ctx2.beginPath();
-      ctx2.moveTo(kn.x + kn.r, kn.y);
-      ctx2.bezierCurveTo(cx1, cy1, cx2, cy2, gn.x - gn.r, gn.y);
-      ctx2.stroke();
-      ctx2.setLineDash([]);
-
-      // Arrowhead at Gita side
-      const angle = Math.atan2(gn.y - cy2, gn.x - gn.r - cx2);
-      ctx2.fillStyle = color;
-      ctx2.beginPath();
-      const ax = gn.x - gn.r, ay = gn.y;
-      ctx2.moveTo(ax, ay);
-      ctx2.lineTo(ax - 9 * Math.cos(angle - 0.4), ay - 9 * Math.sin(angle - 0.4));
-      ctx2.lineTo(ax - 9 * Math.cos(angle + 0.4), ay - 9 * Math.sin(angle + 0.4));
-      ctx2.closePath();
-      ctx2.fill();
-
-      // BG ref label on edge midpoint
-      if (isSelected || !hasSelection) {
-        ctx2.globalAlpha = isSelected ? 0.9 : 0.5;
-        ctx2.font = 'bold 10px Inter, system-ui';
-        ctx2.fillStyle = color;
-        ctx2.textAlign = 'center';
-        const mx = (kn.x + gn.x) / 2;
-        const my = (kn.y + gn.y) / 2 - 7;
-        const bg = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim() || '#fbf5e6';
-        const tw = ctx2.measureText(e.ref).width + 8;
-        ctx2.fillStyle = bg;
-        ctx2.fillRect(mx - tw/2, my - 9, tw, 13);
-        ctx2.fillStyle = color;
-        ctx2.fillText(e.ref, mx, my);
-      }
-      ctx2.restore();
-    });
-
-    // Nodes — Katha side
-    kathaNodes.forEach(n => {
-      const isConnected = selectedConnId && edges.some(e => e.katha === n.id && e.id === selectedConnId);
-      const hasSelection = selectedConnId !== null;
-      const alpha = hasSelection ? (isConnected ? 1 : 0.3) : 0.9;
-
-      ctx2.save();
-      ctx2.globalAlpha = alpha;
-
-      // Pill background
-      ctx2.beginPath();
-      roundRectBimap(ctx2, n.x - n.r, n.y - n.r, n.r * 2, n.r * 2, n.r);
-      ctx2.fillStyle = isConnected ? KATHA_COLOR : lightenBimap(KATHA_COLOR, 0.85);
-      ctx2.fill();
-      ctx2.strokeStyle = KATHA_COLOR;
-      ctx2.lineWidth = isConnected ? 2.5 : 1.5;
-      ctx2.stroke();
-
-      // Label
-      const lbl = currentLanguage === 'kn' ? (n.label_kn || n.label_en) : n.label_en;
-      const short = truncate(lbl, 12);
-      ctx2.font = `bold 11px ${currentLanguage === 'kn' ? "'Noto Sans Kannada'" : 'Inter'}, system-ui`;
-      ctx2.fillStyle = isConnected ? '#fff' : '#1f1a13';
-      ctx2.textAlign = 'center';
-      ctx2.textBaseline = 'middle';
-      ctx2.fillText(short, n.x, n.y);
-      ctx2.restore();
-    });
-
-    // Nodes — Gita side
-    gitaNodes.forEach(n => {
-      const isConnected = selectedConnId && edges.some(e => e.gita === n.id && e.id === selectedConnId);
-      const hasSelection = selectedConnId !== null;
-      const alpha = hasSelection ? (isConnected ? 1 : 0.3) : 0.9;
-
-      ctx2.save();
-      ctx2.globalAlpha = alpha;
-
-      ctx2.beginPath();
-      roundRectBimap(ctx2, n.x - n.r, n.y - n.r, n.r * 2, n.r * 2, n.r);
-      ctx2.fillStyle = isConnected ? GITA_COLOR : lightenBimap(GITA_COLOR, 0.85);
-      ctx2.fill();
-      ctx2.strokeStyle = GITA_COLOR;
-      ctx2.lineWidth = isConnected ? 2.5 : 1.5;
-      ctx2.stroke();
-
-      ctx2.font = 'bold 10px Inter, system-ui';
-      ctx2.fillStyle = isConnected ? '#fff' : '#1f1a13';
-      ctx2.textAlign = 'center';
-      ctx2.textBaseline = 'middle';
-      ctx2.fillText(n.label_en, n.x, n.y);
-      ctx2.restore();
-    });
-  }
-
-  function truncate(s, n) { return s.length > n ? s.slice(0, n - 1) + '…' : s; }
-
-  function roundRectBimap(ctx2, x, y, w, h, r) {
-    ctx2.beginPath();
-    ctx2.moveTo(x + r, y);
-    ctx2.lineTo(x + w - r, y);
-    ctx2.quadraticCurveTo(x + w, y, x + w, y + r);
-    ctx2.lineTo(x + w, y + h - r);
-    ctx2.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-    ctx2.lineTo(x + r, y + h);
-    ctx2.quadraticCurveTo(x, y + h, x, y + h - r);
-    ctx2.lineTo(x, y + r);
-    ctx2.quadraticCurveTo(x, y, x + r, y);
-    ctx2.closePath();
-  }
-
-  function lightenBimap(hex, amount) {
-    const num = parseInt(hex.slice(1), 16);
-    const r = Math.min(255, Math.round(((num >> 16) & 255) * amount + 255 * (1 - amount)));
-    const g = Math.min(255, Math.round(((num >> 8)  & 255) * amount + 255 * (1 - amount)));
-    const b = Math.min(255, Math.round((num & 255)          * amount + 255 * (1 - amount)));
-    return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
-  }
-
-  function hitEdge(cx, cy) {
-    const W = canvas.width;
-    for (const e of edges) {
-      const kn = kathaNodes.find(n => n.id === e.katha);
-      const gn = gitaNodes.find(n  => n.id === e.gita);
-      if (!kn || !gn) continue;
-      // Check proximity to bezier midpoint
-      const mx = (kn.x + gn.x) / 2;
-      const my = (kn.y + gn.y) / 2;
-      if (Math.abs(cx - mx) < 30 && Math.abs(cy - my) < 20) return e;
-    }
-    // Also hit-test nodes to find all connected edges
-    const nearKatha = kathaNodes.find(n => Math.hypot(cx - n.x, cy - n.y) < n.r + 4);
-    if (nearKatha) {
-      const match = edges.filter(e => e.katha === nearKatha.id);
-      if (match.length === 1) return match[0];
-      return match[0] || null; // return first if multiple
-    }
-    const nearGita = gitaNodes.find(n  => Math.hypot(cx - n.x, cy - n.y) < n.r + 4);
-    if (nearGita) {
-      const match = edges.filter(e => e.gita === nearGita.id);
-      if (match.length === 1) return match[0];
-      return match[0] || null;
-    }
-    return null;
-  }
-
-  function getCanvasPos(e) {
-    const rect = canvas.getBoundingClientRect();
-    const scl = canvas.width / rect.width;
-    return {
-      x: (e.clientX - rect.left) * scl,
-      y: (e.clientY - rect.top)  * scl
-    };
-  }
-
-  function showEdgeDetail(conn) {
-    if (!conn || !detail) return;
-    const lang = currentLanguage;
-    const title = conn.conn.title ? (lang === 'kn' ? conn.conn.title.kn : conn.conn.title.en) : '';
-    const explanation = conn.conn.connection ? (lang === 'kn' ? conn.conn.connection.kn : conn.conn.connection.en) : '';
-    const kathaShloka = conn.conn.kathaShloka || '';
-    const gitaShloka  = conn.conn.gitaShloka  || '';
-
-    detail.classList.add('active');
-    detail.innerHTML = `
-      <h4>${title}</h4>
-      <div class="refs-row">
-        <span class="ref-pill" style="color:#c0622e; border-color:#c0622e; background:rgba(192,98,46,0.06);">
-          Katha ${conn.conn.kathaRef || ''}
-        </span>
-        <span class="ref-pill" style="color:#2475b0; border-color:#2475b0; background:rgba(36,117,176,0.06);">
-          ${conn.conn.gitaRef || conn.ref}
-        </span>
-        <span class="ref-pill" style="color:${conn.direct ? '#8b7355' : '#6aab6a'}; border-color:${conn.direct ? '#8b7355' : '#6aab6a'};">
-          ${conn.direct ? 'Direct verse echo' : 'Thematic parallel'}
-        </span>
-      </div>
-      <div class="explanation">${explanation}</div>
-      ${kathaShloka || gitaShloka ? `
-      <div class="shloka-pair">
-        ${kathaShloka ? `<div class="shloka-box"><div class="src-lbl">Katha Upaniṣad</div><div class="shloka-text">${kathaShloka}</div></div>` : ''}
-        ${gitaShloka  ? `<div class="shloka-box gita-side"><div class="src-lbl">Bhagavad Gītā</div><div class="shloka-text">${gitaShloka}</div></div>` : ''}
-      </div>` : ''}
-      <button class="gita-conn-open-btn" onclick="switchGitaView('list'); selectGitaConnection('${conn.id}');">
-        Open in List View →
-      </button>
-    `;
-  }
-
-  let dims = layout();
-  let hoverEdge = null;
-
-  // Mouse events
-  canvas.addEventListener('mousemove', e => {
-    const pos = getCanvasPos(e);
-    const edge = hitEdge(pos.x, pos.y);
-    canvas.style.cursor = edge ? 'pointer' : 'default';
-    if (edge !== hoverEdge) {
-      hoverEdge = edge;
-      if (tip) {
-        if (edge) {
-          const conn = edge.conn;
-          const title = conn.title ? conn.title.en : '';
-          const ref   = edge.ref;
-          tip.textContent = `${title}\n${ref} · ${edge.direct ? 'Direct echo' : 'Thematic'}`;
-          tip.classList.add('visible');
-        } else {
-          tip.classList.remove('visible');
-        }
-      }
-      draw(dims);
-    }
-    if (tip && hoverEdge) {
-      const rect = canvas.getBoundingClientRect();
-      tip.style.left = (e.clientX - rect.left + 12) + 'px';
-      tip.style.top  = (e.clientY - rect.top  - 30) + 'px';
-    }
-  });
-
-  canvas.addEventListener('mouseleave', () => {
-    hoverEdge = null;
-    if (tip) tip.classList.remove('visible');
-  });
-
-  canvas.addEventListener('click', e => {
-    const pos = getCanvasPos(e);
-    const edge = hitEdge(pos.x, pos.y);
-    if (edge) {
-      selectedConnId = edge.id;
-      showEdgeDetail(edge);
-    } else {
-      selectedConnId = null;
-      if (detail) detail.classList.remove('active');
-    }
-    draw(dims);
-  });
-
-  // Touch
-  canvas.addEventListener('touchend', e => {
-    e.preventDefault();
-    const rect = canvas.getBoundingClientRect();
-    const scl = canvas.width / rect.width;
-    const t = e.changedTouches[0];
-    const pos = { x: (t.clientX - rect.left) * scl, y: (t.clientY - rect.top) * scl };
-    const edge = hitEdge(pos.x, pos.y);
-    if (edge) {
-      selectedConnId = edge.id;
-      showEdgeDetail(edge);
-    } else {
-      selectedConnId = null;
-      if (detail) detail.classList.remove('active');
-    }
-    draw(dims);
-  }, { passive: false });
-
-  window.addEventListener('resize', () => {
-    if (!document.getElementById('gita-map-view').classList.contains('active')) return;
-    dims = layout();
-    draw(dims);
-  });
-
-  draw(dims);
-};
-
-window.renderBimap = function() {
-  const canvas = document.getElementById('gita-bimap-canvas');
-  if (!canvas) return;
-  const dims = {
-    W: canvas.width || canvas.offsetWidth,
-    H: canvas.height,
-    COL_K: (canvas.width || 700) * 0.22,
-    COL_G: (canvas.width || 700) * 0.78,
-    NODE_R: 26
-  };
-  // Re-initialise full draw by calling initGitaBimap which re-does layout
-  initGitaBimap();
-};
-
-})(); // end IIFE bipartite map
 
 </script>
 </body>
