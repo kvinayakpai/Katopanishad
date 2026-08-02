@@ -1602,6 +1602,15 @@ function bridgeLabelOf(node, lang) {
   if (lang === 'kn')  return node.kn  || t.kn  || node.en || '';
   return node.en || t.en || '';
 }
+function bridgeTierLabel(tierId, lang) {
+  const tiers = (typeof BRIDGE_GITA_TIERS !== 'undefined') ? BRIDGE_GITA_TIERS : [];
+  const t = tiers.find(x => x.id === tierId);
+  if (!t) return tierId;
+  if (lang === 'hi') return t.hi || t.en || '';
+  if (lang === 'sa') return t.dev || t.en || '';
+  if (lang === 'kn') return t.kn || t.en || '';
+  return t.en || '';
+}
 
 let bridgeState = { current: null, onlyLinked: false };
 
@@ -1695,7 +1704,7 @@ function bridgeRenderOverview(lang) {
     html += `<div class="bridge-tile" data-id="${c.node.id}" style="background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:14px 12px;cursor:pointer;position:relative;overflow:hidden;${zero ? 'opacity:.72' : ''}">
       <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:${color}"></div>
       <div style="font-weight:700;font-size:16px;color:var(--ink);margin-bottom:3px">${bridgeEscapeHtml(bridgeLabelOf(c.node, lang))}</div>
-      <div style="font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-fade);margin-bottom:9px">${bridgeEscapeHtml(c.node.tier)}</div>
+      <div style="font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-fade);margin-bottom:9px">${bridgeEscapeHtml(bridgeTierLabel(c.node.tier, lang))}</div>
       <div style="font-size:11px;color:var(--ink-fade)"><span style="font-weight:700;color:var(--rust)">${total}</span> ${total === 1 ? bridgeEscapeHtml(t.bridge_source) : bridgeEscapeHtml(t.bridge_sources)}</div>
     </div>`;
   });
@@ -1821,7 +1830,7 @@ function bridgeDrawSvg(c, color, sats, hasSats, lang) {
   cLabel.textContent = bridgeLabelOf(c.node, lang);
   cg.appendChild(cLabel);
   const cSub = mk('text', { x: 0, y: 14, 'text-anchor': 'middle', 'font-size': '9.5', fill: 'var(--ink-fade)' });
-  cSub.textContent = c.node.tier;
+  cSub.textContent = bridgeTierLabel(c.node.tier, lang);
   cg.appendChild(cSub);
   cg.addEventListener('click', () => {
     const pending = c.node.note && typeof c.node.note === 'object' && !c.node.note[lang] && c.node.note.en;
