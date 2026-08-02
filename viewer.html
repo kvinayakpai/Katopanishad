@@ -1611,6 +1611,14 @@ function bridgeTierLabel(tierId, lang) {
   if (lang === 'kn') return t.kn || t.en || '';
   return t.en || '';
 }
+/* Extracts a short verse locator so satellite bubbles from the same source
+   text are visually distinguishable instead of all reading identical
+   'Katha / cross-ref' labels. */
+function bridgeShortRef(ref) {
+  if (!ref) return '';
+  const m = ref.match(/(\d[\d.\u2013\u2014-]*\d|\d+)/);
+  return m ? m[0] : ref.split(' ').slice(0, 2).join(' ');
+}
 
 let bridgeState = { current: null, onlyLinked: false };
 
@@ -1814,7 +1822,7 @@ function bridgeDrawSvg(c, color, sats, hasSats, lang) {
     label.textContent = s.kind === 'gita' ? (t.bridge_gita_tag || 'Gita').split(' ')[0] : (t.bridge_katha_tag || 'Katha').split(' ')[0];
     g.appendChild(label);
     const sub = mk('text', { x: 0, y: 11, 'text-anchor': 'middle', 'font-size': '8.5', fill: 'var(--ink-fade)' });
-    sub.textContent = s.kind === 'gita' ? (t.bridge_this_text || '') : (t.bridge_cross_ref || '');
+    sub.textContent = s.kind === 'gita' ? (t.bridge_this_text || '') : bridgeShortRef(s.ref);
     g.appendChild(sub);
     g.addEventListener('click', () => {
       const pending = s.noteField && typeof s.noteField === 'object' && !s.noteField[lang] && s.noteField.en;
